@@ -28,9 +28,9 @@ function App() {
                     element={
                         <motion.div {...pageTransition}>
                             <NameSection />
-                            <ImageSlideshow />
                             <NewsSeparator />
                             <LatestGames />
+                            <ImageSlideshow />
                             <Sponsors />
                         </motion.div>
                     }
