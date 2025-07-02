@@ -13,8 +13,8 @@ export function ImageSlideshow() {
     }, [images.length]);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full mt-10 sm:mt-20">
-            <div className="relative w-full aspect-video overflow-hiddenshadow-xl">
+        <div className="flex flex-col items-center justify-center w-full mb-20">
+            <div className="relative w-full h-[550px] lg:h-[650px] overflow-hidden shadow-xl">
                 <AnimatePresence>
                     {images.map((image, index) =>
                         index === currentIndex ? (
@@ -33,7 +33,7 @@ export function ImageSlideshow() {
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-80"></div>
-                                <div className="absolute top-7 left-7 text-white text-xl lg:text-5xl font-light drop-shadow-md">
+                                <div className="absolute left-5 top-8 sm:left-10 lg:left-20 text-white text-2xl lg:text-5xl font-bold drop-shadow-md before:content-[''] before:absolute before:left-[-10px] sm:before:left-[-15px] before:top-2 before:bottom-1 before:w-1 sm:before:w-2 before:bg-green-500">
                                     K.S.V Wildert - FC Bucovina
                                 </div>
                             </motion.div>
