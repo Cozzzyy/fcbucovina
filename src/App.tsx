@@ -8,21 +8,39 @@ import { Footer } from "./components/Footer.tsx";
 import { Sponsors } from "./components/Sponsors.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NewsPage } from "./components/NewsPage.tsx";
+import { motion } from "framer-motion";
 
 function App() {
+    const pageTransition = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: -20 },
+        transition: { duration: 1 },
+    };
+
     return (
         <Router>
             <NavigationBar />
             <Routes>
-                <Route path="/" element={
-                    <>
-                        <NameSection />
-                        <NewsSeparator />
-                        <LatestGames />
-                        <Sponsors />
-                    </>
-                } />
-                <Route path="/stiri" element={<NewsPage />} />
+                <Route
+                    path="/"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <NameSection />
+                            <NewsSeparator />
+                            <LatestGames />
+                            <Sponsors />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/stiri"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <NewsPage />
+                        </motion.div>
+                    }
+                />
             </Routes>
             <Footer />
             <Background />
