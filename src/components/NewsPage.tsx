@@ -9,7 +9,7 @@ const newsData: Blog[] = [
     {
         id: 1,
         title: "FC BUCOVINA - IMPREUNA SPRE PERFORMANTA IN SEZONUL 25-26",
-        date: "2023-10-01",
+        date: "2025-07-01",
         text :"Fc Bucovina  – Împreună spre performanță în sezonul 2025–2026!\n" +
             "Asociația sportivă Football Club Bucovina Vzw pornește cu încredere într-un nou sezon în care ne propunem să facem un sezon bun la fel ca cel precedent. Pentru a atinge aceste obiective ambițioase, avem nevoie de voi  sponsori, parteneri, oameni de afaceri sau susținători care cred în sport, în echipe unite și în puterea comunității românești din Belgia.\n" +
             "De ce să susții FC Bucovina?\n" +

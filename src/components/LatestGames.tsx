@@ -7,7 +7,7 @@ const games: Game[] = [
         homeTeamLogo: "/porto-bruxelles.png",
         awayTeam: "FC BUCOVINA LOENHOUT",
         awayTeamLogo: "/logo.png",
-        matchType: "AMICAL",
+        matchType: "Amical",
         score: "2-0",
         date: "25/06/2025 19:00",
         location: "Avenue Jean Joseph Crocq 54 Jette",
@@ -27,8 +27,8 @@ const games: Game[] = [
 export function LatestGames() {
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            <div className="flex flex-col w-full sm:w-4/5 lg:w-2/3 mt-4 px-4 sm:px-6 mb-15">
-                <h1 className="text-base sm:text-lg lg:text-sm font-bold text-white text-center lg:text-left p-2 bg-[#008229]">
+            <div className="flex flex-col w-full lg:w-2/3 mt-4 px-4 sm:px-6 mb-15">
+                <h1 className="text-lg lg:text-sm font-bold text-white text-center lg:text-left p-2 bg-[#008229]">
                     ULTIMELE MECIURI
                 </h1>
                 {games.map((game, index) => (
