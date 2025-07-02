@@ -7,7 +7,6 @@ export function NewsSeparator() {
                 <h1 className="text-sm font-bold w-1/2 sm:w-1/3 lg:w-1/7 text-center text-white bg-[#008229] p-2">
                     ULTIMELE ȘTIRI
                 </h1>
-                <div className="w-full h-1 bg-white mt-2"></div>
                 <NewsCards />
             </div>
         </div>

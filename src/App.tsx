@@ -9,6 +9,7 @@ import { Sponsors } from "./components/Sponsors.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NewsPage } from "./components/NewsPage.tsx";
 import { motion } from "framer-motion";
+import {ImageSlideshow} from "./components/ImageSlideshow.tsx";
 
 function App() {
     const pageTransition = {
@@ -27,6 +28,7 @@ function App() {
                     element={
                         <motion.div {...pageTransition}>
                             <NameSection />
+                            <ImageSlideshow />
                             <NewsSeparator />
                             <LatestGames />
                             <Sponsors />
