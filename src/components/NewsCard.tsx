@@ -27,6 +27,11 @@ import { useNavigate } from "react-router-dom";
 export function NewsCards() {
     const navigate = useNavigate();
 
+    const handleNavigate = () => {
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        navigate("/stiri");
+    };
+
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-18 mt-3 mb-30">
             {newsData.map((news) => (
@@ -39,7 +44,7 @@ export function NewsCards() {
                     <p className="text-gray-700 mt-4">{news.text}</p>
                     <button
                         className="mt-4 px-2 py-1.5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-                        onClick={() => navigate("/stiri")}
+                        onClick={handleNavigate}
                     >
                         Citește tot
                     </button>
