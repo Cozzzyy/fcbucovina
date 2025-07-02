@@ -7,7 +7,7 @@ export function Background() {
                 src="/team-photo.jpg"
                 alt="Background"
                 aria-hidden="true"
-                loading="lazy"
+                loading="eager"
             />
             {/* Gradient fading from transparent to white at the bottom */}
             <div className="absolute bottom-0 w-full h-1/4 bg-gradient-to-b from-transparent to-white pointer-events-none"></div>
