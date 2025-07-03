@@ -2,17 +2,22 @@ import type { Game } from "../types/Game.ts";
 
 export function GameCard({ game }: { game: Game }) {
     return (
-        <div className="flex flex-col justify-center items-center rounded-md w-full px-4">
+        <div className="flex flex-col justify-center items-center rounded-md w-full px-2">
             <h3 className="text-[14px] font-semibold opacity-75 mt-5 mb-2 select-none pointer-events-none">
                 {game.matchType}
             </h3>
 
-            <div className="flex flex-wrap justify-center items-center w-full gap-2 text-center">
+            <div className="flex flex-wrap justify-center items-center w-full gap-8 text-center">
                 {/* Home Team */}
                 <div className="flex flex-row justify-end items-center gap-2 flex-1 min-w-0">
-                    <h3 className="text-[13px] ml-2 text-left font-light whitespace-normal break-words select-none pointer-events-none">
+                    <h3
+                        className="text-[13px] ml-2 text-right font-light select-none pointer-events-none"
+                        contentEditable={false}
+                        suppressContentEditableWarning={true}
+                    >
                         {game.homeTeam}
                     </h3>
+
                     <img className="w-10 h-auto flex-shrink-0" src={game.homeTeamLogo} alt={game.homeTeam} />
                 </div>
 
