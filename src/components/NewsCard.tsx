@@ -1,27 +1,5 @@
-
-
-const newsData = [
-    {
-        id: 1,
-        title: "FC BUCOVINA - IMPREUNA SPRE PERFORMANTA IN SEZONUL 25-26",
-        date: "2025-07-01",
-        text: "Asociația sportivă Football Club Bucovina Vzw pornește cu încredere într-un nou sezon în care ne propunem să facem un sezon bun la fel ca cel precedent. Pentru a atinge aceste obiective ambițioase, avem nevoie de voi  sponsori, parteneri, oameni de afaceri sau susținători care cred în sport, în echipe unite și în puterea comunității românești din Belgia."
-    },
-    {
-        id: 2,
-        title: "FC BUCOVINA - INVITATE DE ONOARE LA UN MECI DE AMICAL IN BRUXELLE",
-        date: "2025-06-25",
-        text: "Echipa noastră, Fc Bucovina, are onoarea de a răspunde invitației lansate de Porto Bruxelles pentru un meci amical de gală ce va avea loc sâmbătă seara, în capitala Belgiei. Evenimentul marchează începutul unui nou capitol pentru clubul gazdă, care va profita de această ocazie pentru a-și prezenta oficial echipamentele pentru sezonul 2025-2026, precum.."
-    },
-    {
-        id: 3,
-        title: "FINAL DE SEZON. FINAL DE POVESTE. DAR NU ȘI FINAL DE DRUM.",
-        date: "2025-05-05",
-        text: "Astăzi nu scriem doar despre un meci. Scriem despre caracter. Despre inimă. Despre o echipă care a demonstrat că fotbalul înseamnă mai mult decât un scor. Scriem despre  Fc Bucovina, o echipă care a luptat cu tot ce a avut în ea, până la ultima picătură de energie, până la ultima bătaie de inimă.\n" +
-            "Într-un duel de foc, contând pentru semifinala barajului..."
-    }
-];
-
+import newsData from '../../data/data.json';
+import type { News } from '../types/News.ts';
 import { useNavigate } from "react-router-dom";
 
 export function NewsCards() {
@@ -32,9 +10,14 @@ export function NewsCards() {
         navigate("/stiri");
     };
 
+    // Sort newsData by date in descending order and take the first 3 items
+    const latestNews : News[] = [...newsData]
+        .sort((a : News, b : News): number => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .slice(0, 3);
+
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 mt-3 mb-30">
-            {newsData.map((news) => (
+            {latestNews.map((news: News) => (
                 <div
                     key={news.id}
                     className="bg-white shadow-xl p-4 hover:shadow-xl transition-shadow opacity-85 rounded-lg"

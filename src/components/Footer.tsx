@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="bg-[#034d03] text-gray-200 mt-20">
+        <footer className="bg-[#034d03] text-gray-200 mt-10">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="flex w-full flex-col lg:flex-col justify-center items-center">
                     <img className="w-30 h-auto" src="/logo.png" alt="Logo" />
