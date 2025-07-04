@@ -12,11 +12,12 @@ export function ScrollingPlayersRow() {
 
         const autoScroll = () => {
             if (scrollContainer) {
-                const scrollSpeed = 0.5;
+                const scrollSpeed = 0.5; // Adjust as needed
                 scrollContainer.scrollLeft += scrollSpeed;
 
                 // When the scroll position exceeds the width of the first set of items,
                 // silently reset to the beginning for a seamless loop.
+                // We divide by 2 because we duplicated the players array.
                 if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
                     scrollContainer.scrollLeft = 0;
                 }
@@ -43,8 +44,9 @@ export function ScrollingPlayersRow() {
             </h2>
             <div
                 ref={scrollRef}
-                // Key change: `overflow-x-hidden` prevents all manual scrolling.
-                className="flex gap-20 overflow-x-hidden whitespace-nowrap px-4"
+                // Change: Use overflow-x-scroll to allow programmatic scrolling
+                // Add a custom class to hide the scrollbar
+                className="flex gap-20 overflow-x-scroll whitespace-nowrap px-4 scrollbar-hide"
             >
                 {/* Duplicate the players array for a seamless loop */}
                 {[...players, ...players].map((player, index) => (

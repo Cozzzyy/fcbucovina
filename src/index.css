@@ -4,3 +4,18 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox */
+.scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* For IE and Edge (older versions) */
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+}
