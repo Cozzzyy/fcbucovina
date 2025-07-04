@@ -12,9 +12,9 @@ export function NameSection({ scrollToNewsSeparator }: { scrollToNewsSeparator: 
                     "O ECHIPĂ UNITĂ PRIN ÎNCREDERE, CRESCUTĂ PRIN RESPECT, CONDUSĂ DE DORINȚA DE A ÎNVINGE.”
                 </h2>
             </div>
-            <div className="pb-6">
+            <div>
                 <button
-                    className="px-4 py-2 border border-green-700 text-white rounded-2xl hover:bg-green-700 transition-colors m-0"
+                    className="px-4 py-2 border border-green-700 text-white rounded-2xl hover:bg-green-700 transition-colors"
                     onClick={scrollToNewsSeparator}
                 >
                     VEZI MAI MULTE
