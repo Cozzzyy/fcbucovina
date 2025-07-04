@@ -7,7 +7,12 @@ export function ScrollingPlayersRow() {
     const scrollRef = useRef<HTMLDivElement>(null);
     const firstCardRef = useRef<HTMLDivElement>(null);
     const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
-    const members = [...staff, ...players];
+    const [sidePadding, setSidePadding] = useState<number>(0);
+
+    const members = [
+        ...staff.map((s) => ({ ...s, type: "staff" })),
+        ...players.map((p) => ({ ...p, type: "player" })),
+    ];
 
     useEffect(() => {
         const handleResize = () => {
@@ -15,12 +20,22 @@ export function ScrollingPlayersRow() {
             setIsDesktop(!isMobile);
         };
 
-        handleResize(); // Initial check
+        handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-
+    // Calculate padding dynamically to center first card on mobile
+    useEffect(() => {
+        if (!isDesktop && firstCardRef.current) {
+            const cardWidth = firstCardRef.current.offsetWidth;
+            const viewportWidth = window.innerWidth;
+            const padding = (viewportWidth - cardWidth) / 2;
+            setSidePadding(padding);
+        } else {
+            setSidePadding(0);
+        }
+    }, [isDesktop]);
 
     return (
         <div className="w-full overflow-hidden py-10 mb-35">
@@ -30,41 +45,49 @@ export function ScrollingPlayersRow() {
 
             <div
                 ref={scrollRef}
-                className="relative w-full overflow-x-scroll px-4 scrollbar-hide"
+                className={`relative w-full overflow-x-scroll px-4 scrollbar-hide ${
+                    isDesktop ? "" : "snap-x snap-mandatory"
+                }`}
+                style={{
+                    paddingLeft: !isDesktop ? sidePadding : undefined,
+                    paddingRight: !isDesktop ? sidePadding : undefined,
+                }}
             >
                 <div
-                    className={`flex items-center gap-20 whitespace-nowrap ${
-                        isDesktop ? "animate-scroll" : ""
+                    className={`flex gap-15 ${
+                        isDesktop ? "animate-scroll whitespace-nowrap items-center gap-5" : "justify-start"
                     }`}
                 >
-                    {[...members, ...members].map((member, index) => (
+                    {(isDesktop ? [...members, ...members] : members).map((member, index) => (
                         <div
                             key={index}
                             ref={index === 0 ? firstCardRef : null}
-                            className="min-w-[250px] flex-shrink-0"
+                            className={`${
+                                isDesktop ? "min-w-[350px] flex-shrink-0" : "snap-center w-full max-w-sm mx-auto"
+                            }`}
                         >
-                            <PlayerCard player={member} hideDetails={true} />
+                            <PlayerCard player={member} hideDetails />
                         </div>
                     ))}
                 </div>
             </div>
 
             <style>{`
-                @keyframes scroll {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-100%); }
-                }
-                .animate-scroll {
-                    animation: scroll 8s linear infinite;
-                }
-                .scrollbar-hide::-webkit-scrollbar {
-                    display: none;
-                }
-                .scrollbar-hide {
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
-                }
-            `}</style>
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
         </div>
     );
 }

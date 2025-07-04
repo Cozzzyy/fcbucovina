@@ -8,7 +8,7 @@ interface PlayerCardProps {
 export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
     return (
         <div className="flex flex-col w-full justify-center items-center min-h-[420px]">
-            <div className="relative flex flex-col justify-center items-center bg-transparent pt-10 w-[300px] md:w-[300px] lg:w-[315px] overflow-hidden">
+            <div className="relative flex flex-col justify-center items-center bg-transparent pt-10 w-[320px] md:w-[300px] lg:w-[315px] overflow-hidden">
 
                 {/* Player Number */}
                 <div className="absolute top-2 left-2 w-14 h-14 flex justify-center items-center z-20">
@@ -38,7 +38,7 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
 
                 {/* Player Name */}
                 <div className="w-full z-10">
-                    <h2 className="text-xl text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
+                    <h2 className="text-lg text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
                         {player.name.toUpperCase()}
                     </h2>
                 </div>
