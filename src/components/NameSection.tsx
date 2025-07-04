@@ -1,7 +1,7 @@
 export function NameSection({ scrollToNewsSeparator }: { scrollToNewsSeparator: () => void }) {
     return (
         <section 
-            className="flex flex-col h-screen justify-between items-center px-4 text-center overflow-hidden pb-22"
+            className="flex flex-col h-screen justify-start items-center px-4 text-center overflow-hidden pb-75"
             style={{ boxSizing: "border-box" }}
         >
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">

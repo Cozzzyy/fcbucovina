@@ -64,9 +64,9 @@ export function NavigationBar() {
                         {[
                             { name: "ACASA", path: "/" },
                             { name: "STIRI", path: "/stiri" },
+                            { name: "CLUB", path: "/club" },
                             { name: "MECIURI", path: "/meciuri" },
                             { name: "CLASAMENT", path: "/clasament" },
-                            { name: "CLUB", path: "/club" },
                         ].map((item) => (
                             <Link
                                 key={item.name}
