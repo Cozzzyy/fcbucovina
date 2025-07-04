@@ -14,7 +14,7 @@ export function Sponsors() {
 
     return (
         <div className="flex flex-col justify-center items-center w-full px-4 mt-10 overflow-hidden">
-            <div className="flex flex-col w-full lg:w-2/3 items-center mt-8 sm:mt-12">
+            <div className="flex flex-col w-full items-center mt-8 sm:mt-12">
                 <h1 className="text-2xl mb-2 font-bold leading-tight uppercase">
                     Multumiri sponsorilor
                 </h1>

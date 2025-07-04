@@ -1,0 +1,149 @@
+[
+  {
+    "number": 1,
+    "name": "Marius Aanitei",
+    "position": "portar",
+    "dateOfBirth": "14/08/1994",
+    "description": "a jucat Șomuzul Preutești, Fc Royal, Fc Dacia, Fc Bucovina."
+  },
+  {
+    "number": 3,
+    "name": "Negrea Robert",
+    "position": "fundaș dreapta",
+    "dateOfBirth": "02/10/1997",
+    "description": "a jucat Csm Focșani, Csm Dumbrăveni, Fc Bucovina."
+  },
+  {
+    "number": 4,
+    "name": "Florin Goian",
+    "position": "fundaș central",
+    "dateOfBirth": "08/04/1996",
+    "description": "a jucat la Moldova Drăgușeni, Fc Royal, Sint Lenaarts, Fc. Dacia, Fc Bucovina."
+  },
+  {
+    "number": 5,
+    "name": "Cristinel Tîrnovan",
+    "position": "mijlocaș dreapta",
+    "dateOfBirth": "28/07/1994",
+    "description": "a jucat la Viitorul Liteni, Fc Dacia, Fc Inter Merksplas, Fc Bucovina."
+  },
+  {
+    "number": 6,
+    "name": "Alex Ailincăi",
+    "position": "mijlocaș central",
+    "dateOfBirth": "13/07/1995",
+    "description": "a jucat la CD. Otxarkoaga, FC. Txurdinaga, FC. Romo, Șomuzul Fălticeni, Acs Somuzul Preutești, FC.ROYAL, FC.Dacia, Fc.Bucovina."
+  },
+  {
+    "number": 7,
+    "name": "Adrian Făget",
+    "position": "mijlocaș central",
+    "dateOfBirth": "25/05/1993",
+    "description": "a jucat la Minerul Motru, Fc Royal, Fc Dacia, Kasterlee, Jantjes, Dosko, Fc Bucovina."
+  },
+  {
+    "number": 8,
+    "name": "Alexandru Paius",
+    "position": "mijlocaș stânga",
+    "dateOfBirth": "27/02/1997",
+    "description": "a jucat la Kon. Vlimmeren Sport, FC Royal, KVV Dosko, FC Bucovina."
+  },
+  {
+    "number": 9,
+    "name": "Volovaci Dumitrel Mihai",
+    "position": "mijlocaș stânga",
+    "dateOfBirth": "24/10/1996",
+    "description": "a jucat la Cs Botoșani, Fc Dacia, Fc Suceava Bruxelles, Fc Bucovina."
+  },
+  {
+    "number": 10,
+    "name": "Gheorghiu Cornel",
+    "position": "mijlocaș central",
+    "dateOfBirth": "05/11/1985",
+    "description": "a jucat la Unirea Sânicolau Mare, Vv Zundert, Baronie, Fc Bucovina."
+  },
+  {
+    "number": 11,
+    "name": "Onofrei Bogdan",
+    "position": "atacant",
+    "dateOfBirth": "22/11/1990",
+    "description": "a jucat la Css Nicu Gane Fălticeni (Foresta), Voința Hartop, Unirea Boroaia, Acs Somuzul Preutești, Fc.ROYAL, Fc Bucovina."
+  },
+  {
+    "number": 12,
+    "name": "Grabovinschi Claudiu",
+    "position": "fundaș central",
+    "dateOfBirth": "23/07/1992",
+    "description": "a jucat la Luceafărul Mihai Eminescu, FC Royal, CS Botoșani, Fc Bucovina."
+  },
+  {
+    "number": 13,
+    "name": "Andriesei Ciprian",
+    "position": "fundaș stânga",
+    "dateOfBirth": "24/03/1995",
+    "description": "a jucat la FC Stroiești, FC Ciprian Porumbescu, Rapid CFR Suceava jr, FC Wernberg-Köblitz, FC Royal, KVV Dosko, Fc Bucovina."
+  },
+  {
+    "number": 14,
+    "name": "Temelie Ionuț",
+    "position": "fundaș central",
+    "dateOfBirth": "20/04/1993",
+    "description": "a jucat la CSM FOCȘANI, CALCIO ROSA, EUROMANIA DUMBRAVENI, Fc Bucovina."
+  },
+  {
+    "number": 16,
+    "name": "Ionuț Luca",
+    "position": "portar",
+    "dateOfBirth": "08/10/2003",
+    "description": "a jucat la Recolta Fântânele, Unirea 92, Fc Steaua 90, Fc Bucovina."
+  },
+  {
+    "number": 17,
+    "name": "Ionuț Maftei",
+    "position": "atacant",
+    "dateOfBirth": "19/07/1993",
+    "description": "a jucat la Unirea Boroaia, Șomuzul Preutești, Fc Dacia, Fc Gheorgarii, Fc Bucovina."
+  },
+  {
+    "number": 19,
+    "name": "Volovaci George-Alex",
+    "position": "mijlocaș dreapta",
+    "dateOfBirth": "30/11/2004",
+    "description": "a jucat la Cs Botoșani, FCSV Porto Bruxelles, VK De Jantjes, Fc Bucovina."
+  },
+  {
+    "number": 21,
+    "name": "Pavel Cristian",
+    "position": "mijlocaș central",
+    "dateOfBirth": "22/11/1995",
+    "description": "a jucat la Comuna Vișani, Academia Hagi, Brenes Sevilla, Fc Bucovina."
+  },
+  {
+    "number": 23,
+    "name": "Cuciorva Daniel Bogdan",
+    "position": "fundaș stânga",
+    "dateOfBirth": "26/10/1992",
+    "description": "a jucat la Fc Gheorgarii, Avântul Baia, Fc Dacia, Fc Bucovina."
+  },
+  {
+    "number": 24,
+    "name": "Cătăniciu Sergiu",
+    "position": "mijlocaș dreapta",
+    "dateOfBirth": "13/09/2001",
+    "description": "a jucat la Viitorul Loenhout, Fc Dacia, Inter Merksplas, Fc Bucovina."
+  },
+  {
+    "number": 25,
+    "name": "Ciobanu Eusebiu",
+    "position": "atacant",
+    "dateOfBirth": "19/01/2001",
+    "description": "a jucat la FC Steaua 90, FC Botosani, Inter Merksplas, FC Bucovina."
+  },
+  {
+    "number": 93,
+    "name": "Arvinte Emanuele Constantin",
+    "position": "mijlocaș stânga",
+    "dateOfBirth": "25/12/2003",
+    "description": "a jucat la Palermo, Cluj, Fc Bacău, Șomuzul Preutești, Fc Bucovina."
+  }
+]

@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="bg-[#034d03] text-gray-200 mt-10">
+        <footer className="bg-green-700 text-gray-200 mt-10">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="flex w-full flex-col lg:flex-col justify-center items-center">
                     <img className="w-30 h-auto" src="/teams/logo.png" alt="Logo" />
@@ -14,7 +14,7 @@ export function Footer() {
                 </div>
 
                 {/* Copyright Section */}
-                <div className="mt-6 mb-4 font-light text-center text-gray-400">
+                <div className="mt-6 mb-4 font-light text-center text-gray-200">
                     <p>&copy; 2025 Cosmin Nechita. All rights reserved.</p>
                 </div>
             </div>

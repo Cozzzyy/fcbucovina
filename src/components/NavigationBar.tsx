@@ -5,7 +5,7 @@ export function NavigationBar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-gradient-to-r from-[#08BE08] to-[#045804] mt-5">
+        <nav className="bg-green-700">
             <div className="mx-auto max-w-7xl px-2 sm:px-6">
                 <div className="relative flex h-20 items-center justify-between">
                     {/* Mobile menu button */}
@@ -41,9 +41,9 @@ export function NavigationBar() {
                         {[
                             { name: "ACASA", path: "/" },
                             { name: "STIRI", path: "/stiri" },
+                            { name: "CLUB", path: "/club" },
                             { name: "MECIURI", path: "/meciuri" },
                             { name: "CLASAMENT", path: "/clasament" },
-                            { name: "CLUB", path: "/club" },
                         ].map((item) => (
                             <Link
                                 key={item.name}

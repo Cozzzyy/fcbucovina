@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Toma Bogdan",
+    "position": "antrenor principal",
+    "dateOfBirth": "22/02/1988",
+    "description": "a jucat Nicu Gane Fălticeni ( Foresta Fălticeni II ), Fc Ena Făgăraș, CFR Brașov, Unirea Boroaia, Șomuzul Preutești, Viitorul Mironeasa, FC Bucovina."
+  },
+  {
+    "name": "Ciprian Vrabie",
+    "position": "antrenor principal",
+    "dateOfBirth": "23/05/1989",
+    "description": "a jucat la Juventus Fălticeni, Șomuzul Preutești, Viitorul Loenhout, Fc Bucovina."
+  },
+  {
+    "name": "Alexandru Luca",
+    "position": "președintele echipei",
+    "dateOfBirth": "17/08/1989",
+    "description": "a jucat la Css Nicu Gane (Foresta II), Juventus Fălticeni, Dunărea Călărași, Romprim Bucuresti, Metaloglobus Bucuresti, VV Achtmaal, Fc Bucovina."
+  },
+  {
+    "name": "Romeo Aurelian Roșu",
+    "position": "doctorul echipei",
+    "dateOfBirth": "21/11/1972",
+    "description": "a jucat la Laminorul Roman și Fcm Bacău."
+  },
+  {
+    "name": "George Dorneanu",
+    "position": "delegatul echipei",
+    "dateOfBirth": "17/07/1986",
+    "description": ""
+  },
+  {
+    "name": "Octavian Leonte",
+    "position": "fotograful echipei",
+    "dateOfBirth": "10/08/1998",
+    "description": ""
+  }
+]
