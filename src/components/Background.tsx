@@ -9,7 +9,7 @@ export function Background() {
     }
 
     return (
-        <div className="absolute inset-0 mt-15 -z-2">
+        <div className="absolute inset-0 -z-2">
             {/* Gradient fading from black to transparent at the top */}
             <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
             <img

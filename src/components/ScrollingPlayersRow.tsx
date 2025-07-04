@@ -35,7 +35,7 @@ export function ScrollingPlayersRow() {
             <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold mb-10 italic uppercase">Jucători</h2>
             <div
                 ref={scrollRef}
-                className="flex gap-6 overflow-x-auto whitespace-nowrap px-4 scroll-smooth touch-auto"
+                className="flex gap-20 overflow-x-auto whitespace-nowrap px-4 scroll-smooth touch-auto"
             >
                 {players.map((player) => (
                     <div key={player.number} className="min-w-[250px] flex-shrink-0">
