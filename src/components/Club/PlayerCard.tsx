@@ -7,8 +7,8 @@ interface PlayerCardProps {
 
 export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
     return (
-        <div className="flex flex-col w-full justify-center items-center min-h-[420px]">
-            <div className="relative flex flex-col justify-center items-center bg-transparent pt-10 w-[320px] md:w-[300px] lg:w-[315px] overflow-hidden">
+        <div className="flex flex-col w-full justify-center items-center min-h-[400px]">
+            <div className="relative flex flex-col justify-center items-center bg-transparent pt-10 w-[320px] md:w-[300px] lg:w-[300px] overflow-hidden">
 
                 {/* Player Number */}
                 <div className="absolute top-2 left-2 w-14 h-14 flex justify-center items-center z-20">
@@ -24,13 +24,13 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
                 </div>
 
                 {/* Player Image */}
-                <div className="relative w-full h-[420px] lg:h-[420px] rounded-t-lg">
+                <div className="relative w-full h-[420px] lg:h-[370px] rounded-t-lg">
                     <img
-                        className="w-full h-full object-cover rounded-t-lg"
+                        className="w-full h-full object-cover object-top rounded-t-lg"
                         src={`/jucatori/${player.name.replace(/\s+/g, "-")}.png`}
                         alt={`Image of ${player.name}`}
                         onError={(e) => {
-                            (e.target as HTMLImageElement).src = '/jucatori/Marius-Aanitei.png';
+                            (e.target as HTMLImageElement).src = '/jucatori/placeholder.jpg';
                         }}
                     />
                     <div className="absolute -bottom-2 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-white"></div>
@@ -38,7 +38,7 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
 
                 {/* Player Name */}
                 <div className="w-full z-10">
-                    <h2 className="text-lg text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
+                    <h2 className="text-md text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
                         {player.name.toUpperCase()}
                     </h2>
                 </div>
