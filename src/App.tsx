@@ -28,7 +28,6 @@ function App() {
     const scrollToNewsSeparator = () => {
         if (newsSeparatorRef.current) {
             newsSeparatorRef.current.scrollIntoView({ behavior: "smooth" });
-            window.scrollBy({ top:650 , behavior: "smooth" }); // Adjust the value (40) for the desired margin top
         }
     };
 
