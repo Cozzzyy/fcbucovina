@@ -38,7 +38,7 @@ export function ScrollingPlayersRow() {
     }, [isDesktop]);
 
     return (
-        <div className="w-full overflow-hidden py-10 mb-35">
+        <div className="w-full overflow-hidden py-10 mb-15">
             <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold mb-10 italic uppercase">
                 STAFF & JUCĂTORI
             </h2>
