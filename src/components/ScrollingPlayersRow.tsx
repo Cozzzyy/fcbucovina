@@ -7,25 +7,29 @@ export function ScrollingPlayersRow() {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const scrollContainer = scrollRef.current;
-        if (!scrollContainer) return;
-
-        const scrollSpeed = 0.5; // pixels per frame
         let frameId: number;
 
         const autoScroll = () => {
+            const scrollContainer = scrollRef.current;
             if (!scrollContainer) return;
 
+            const scrollSpeed = 0.5;
             scrollContainer.scrollLeft += scrollSpeed;
+
             if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-                scrollContainer.scrollLeft = 0; // Reset to the start
+                scrollContainer.scrollLeft = 0;
             }
+
             frameId = requestAnimationFrame(autoScroll);
         };
 
         frameId = requestAnimationFrame(autoScroll);
-        return () => cancelAnimationFrame(frameId);
+
+        return () => {
+            cancelAnimationFrame(frameId);
+        };
     }, []);
+
 
     return (
         <div className="w-full overflow-hidden py-10 mb-35">
