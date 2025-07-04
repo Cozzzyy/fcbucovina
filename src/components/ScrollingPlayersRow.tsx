@@ -4,55 +4,37 @@ import { PlayerCard } from "./Club/PlayerCard.tsx";
 
 export function ScrollingPlayersRow() {
     const scrollRef = useRef<HTMLDivElement>(null);
-    // Use a ref to control the animation loop without causing re-renders
     const animationFrameId = useRef<number | null>(null);
-    const isPaused = useRef(false);
 
     useEffect(() => {
         const scrollContainer = scrollRef.current;
         if (!scrollContainer) return;
 
         const autoScroll = () => {
-            if (!isPaused.current && scrollContainer) {
-                const scrollSpeed = 2;
+            if (scrollContainer) {
+                const scrollSpeed = 0.5;
                 scrollContainer.scrollLeft += scrollSpeed;
 
                 // When the scroll position exceeds the width of the first set of items,
-                // silently reset to the beginning.
+                // silently reset to the beginning for a seamless loop.
                 if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
                     scrollContainer.scrollLeft = 0;
                 }
             }
-            // Continue the loop
+            // Continue the animation loop
             animationFrameId.current = requestAnimationFrame(autoScroll);
         };
-
-        // --- Event handlers to pause/resume scrolling ---
-        const pauseScroll = () => (isPaused.current = true);
-        const resumeScroll = () => (isPaused.current = false);
-
-        scrollContainer.addEventListener("mouseenter", pauseScroll);
-        scrollContainer.addEventListener("mouseleave", resumeScroll);
-        scrollContainer.addEventListener("touchstart", pauseScroll, {
-            passive: true,
-        });
-        scrollContainer.addEventListener("touchend", resumeScroll);
 
         // Start the animation
         animationFrameId.current = requestAnimationFrame(autoScroll);
 
-        // Cleanup function
+        // Cleanup function to cancel the animation when the component unmounts
         return () => {
             if (animationFrameId.current) {
                 cancelAnimationFrame(animationFrameId.current);
             }
-            // Remove event listeners on cleanup
-            scrollContainer.removeEventListener("mouseenter", pauseScroll);
-            scrollContainer.removeEventListener("mouseleave", resumeScroll);
-            scrollContainer.removeEventListener("touchstart", pauseScroll);
-            scrollContainer.removeEventListener("touchend", resumeScroll);
         };
-    }, []); // Empty dependency array ensures this runs only once on mount
+    }, []); // Empty dependency array ensures this runs only once
 
     return (
         <div className="w-full overflow-hidden py-10 mb-35">
@@ -61,7 +43,8 @@ export function ScrollingPlayersRow() {
             </h2>
             <div
                 ref={scrollRef}
-                className="flex gap-20 overflow-x-auto whitespace-nowrap px-4 scroll-smooth touch-auto scrollbar-hide"
+                // Key change: `overflow-x-hidden` prevents all manual scrolling.
+                className="flex gap-20 overflow-x-hidden whitespace-nowrap px-4"
             >
                 {/* Duplicate the players array for a seamless loop */}
                 {[...players, ...players].map((player, index) => (
