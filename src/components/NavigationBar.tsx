@@ -16,8 +16,9 @@ export function NavigationBar() {
                             className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-green-800 focus:outline-none focus:ring-0"
                             aria-controls="mobile-menu"
                             aria-expanded={menuOpen}
+                            aria-label={menuOpen ? "Închide meniul" : "Deschide meniul"}
                         >
-                            <span className="sr-only">Open main menu</span>
+                            <span className="sr-only">{menuOpen ? "Închide meniul principal" : "Deschide meniul principal"}</span>
                             {menuOpen ? (
                                 // X icon
                                 <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">

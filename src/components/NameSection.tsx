@@ -16,6 +16,7 @@ export function NameSection({ scrollToNewsSeparator }: { scrollToNewsSeparator: 
                 <button
                     className="px-3 py-2 text-sm border-2 font-bold border-green-700 text-white rounded-2xl hover:bg-green-700 transition-colors"
                     onClick={scrollToNewsSeparator}
+                    aria-label="Vezi mai multe despre FC Bucovina"
                 >
                     VEZI MAI MULTE
                 </button>

@@ -30,6 +30,7 @@ export function NewsCards() {
                     <button
                         className="mt-4 px-2 py-1.5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
                         onClick={handleNavigate}
+                        aria-label={`Citește mai mult despre ${news.title}`}
                     >
                         Citește tot
                     </button>
