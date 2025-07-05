@@ -27,10 +27,14 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
                 <div className="relative w-full h-[420px] lg:h-[370px] rounded-t-lg">
                     <img
                         className="w-full h-full object-cover object-top rounded-t-lg"
-                        src={`/jucatori/${player.name.replace(/\s+/g, "-")}.png`}
+                        src={`/jucatori/${player.name.replace(/\s+/g, "-")}.webp`}
                         alt={`Image of ${player.name}`}
                         onError={(e) => {
-                            (e.target as HTMLImageElement).src = '/jucatori/placeholder.jpg';
+                            try {
+                                (e.target as HTMLImageElement).src = '/jucatori/placeholder.webp';
+                            } catch (error) {
+                                console.warn("Failed to load player image or fallback image:", error);
+                            }
                         }}
                     />
                     <div className="absolute -bottom-2 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-white"></div>
