@@ -47,6 +47,7 @@ export function ImageSlideshow() {
                         <button
                             key={i}
                             onClick={() => setCurrentIndex(i)}
+                            aria-label={`Du-te la ${i + 1}`}
                             className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                                 i === currentIndex ? "bg-white" : "bg-gray-400"
                             }`}
