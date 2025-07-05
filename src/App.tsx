@@ -6,16 +6,18 @@ import { NewsSeparator } from "./components/NewsSeparator.tsx";
 import { LatestGames } from "./components/LatestGames.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { Sponsors } from "./components/Sponsors.tsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes, useLocation} from "react-router-dom";
 import { NewsPage } from "./components/NewsPage.tsx";
 import { motion } from "framer-motion";
 import {ImageSlideshow} from "./components/ImageSlideshow.tsx";
 import {Club} from "./components/Club/Club.tsx"
-import { useRef } from "react";
+import {useEffect, useRef} from "react";
 import {ScrollingPlayersRow} from "./components/ScrollingPlayersRow.tsx";
 
 
 function App() {
+    const { pathname } = useLocation();
+
     const pageTransition = {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
@@ -32,6 +34,11 @@ function App() {
             window.scrollTo({ top: topPosition, behavior: "smooth" });
         }
     };
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <Router>
