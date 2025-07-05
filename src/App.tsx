@@ -27,7 +27,9 @@ function App() {
 
     const scrollToNewsSeparator = () => {
         if (newsSeparatorRef.current) {
-            newsSeparatorRef.current.scrollIntoView({ behavior: "smooth" });
+            const offset = -100; // Adjust this value based on your navbar height
+            const topPosition = newsSeparatorRef.current.getBoundingClientRect().top + window.scrollY + offset;
+            window.scrollTo({ top: topPosition, behavior: "smooth" });
         }
     };
 

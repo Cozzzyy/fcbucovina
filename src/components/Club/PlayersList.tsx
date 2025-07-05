@@ -8,8 +8,8 @@ function capitalizeFirstLetter(text: string): string {
 
 export function PlayersList() {
     return (
-        <div className="w-full mt-20">
-            <div className="w-full h-20 flex justify-center items-center mb-20">
+        <div className="w-full mt-40">
+            <div className="w-full h-20 flex justify-center items-center mb-16">
                 <h1 className="text-5xl lg:text-6xl text-green-700 font-bold mb-10 italic uppercase text-center tracking-wider">
                     ANTRENORI SI STAFF
                 </h1>

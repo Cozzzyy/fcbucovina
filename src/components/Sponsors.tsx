@@ -1,15 +1,15 @@
 export function Sponsors() {
     const sponsors = [
-        {src: "/sponsors/Pravalia-lui-David.png", alt: "Pravalia lui David"},
-        {src: "/sponsors/Pravalia-mariei.png", alt: "Pravalia Mariei"},
-        {src: "/sponsors/Anditrans.png", alt: "Anditrans"},
-        {src: "/sponsors/Rino-Dental-Center.jpg", alt: "Rino Dental Center"},
-        {src: "/sponsors/NED.png", alt: "NED"},
-        {src: "/sponsors/NICO-GARAGE.png", alt: "NICO GARAGE"},
-        {src: "/sponsors/Gustul-Romanesc.png", alt: "Gustul Romanesc"},
-        {src: "/sponsors/Afine.png", alt: "Afine"},
-        {src: "/sponsors/AcasaInBucovina.png", alt: "Acasa in Bucovina"},
-        {src: "/sponsors/fun-tour.png", alt: "Fun Tour"},
+        {src: "/sponsors/Pravalia-lui-David.webp", alt: "Pravalia lui David"},
+        {src: "/sponsors/Pravalia-mariei.webp", alt: "Pravalia Mariei"},
+        {src: "/sponsors/Anditrans.webp", alt: "Anditrans"},
+        {src: "/sponsors/Rino-Dental-Center.webp", alt: "Rino Dental Center"},
+        {src: "/sponsors/NED.webp", alt: "NED"},
+        {src: "/sponsors/NICO-GARAGE.webp", alt: "NICO GARAGE"},
+        {src: "/sponsors/Gustul-Romanesc.webp", alt: "Gustul Romanesc"},
+        {src: "/sponsors/Afine.webp", alt: "Afine"},
+        {src: "/sponsors/AcasaInBucovina.webp", alt: "Acasa in Bucovina"},
+        {src: "/sponsors/fun-tour.webp", alt: "Fun Tour"},
     ];
 
     return (

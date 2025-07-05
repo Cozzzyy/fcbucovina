@@ -5,7 +5,7 @@ export function NavigationBar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-green-700">
+        <nav className="bg-green-700 fixed top-0 w-full z-50">
             <div className="mx-auto max-w-7xl px-2 sm:px-6">
                 <div className="relative flex h-20 items-center justify-between">
                     {/* Mobile menu button */}
