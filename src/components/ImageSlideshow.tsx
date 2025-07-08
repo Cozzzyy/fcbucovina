@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function ImageSlideshow() {
     const images = [
-        "https://storage.googleapis.com/bucovina-images/Game-images/wilders-3.jpg",
-        "https://storage.googleapis.com/bucovina-images/Game-images/wilders-2.jpg",
-        "https://storage.googleapis.com/bucovina-images/Game-images/wilders-1.jpg"];
+        "https://storage.googleapis.com/bucovina-images/Game-images/Game-images_wilders-1.webp",
+        "https://storage.googleapis.com/bucovina-images/Game-images/Game-images_wilders-2.webp",
+        "https://storage.googleapis.com/bucovina-images/Game-images/Game-images_wilders-3.webp"];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {

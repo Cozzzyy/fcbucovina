@@ -14,7 +14,7 @@ export function Background() {
             <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
             <img
                 className="w-full h-full object-cover"
-                src="https://storage.googleapis.com/bucovina-images/team-photo.jpg"
+                src="https://storage.googleapis.com/bucovina-images/team-photo%20(1).webp"
                 alt="Background"
                 aria-hidden="true"
                 loading="eager"
