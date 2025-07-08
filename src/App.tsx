@@ -2,7 +2,6 @@ import './App.css';
 import { Background } from "./components/Background.tsx";
 import { NavigationBar } from "./components/NavigationBar.tsx";
 import { NameSection } from "./components/NameSection.tsx";
-import { NewsSeparator } from "./components/NewsSeparator.tsx";
 import { LatestGames } from "./components/LatestGames.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { Sponsors } from "./components/Sponsors.tsx";
@@ -14,6 +13,7 @@ import {Club} from "./components/Club/Club.tsx"
 import {useRef} from "react";
 import {ScrollingPlayersRow} from "./components/ScrollingPlayersRow.tsx";
 import {ScrollToTop} from "./components/ScrollToTop.tsx";
+import {NewsCards} from "./components/NewsSection/NewsCards.tsx";
 
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
                         <motion.div {...pageTransition}>
                             <NameSection scrollToNewsSeparator={scrollToNewsSeparator} />
                             <div ref={newsSeparatorRef}>
-                                <NewsSeparator />
+                                <NewsCards />
                             </div>
                             <ImageSlideshow />
                             <ScrollingPlayersRow />
