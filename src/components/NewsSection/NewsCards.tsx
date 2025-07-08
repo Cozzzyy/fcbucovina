@@ -1,7 +1,6 @@
 import { NewsCard } from "./NewsCard.tsx";
 import type { News } from "../../types/News.ts";
 import newsData from '../../../data/data.json';
-import "./newsCards.css";
 
 export function NewsCards() {
     const latestNews: News[] = [...newsData]
@@ -9,7 +8,7 @@ export function NewsCards() {
 
     return (
         <>
-            <h1 className="lg:mt-15 mt-15 w-full text-center text-5xl font-bold mb-8 text-transparent text-outline">
+            <h1 className="lg:mt-15 mt-15 w-full text-center text-5xl font-bold mb-8 text-green-700">
                 Ultimele știri
             </h1>
 
