@@ -30,7 +30,7 @@ export function NewsCard({ id, title, date, first }: NewsCardProps) {
                 first ? "lg:w-auto" : "lg:w-[330px]"
             }`}
             style={{
-                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('/stiri-bg.jpg')`,
+                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('/stiri-bg.webp')`,
             }}
         >
             <div className="flex flex-col p-1 justify-end items-baseline h-full">
