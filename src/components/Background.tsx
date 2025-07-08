@@ -4,7 +4,7 @@ export function Background() {
     const location = useLocation();
 
     // Do not render the background on the /club route
-    if (location.pathname === "/club") {
+    if (location.pathname === "/club" || location.pathname === "/clasament" || location.pathname === "/meciuri") {
         return null;
     }
 

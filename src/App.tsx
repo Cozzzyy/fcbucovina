@@ -14,6 +14,8 @@ import {useRef} from "react";
 import {ScrollingPlayersRow} from "./components/ScrollingPlayersRow.tsx";
 import {ScrollToTop} from "./components/ScrollToTop.tsx";
 import {NewsCards} from "./components/NewsSection/NewsCards.tsx";
+import {StandingsPage} from "./components/StandingsPage/StandingsPage.tsx";
+import {GamesPage} from "./components/GamesPage/GamesPage.tsx";
 
 
 function App() {
@@ -71,6 +73,23 @@ function App() {
                         </motion.div>
                     }
                 />
+                <Route
+                    path="/clasament"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <StandingsPage/>
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/meciuri"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <GamesPage />
+                        </motion.div>
+                    }
+                />
+
             </Routes>
             <Footer />
             <Background />
