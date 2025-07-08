@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function ImageSlideshow() {
-    const images = ["/wilders-3.jpg", "/wilders-2.jpg", "/wilders-1.jpg"];
+    const images = [
+        "https://storage.googleapis.com/bucovina-images/Game-images/wilders-3.jpg",
+        "https://storage.googleapis.com/bucovina-images/Game-images/wilders-2.jpg",
+        "https://storage.googleapis.com/bucovina-images/Game-images/wilders-1.jpg"];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
