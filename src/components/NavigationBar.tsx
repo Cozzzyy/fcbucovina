@@ -73,7 +73,7 @@ export function NavigationBar() {
                                 key={item.name}
                                 to={item.path}
                                 onClick={() => setMenuOpen(false)} // Close menu on click
-                                className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-green-800"
+                                className="block rounded-md px-3 py-2 text-base font-bold text-white hover:bg-green-800"
                             >
                                 {item.name}
                             </Link>

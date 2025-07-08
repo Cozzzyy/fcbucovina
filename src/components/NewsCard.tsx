@@ -20,15 +20,15 @@ export function NewsCards() {
             {latestNews.map((news: News) => (
                 <div
                     key={news.id}
-                    className="bg-white shadow-xl p-4 hover:shadow-xl transition-shadow opacity-85 rounded-lg"
+                    className="relative bg-white shadow-xl p-4 pb-12 hover:shadow-xl transition-shadow opacity-85 rounded-lg"
                 >
                     <h2 className="text-xl font-bold">{news.title}</h2>
                     <p className="text-sm text-gray-500 mt-1">{news.date}</p>
-                    <p className="text-gray-700 mt-4">
+                    <p className="text-gray-700 mt-4 mb-2">
                         {news.text.length > 150 ? news.text.slice(0, 150) + "..." : news.text}
                     </p>
                     <button
-                        className="mt-4 px-2 py-1.5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+                        className="absolute bottom-4 left-4 px-2 py-1.5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
                         onClick={handleNavigate}
                         aria-label={`Citește mai mult despre ${news.title}`}
                     >

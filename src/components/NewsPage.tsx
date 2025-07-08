@@ -6,7 +6,7 @@ export function NewsPage() {
     const reversedNewsData: News[] = [...newsData].reverse();
 
     return (
-        <div className="w-full lg:w-1/2 mx-auto mt-10 p-6 px-4">
+        <div className="w-full lg:w-1/2 mx-auto mt-25 p-4 px-4">
             <div className="space-y-12">
                 {reversedNewsData.map((news: News) => (
                     <div
