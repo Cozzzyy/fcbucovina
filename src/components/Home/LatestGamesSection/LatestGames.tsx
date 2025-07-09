@@ -3,16 +3,6 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
-        homeTeam: "FC PORTO BRUXELLES",
-        homeTeamLogo: "/teams/porto-bruxelles.png",
-        awayTeam: "FC BUCOVINA LOENHOUT",
-        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        matchType: "Amical",
-        score: "2-0",
-        date: "25/06/2025 19:00",
-        location: "Avenue Jean Joseph Crocq 54 Jette",
-    },
-    {
         homeTeam: "FC BUCOVINA LOENHOUT",
         homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
         awayTeam: "K.S.V Wildert",

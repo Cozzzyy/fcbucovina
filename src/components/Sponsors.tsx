@@ -4,12 +4,8 @@ export function Sponsors() {
         {src: "/sponsors/Pravalia-mariei.webp", alt: "Pravalia Mariei"},
         {src: "/sponsors/Anditrans.webp", alt: "Anditrans"},
         {src: "/sponsors/Rino-Dental-Center.webp", alt: "Rino Dental Center"},
-        {src: "/sponsors/NED.webp", alt: "NED"},
-        {src: "/sponsors/NICO-GARAGE.webp", alt: "NICO GARAGE"},
         {src: "/sponsors/Frtieje-meer.webp", alt: "Frietje Meer"},
-        {src: "/sponsors/Gustul-Romanesc.webp", alt: "Gustul Romanesc"},
         {src: "/sponsors/Afine.webp", alt: "Afine"},
-        {src: "/sponsors/AcasaInBucovina.webp", alt: "Acasa in Bucovina"},
         {src: "/sponsors/fun-tour.webp", alt: "Fun Tour"},
     ];
 
