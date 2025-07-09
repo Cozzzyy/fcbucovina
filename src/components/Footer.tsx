@@ -3,7 +3,7 @@ export function Footer() {
         <footer className="bg-green-700 text-gray-200 mt-10">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="flex w-full flex-col lg:flex-col justify-center items-center">
-                    <img className="w-30 h-auto" src="/teams/logo.png" alt="Logo" />
+                    <img className="w-30 h-auto" src="/teams/FC%20Bucovina%20Loenhout.png" alt="Logo" />
                     <h2 className="text-lg font-medium text-center">
                         Football Club Bucovina Vzw
                     </h2>

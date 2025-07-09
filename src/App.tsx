@@ -1,59 +1,36 @@
 import './App.css';
-import { Background } from "./components/Background.tsx";
-import { NavigationBar } from "./components/NavigationBar.tsx";
-import { NameSection } from "./components/NameSection.tsx";
-import { LatestGames } from "./components/LatestGames.tsx";
-import { Footer } from "./components/Footer.tsx";
-import { Sponsors } from "./components/Sponsors.tsx";
+import {Background} from "./components/Background.tsx";
+import {NavigationBar} from "./components/NavigationBar.tsx";
+import {Footer} from "./components/Footer.tsx";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import { NewsPage } from "./components/NewsPage.tsx";
-import { motion } from "framer-motion";
-import {ImageSlideshow} from "./components/ImageSlideshow.tsx";
-import {Club} from "./components/Club/Club.tsx"
-import {useRef} from "react";
-import {ScrollingPlayersRow} from "./components/ScrollingPlayersRow.tsx";
+import {NewsPage} from "./pages/NewsPage.tsx";
+import {motion} from "framer-motion";
 import {ScrollToTop} from "./components/ScrollToTop.tsx";
-import {NewsCards} from "./components/NewsSection/NewsCards.tsx";
-import {StandingsPage} from "./components/StandingsPage/StandingsPage.tsx";
-import {GamesPage} from "./components/GamesPage/GamesPage.tsx";
+import {StandingsPage} from "./components/Standings/StandingsPage.tsx";
+import {GamesPage} from "./pages/GamesPage.tsx";
+import {HomePage} from "./pages/HomePage.tsx";
+import {ClubPage} from "./pages/ClubPage.tsx";
 
 
 function App() {
 
     const pageTransition = {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -10 },
-        transition: { duration: 1.5 },
-    };
-
-    const newsSeparatorRef = useRef<HTMLDivElement>(null);
-
-    const scrollToNewsSeparator = () => {
-        if (newsSeparatorRef.current) {
-            const offset = -100; // Adjust this value based on your navbar height
-            const topPosition = newsSeparatorRef.current.getBoundingClientRect().top + window.scrollY + offset;
-            window.scrollTo({ top: topPosition, behavior: "smooth" });
-        }
+        initial: {opacity: 0, y: 20},
+        animate: {opacity: 1, y: 0},
+        exit: {opacity: 0, y: -10},
+        transition: {duration: 1.5},
     };
 
     return (
         <Router>
-            <ScrollToTop />
-            <NavigationBar />
+            <ScrollToTop/>
+            <NavigationBar/>
             <Routes>
                 <Route
                     path="/"
                     element={
                         <motion.div {...pageTransition}>
-                            <NameSection scrollToNewsSeparator={scrollToNewsSeparator} />
-                            <div ref={newsSeparatorRef}>
-                                <NewsCards />
-                            </div>
-                            <ImageSlideshow />
-                            <ScrollingPlayersRow />
-                            <LatestGames />
-                            <Sponsors />
+                            <HomePage/>
                         </motion.div>
                     }
                 />
@@ -61,7 +38,7 @@ function App() {
                     path="/stiri"
                     element={
                         <motion.div {...pageTransition}>
-                            <NewsPage />
+                            <NewsPage/>
                         </motion.div>
                     }
                 />
@@ -69,7 +46,7 @@ function App() {
                     path="/club"
                     element={
                         <motion.div {...pageTransition}>
-                            <Club />
+                            <ClubPage/>
                         </motion.div>
                     }
                 />
@@ -85,14 +62,14 @@ function App() {
                     path="/meciuri"
                     element={
                         <motion.div {...pageTransition}>
-                            <GamesPage />
+                            <GamesPage/>
                         </motion.div>
                     }
                 />
 
             </Routes>
-            <Footer />
-            <Background />
+            <Footer/>
+            <Background/>
         </Router>
     );
 }

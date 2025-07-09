@@ -1,6 +1,6 @@
 import { NewsCard } from "./NewsCard.tsx";
-import type { News } from "../../types/News.ts";
-import newsData from '../../../data/data.json';
+import type { News } from "../../../types/News.ts";
+import newsData from '../../../../data/data.json';
 
 export function NewsCards() {
     const latestNews: News[] = [...newsData]

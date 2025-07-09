@@ -1,4 +1,4 @@
-import type { Game } from "../types/Game.ts";
+import type { Game } from "../../../types/Game.ts";
 
 export function GameCard({ game }: { game: Game }) {
     return (

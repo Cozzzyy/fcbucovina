@@ -7,4 +7,5 @@ export type Game = {
     score: string;
     date: string;
     location: string;
+    time?: string;
 };

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import players from "../../data/players.json";
-import staff from "../../data/staff.json";
-import { PlayerCard } from "./Club/PlayerCard";
+import players from "../../../../data/players.json";
+import staff from "../../../../data/staff.json";
+import { PlayerCard } from "../../Club/PlayerCard.tsx";
 
 export function ScrollingPlayersRow() {
     const scrollRef = useRef<HTMLDivElement>(null);

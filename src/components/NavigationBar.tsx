@@ -44,7 +44,7 @@ export function NavigationBar() {
 
                     {/* Logo */}
                     <div className="flex-1 flex justify-center sm:justify-start">
-                        <img className="h-25 lg:h-45 lg:mt-8 w-auto" src="/teams/logo.png" alt="Logo" />
+                        <img className="h-25 lg:h-45 lg:mt-8 w-auto" src="/teams/FC%20Bucovina%20Loenhout.png" alt="Logo" />
                     </div>
 
                     {/* Desktop links */}

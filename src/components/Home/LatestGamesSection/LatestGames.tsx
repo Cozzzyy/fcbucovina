@@ -1,5 +1,5 @@
 import { GameCard } from "./GameCard.tsx";
-import type { Game } from "../types/Game.ts";
+import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
