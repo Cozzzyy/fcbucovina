@@ -18,7 +18,7 @@ export function MonthFilter() {
 
     return (
         <div className={
-            "sticky top-25 z-50 w-11/12 md:w-2/6 backdrop-blur-lg bg-white/90 " +
+            "sticky top-25 z-10 w-11/12 md:w-2/6 backdrop-blur-lg bg-white/90 " +
             "rounded-3xl mb-8 mt-8 overflow-hidden shadow-xl border border-gray-100"
         }>
             <div className={
