@@ -68,7 +68,7 @@ export function ScrollingPlayersRow() {
                                     : "snap-center min-w-[90%] max-w-[95%] mx-auto"
                             }`}
                         >
-                            <PlayerCard player={member} hideDetails />
+                            <PlayerCard player={member} hideDetails scrolling={true} />
                         </div>
                     ))}
                 </div>

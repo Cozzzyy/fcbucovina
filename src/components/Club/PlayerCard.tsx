@@ -2,10 +2,11 @@ import type { Player } from "../../types/Player.ts";
 
 interface PlayerCardProps {
     player: Player;
-    hideDetails?: boolean; // Optional prop to hide details
+    hideDetails?: boolean;
+    scrolling?: boolean;
 }
 
-export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
+export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) {
     return (
         <article className="flex flex-col w-full justify-center items-center min-h-[400px]">
             <section className="relative flex flex-col justify-center items-center bg-transparent pt-6 w-[90%] md:w-[300px] lg:w-[300px] overflow-hidden">
@@ -24,7 +25,11 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
                 </header>
 
                 {/* Player Image */}
-                <figure className="relative w-full h-[250px] lg:h-[370px] rounded-t-lg">
+                <figure
+                    className={`relative w-full ${
+                        scrolling ? "h-[350px]" : "h-[250px]"
+                    } lg:h-[370px] rounded-t-lg`}
+                >
                     <img
                         className="w-full h-full object-cover object-top rounded-t-lg"
                         src={`/jucatori/${player.name.replace(/\s+/g, "-")}.webp`}
