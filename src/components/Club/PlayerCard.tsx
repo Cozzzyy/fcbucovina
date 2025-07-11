@@ -8,12 +8,12 @@ interface PlayerCardProps {
 export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
     return (
         <article className="flex flex-col w-full justify-center items-center min-h-[400px]">
-            <section className="relative flex flex-col justify-center items-center bg-transparent pt-10 w-[320px] md:w-[300px] lg:w-[300px] overflow-hidden">
+            <section className="relative flex flex-col justify-center items-center bg-transparent pt-6 w-[90%] md:w-[300px] lg:w-[300px] overflow-hidden">
 
                 {/* Player Number */}
-                <header className="absolute top-2 left-2 w-14 h-14 flex justify-center items-center z-20">
+                <header className="absolute top-2 left-2 w-12 h-12 sm:w-14 sm:h-14 flex justify-center items-center z-20">
                     <span
-                        className="text-5xl italic font-bold"
+                        className="text-4xl sm:text-5xl italic font-bold"
                         style={{
                             color: "#edd11a",
                             WebkitTextStroke: "1px green",
@@ -24,7 +24,7 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
                 </header>
 
                 {/* Player Image */}
-                <figure className="relative w-full h-[420px] lg:h-[370px] rounded-t-lg">
+                <figure className="relative w-full h-[250px] lg:h-[370px] rounded-t-lg">
                     <img
                         className="w-full h-full object-cover object-top rounded-t-lg"
                         src={`/jucatori/${player.name.replace(/\s+/g, "-")}.webp`}
@@ -42,21 +42,21 @@ export function PlayerCard({ player, hideDetails }: PlayerCardProps) {
 
                 {/* Player Name */}
                 <header className="w-full z-10">
-                    <h2 className="text-md text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
+                    <h2 className="text-xs text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
                         {player.name.toUpperCase()}
                     </h2>
                 </header>
 
                 {/* Player Position */}
-                <p className="text-md text-white w-full text-center mb-1 bg-green-700 py-1">
+                <p className="text-sm sm:text-md text-white w-full text-center mb-1 bg-green-700 py-1">
                     {player.position.toUpperCase()}
                 </p>
 
                 {/* Optional Details */}
                 {!hideDetails && (
-                    <section className="flex flex-col justify-center items-center p-4">
-                        <p className="text-sm text-gray-500 mb-2">{player.dateOfBirth}</p>
-                        <p className="text-sm text-gray-900 text-center mb-2 w-full h-[100px] overflow-hidden">
+                    <section className="flex flex-col justify-center items-center p-2 sm:p-4">
+                        <p className="text-xs sm:text-sm text-gray-500 mb-2">{player.dateOfBirth}</p>
+                        <p className="text-xs sm:text-sm text-gray-900 text-center mb-2 w-full h-[80px] sm:h-[100px] overflow-hidden">
                             {player.description}
                         </p>
                     </section>

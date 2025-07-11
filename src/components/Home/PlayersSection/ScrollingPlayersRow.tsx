@@ -55,7 +55,7 @@ export function ScrollingPlayersRow() {
             >
                 <div
                     className={`flex gap-15 ${
-                        isDesktop ? "animate-scroll whitespace-nowrap items-center gap-5" : "justify-start"
+                        isDesktop ? "animate-scroll whitespace-nowrap items-center" : "justify-start"
                     }`}
                 >
                     {(isDesktop ? [...members, ...members] : members).map((member, index) => (
@@ -63,7 +63,9 @@ export function ScrollingPlayersRow() {
                             key={index}
                             ref={index === 0 ? firstCardRef : null}
                             className={`${
-                                isDesktop ? "min-w-[350px] flex-shrink-0" : "snap-center w-full max-w-sm mx-auto"
+                                isDesktop
+                                    ? "min-w-[450px] flex-shrink-0"
+                                    : "snap-center min-w-[90%] max-w-[95%] mx-auto"
                             }`}
                         >
                             <PlayerCard player={member} hideDetails />
