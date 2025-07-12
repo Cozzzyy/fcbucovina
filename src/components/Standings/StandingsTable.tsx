@@ -21,57 +21,60 @@ export function StandingsTable() {
             <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-2">CLASAMENT</h2>
             <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">2025-2026</h2>
             <h2 className="text-sm text-gray-300 mb-4">Competitie - 4 Provinciaal Antw B</h2>
-    <div className="overflow-x-auto">
-        <table className="min-w-full bg-white rounded-xl shadow-md">
-            <thead className="bg-gray-100 text-gray-700 text-xs sm:text-sm uppercase">
-            <tr>
-                <th className="px-2 sm:px-4 py-2 text-center">Loc</th>
-                <th className="px-2 sm:px-4 py-2 text-left">Echipă</th>
-                <th className="px-2 sm:px-4 py-2 text-center">Puncte</th>
-                <th className="px-2 sm:px-4 py-2 text-center">Meciuri</th>
-                <th className="px-2 sm:px-4 py-2 text-center">Victorii</th>
-                <th className="px-2 sm:px-4 py-2 text-center">Egaluri</th>
-                <th className="px-2 sm:px-4 py-2 text-center">Înfrângeri</th>
-            </tr>
-            </thead>
-            <tbody className="text-gray-800">
-            {standings.map((team, index) => {
-                const isBucovina = team.team.toUpperCase() === "FC BUCOVINA LOENHOUT";
-                return (
-                    <tr
-                        key={team.pos}
-                        className={`${
-                            isBucovina
-                                ? "bg-green-100 font-bold"
-                                : index % 2 === 0
-                                    ? "bg-white"
-                                    : "bg-gray-100"
-                        } hover:bg-green-200 transition font-medium`}
-                    >
-                        <td className="px-2 py-3 text-center">{team.pos}</td>
-                        <td className="px-2 pr-10 py-3 text-left flex items-center gap-3 whitespace-nowrap">
-                            <div className="flex items-center gap-3 pointer-events-none">
-                                <img
-                                    src={`/teams/${team.team}.png`}
-                                    alt={team.team}
-                                    className="w-7 h-7 inline-block"
-                                    loading="lazy" // Lazy load the image
-                                />
-                                <span>{team.team}</span>
-                            </div>
-                        </td>
-                        <td className="px-2 sm:px-4 py-3 text-center">{team.pts}</td>
-                        <td className="px-2 sm:px-4 py-3 text-center">{team.matches}</td>
-                        <td className="px-2 sm:px-4 py-3 text-center">{team.wins}</td>
-                        <td className="px-2 sm:px-4 py-3 text-center">{team.draws}</td>
-                        <td className="px-2 sm:px-4 py-3 text-center">{team.losses}</td>
+            <div className="overflow-x-auto">
+                <table className="min-w-full bg-white rounded-xl shadow-md">
+                    <thead className="bg-gray-100 text-gray-700 text-xs sm:text-sm uppercase">
+                    <tr>
+                        <th className="px-2 sm:px-4 py-2 text-center">Loc</th>
+                        <th className="px-2 sm:px-4 py-2 text-left">Echipă</th>
+                        <th className="px-2 sm:px-4 py-2 text-center">Puncte</th>
+                        <th className="px-2 sm:px-4 py-2 text-center">Meciuri</th>
+                        <th className="px-2 sm:px-4 py-2 text-center">Victorii</th>
+                        <th className="px-2 sm:px-4 py-2 text-center">Egaluri</th>
+                        <th className="px-2 sm:px-4 py-2 text-center">Înfrângeri</th>
                     </tr>
-                );
-            })}
-            </tbody>
-        </table>
-    </div>
-</div>
-)
-    ;
+                    </thead>
+                    <tbody className="text-gray-800">
+                    {standings.map((team, index) => {
+                        const isBucovina = team.team.toUpperCase() === "FC BUCOVINA LOENHOUT";
+                        return (
+                            <tr
+                                key={team.pos}
+                                className={`${
+                                    isBucovina
+                                        ? "bg-green-100 font-bold"
+                                        : index % 2 === 0
+                                            ? "bg-white"
+                                            : "bg-gray-100"
+                                } hover:bg-green-200 transition font-medium`}
+                            >
+                                <td className="px-2 py-3 text-center">{team.pos}</td>
+                                <td className="px-2 pr-10 py-3 text-left flex items-center gap-3 whitespace-nowrap">
+                                    <div className="flex items-center gap-3 select-none pointer-events-none"
+                                         contentEditable={false}
+                                         suppressContentEditableWarning={true}>
+                                        <img
+                                            src={`/teams/${team.team}.png`}
+                                            alt={team.team}
+                                            className="w-7 h-7 flex-shrink-0"
+                                            loading="lazy" // Lazy load the image
+                                        />
+                                        <span className={"select-none pointer-events-none"} contentEditable={false}
+                                              suppressContentEditableWarning={true}>{team.team}</span>
+                                    </div>
+                                </td>
+                                <td className="px-2  py-3 text-center">{team.pts}</td>
+                                <td className="px-2  py-3 text-center">{team.matches}</td>
+                                <td className="px-2 py-3 text-center">{team.wins}</td>
+                                <td className="px-2  py-3 text-center">{team.draws}</td>
+                                <td className="px-2  py-3 text-center">{team.losses}</td>
+                            </tr>
+                        );
+                    })}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    )
+        ;
 }
