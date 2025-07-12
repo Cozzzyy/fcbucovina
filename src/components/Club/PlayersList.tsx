@@ -14,10 +14,10 @@ const cardVariants = {
 
 export function PlayersList() {
     return (
-        <div className="w-full mt-45">
+        <div className="w-full mt-35 lg:mt-45">
             {/* Staff Header */}
-            <div className="w-full h-20 flex flex-col justify-center items-center mb-16">
-                <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-2">STAFF & JUCATORI</h2>
+            <div className="w-full h-20 flex flex-col justify-center items-center text-center mb-13">
+                <h2 className="text-4xl lg:text-7xl text-green-700 font-bold italic mb-2">STAFF & JUCATORI</h2>
                 <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">2025-2026</h2>
             </div>
 
