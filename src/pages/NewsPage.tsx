@@ -6,8 +6,10 @@ export function NewsPage() {
     const hash = window.location.hash; // e.g., "#news-6"
     const id = hash.startsWith("#news-") ? Number(hash.replace("#news-", "")) : null;
 
-    // If no id is present, show all news items; otherwise, filter by id
-    const filteredNewsData: News[] = id ? newsData.filter((news) => news.id === id) : newsData.reverse();
+    // If no id is present, show all news items in reverse order; otherwise, filter by id
+    const filteredNewsData: News[] = id
+        ? newsData.filter((news) => news.id === id)
+        : [...newsData].reverse(); // Create a shallow copy before reversing
 
     return (
         <div className="w-full lg:w-1/2 mx-auto mt-25">

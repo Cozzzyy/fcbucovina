@@ -8,13 +8,14 @@ export function Footer() {
                         Football Club Bucovina Vzw
                     </h2>
                 </div>
+
                 <a href="https://www.facebook.com/profile.php?id=100057387851433" target="_blank" rel="noopener noreferrer">
-                    <img className="w-10 h-auto mt-2" src="/facebook.png" alt="Facebook Logo" />
+                    <img className="w-10 h-auto mt-2 filter invert" src="/facebook.png" alt="Facebook Logo" />
                 </a>
 
                 <div className="flex flex-row justify-center items-center w-full mt-4 gap-10">
-                    <h3 className="opacity-80 text-gray-300">BE79 7340 6867 8433</h3>
-                    <h3 className="opacity-80 text-gray-300">bucovinafc@gmail.com</h3>
+                    <h3 className="opacity-80 text-gray-100">BE79 7340 6867 8433</h3>
+                    <h3 className="opacity-80 text-gray-100">bucovinafc@gmail.com</h3>
                 </div>
 
                 {/*Facebook*/}

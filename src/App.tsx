@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {NewsPage} from "./pages/NewsPage.tsx";
 import {motion} from "framer-motion";
 import {ScrollToTop} from "./components/ScrollToTop.tsx";
-import {StandingsPage} from "./components/Standings/StandingsPage.tsx";
+import {StandingsPage} from "./pages/StandingsPage.tsx";
 import {GamesPage} from "./pages/GamesPage.tsx";
 import {HomePage} from "./pages/HomePage.tsx";
 import {ClubPage} from "./pages/ClubPage.tsx";

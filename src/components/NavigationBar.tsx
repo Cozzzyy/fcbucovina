@@ -16,7 +16,7 @@ export function NavigationBar() {
     return (
         <nav className="bg-green-700 fixed top-0 w-full z-50">
             <div className="mx-auto max-w-7xl px-2 sm:px-6">
-                <div className="relative flex h-20 items-center justify-between">
+                <div className="relative flex h-16 items-center justify-between">
                     {/* Mobile menu button */}
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         <button
@@ -35,7 +35,7 @@ export function NavigationBar() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             ) : (
-                                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                <svg className="block h-10 w-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
                             )}
@@ -44,7 +44,7 @@ export function NavigationBar() {
 
                     {/* Logo */}
                     <div className="flex-1 flex justify-center sm:justify-start">
-                        <img className="h-25 lg:h-45 lg:mt-8 w-auto" src="/teams/FC%20Bucovina%20Loenhout.png" alt="Logo" />
+                        <img className="h-20 lg:h-35 lg:ml-10 lg:mt-8 w-auto" src="/teams/FC%20Bucovina%20Loenhout.png" alt="Logo" />
                     </div>
 
                     {/* Desktop links */}
@@ -53,7 +53,7 @@ export function NavigationBar() {
                             <Link
                                 key={item.name}
                                 to={item.path}
-                                className="rounded-md px-3 py-2 text-lg font-light text-white hover:text-green-300 hover:scale-105 transition-transform"
+                                className="rounded-md px-3 py-2 text-lg font-medium text-white hover:text-green-300 hover:scale-105 transition-transform"
                             >
                                 {item.name}
                             </Link>
@@ -72,7 +72,7 @@ export function NavigationBar() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="sm:hidden overflow-hidden"
+                        className="overflow-hidden"
                     >
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             {mobileLinks.map((item, index) => (
