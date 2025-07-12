@@ -49,14 +49,16 @@ export function StandingsTable() {
                         } hover:bg-green-200 transition font-medium`}
                     >
                         <td className="px-2 py-3 text-center">{team.pos}</td>
-                        <td className="px-2 pr-20 py-3 text-left flex items-center gap-3 whitespace-nowrap">
-                            <img
-                                src={`/teams/${team.team}.png`}
-                                alt={team.team}
-                                className="w-7 h-7 mr-3 inline-block"
-                                loading="lazy" // Lazy load the image
-                            />
-                            {team.team}
+                        <td className="px-2 pr-10 py-3 text-left flex items-center gap-3 whitespace-nowrap">
+                            <div className="flex items-center gap-3 pointer-events-none">
+                                <img
+                                    src={`/teams/${team.team}.png`}
+                                    alt={team.team}
+                                    className="w-7 h-7 inline-block"
+                                    loading="lazy" // Lazy load the image
+                                />
+                                <span>{team.team}</span>
+                            </div>
                         </td>
                         <td className="px-2 sm:px-4 py-3 text-center">{team.pts}</td>
                         <td className="px-2 sm:px-4 py-3 text-center">{team.matches}</td>
