@@ -1,7 +1,7 @@
 export function NameSection({ scrollToNewsSeparator }: { scrollToNewsSeparator: () => void }) {
     return (
         <section
-            className="relative flex flex-col h-screen justify-start items-center px-4 text-center overflow-hidden pb-55 gap-5 pt-15"
+            className="flex flex-col h-screen justify-start items-center px-4 text-center overflow-hidden pb-40"
             style={{ boxSizing: "border-box" }}
         >
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
@@ -12,25 +12,15 @@ export function NameSection({ scrollToNewsSeparator }: { scrollToNewsSeparator: 
                     "O ECHIPĂ UNITĂ PRIN ÎNCREDERE, CRESCUTĂ PRIN RESPECT, CONDUSĂ DE DORINȚA DE A ÎNVINGE.”
                 </h2>
             </header>
-            <footer className="mt-8 flex flex-col items-center gap-4 mb-35">
+            <footer className="mb-auto mt-8">
                 <button
-                    className="px-5 py-3 lg:px-3 lg:py-2 text-md lg:text-sm border-2 font-medium border-green-700 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-3 py-2 text-sm border-2 font-medium border-green-700 text-white rounded-md hover:bg-green-700 transition-colors"
                     onClick={scrollToNewsSeparator}
                     aria-label="Vezi mai multe despre FC Bucovina"
                 >
                     VEZI MAI MULTE
                 </button>
             </footer>
-            <div className="absolute bottom-4 flex flex-col items-center">
-                <p className="text-white text-sm font-bold mb-2">Urmărește-ne pe social media</p>
-                <a href="https://www.facebook.com/profile.php?id=100057387851433" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <img
-                        src="/facebook.png"
-                        alt="Facebook"
-                        className="w-10 h-10"
-                    />
-                </a>
-            </div>
         </section>
     );
 }
