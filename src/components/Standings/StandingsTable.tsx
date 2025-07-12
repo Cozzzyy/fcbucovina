@@ -17,7 +17,7 @@ export function StandingsTable() {
     ];
 
     return (
-        <div className="p-4 max-w-6xl mx-auto mt-15 lg:mt-30">
+        <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-30">
             <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-2">CLASAMENT</h2>
             <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">2025-2026</h2>
             <h2 className="text-sm text-gray-300 mb-4">Competitie - 4 Provinciaal Antw B</h2>
