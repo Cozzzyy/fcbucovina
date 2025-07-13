@@ -8,7 +8,7 @@ export function NewsCards() {
 
     return (
         <>
-            <h1 className="lg:mt-25 mt-5 w-full text-center text-5xl font-bold mb-8 text-green-700">
+            <h1 className="lg:mt-25 mt-4 w-full text-center text-5xl font-bold mb-8 text-green-700">
                 Ultimele știri
             </h1>
 
