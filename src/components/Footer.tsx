@@ -47,7 +47,7 @@ export function Footer() {
                              alt="FC Bucovina Logo"/>
                     </div>
                 </div>
-                <div className="mt-15 mb-4 font-light">
+                <div className="mt-8 mb-4 font-light">
                     <p>&copy; 2025 Cosmin Nechita. All rights reserved.</p>
                 </div>
             </div>
