@@ -47,20 +47,29 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
 
                 {/* Player Name */}
                 <header className="w-full z-10">
-                    <h2 className="text-xs text-black font-bold border-b-yellow-300 w-full text-center p-1">
+                    <h2 className="text-xl text-black font-bold border-b-yellow-300 w-full text-center p-1">
                         {player.name.toUpperCase()}
                     </h2>
                 </header>
 
                 {/* Player Position */}
-                <p className="text-sm sm:text-md text-white w-full text-center mb-1 bg-green-700 py-1">
+                <p
+                    className="text-sm text-white w-6/7 font-bold text-center mb-1 rounded-xl py-2"
+                    style={{
+                        backgroundImage: "linear-gradient(135deg, #28B063 15%, #2F855A 15%)", // green-500 → green-900
+                        backgroundSize: "220% 200%",
+                    }}
+                >
                     {player.position.toUpperCase()}
                 </p>
 
+
+
                 {/* Optional Details */}
                 {!hideDetails && (
-                    <section className="flex flex-col justify-center items-center p-2 sm:p-4">
+                    <section className="flex flex-col justify-center items-center">
                         <p className="text-xs sm:text-sm text-gray-500 mb-2">{player.dateOfBirth}</p>
+                        <p className={'text-sm italic font-bold mb-1'}>EXPERIENȚA</p>
                         <p className="text-xs sm:text-sm text-gray-900 text-center mb-2 w-full h-[80px] sm:h-[100px] overflow-hidden">
                             {player.description}
                         </p>

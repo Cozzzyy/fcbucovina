@@ -12,11 +12,11 @@ export function Sponsors() {
     return (
         <div className="flex flex-col justify-center items-center w-full px-4 overflow-hidden">
             <div className="flex flex-col w-full items-center mt-4">
-                <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold italic uppercase">
+                <h2 className="text-4xl sm:text-6xl text-center p-4 bg-green-700 text-white w-full font-bold italic uppercase">
                     SPONSORI
                 </h2>
-                <div className="relative w-full overflow-hidden mt-10">
-                    <div className="flex w-max animate-scroll whitespace-nowrap">
+                <div className="relative w-full overflow-hidden mt-5">
+                    <div className="flex w-max animate-scroll bg-white whitespace-nowrap">
                         {[...sponsors, ...sponsors].map((sponsor, index) => (
                             <img
                                 key={index}
