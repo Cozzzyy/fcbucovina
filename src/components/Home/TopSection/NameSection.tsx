@@ -10,20 +10,16 @@ export function NameSection() {
 
     return (
         <section
-            className="flex flex-col h-screen justify-start items-center px-4 text-center overflow-hidden pb-40"
+            className="flex flex-col h-screen justify-start items-center px-4 text-center overflow-hidden pb-20 md:pb-40"
             style={{ boxSizing: "border-box" }}
         >
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
                 <h1
-                    className="text-[55px] lg:text-9xl font-bold text-nowrap text-center text-green-700 leading-tight lg:w-2/3 mt-0"
-                    style={{
-                        WebkitTextStroke: "1px #00ff00",
-                        color: "rgba(34, 197, 94, 0.2)",
-                    }}
+                    className="text-[55px] lg:text-9xl font-bold text-nowrap text-center text-green-700 shadow-2xl leading-tight lg:w-2/3 mt-0 relative"
                 >
                     FC BUCOVINA
                 </h1>
-                <h2 className="text-5xl lg:text-7xl font-semibold text-white lg:w-1/2 mb-5">
+                <h2 className="text-5xl lg:text-7xl font-bold text-white lg:w-1/2 mb-5">
                     LOENHOUT
                 </h2>
                 <h2 className="text-[12px] lg:text-md text-center text-[#ffe87c] pt-2 lg:w-1/4 m-0">
