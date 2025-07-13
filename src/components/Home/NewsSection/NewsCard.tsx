@@ -25,7 +25,7 @@ export function NewsCard({ id, title, date, first }: NewsCardProps) {
     return (
         <div
             id={`news-${id}`}
-            className={`news-card relative bg-cover bg-center text-white p-4 lg:rounded-lg w-full h-[500px] mb-6 md:w-[320px] md:h-[420px] lg:h-[420px] shadow-2xl overflow-hidden ${
+            className={`news-card relative bg-cover bg-center text-white p-4 lg:rounded-lg w-full h-[500px] mb-6 md:w-[320px] md:h-[420px] lg:h-[420px] overflow-hidden ${
                 first ? "lg:w-auto" : "lg:w-[330px]"
             }`}
             style={{

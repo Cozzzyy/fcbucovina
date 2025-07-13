@@ -9,15 +9,6 @@ import { motion } from "framer-motion";
 
 export function HomePage() {
     const newsSeparatorRef = useRef<HTMLDivElement>(null);
-
-    const scrollToNewsSeparator = () => {
-        if (newsSeparatorRef.current) {
-            const offset = -100; // Adjust this value based on your navbar height
-            const topPosition = newsSeparatorRef.current.getBoundingClientRect().top + window.scrollY + offset;
-            window.scrollTo({ top: topPosition, behavior: "smooth" });
-        }
-    };
-
     const sectionVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
@@ -32,7 +23,7 @@ export function HomePage() {
                 transition={{ duration: 0.8 }}
                 variants={sectionVariants}
             >
-                <NameSection scrollToNewsSeparator={scrollToNewsSeparator} />
+                <NameSection/>
             </motion.div>
 
             <motion.div

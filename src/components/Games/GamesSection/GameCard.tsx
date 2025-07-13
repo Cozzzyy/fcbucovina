@@ -20,9 +20,8 @@ export function GameCard({ game }: GameCardProps) {
         <motion.section
             className="flex flex-row w-11/12 md:w-2/3 mb-5"
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
         >
             <div className="w-[8px] md:w-[12px] bg-green-700 rounded-4xl" />
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full bg-white shadow-lg p-4 md:px-8">
