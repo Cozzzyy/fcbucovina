@@ -6,7 +6,7 @@ export function Footer() {
             <div className="flex flex-col justify-center items-center w-full text-center">
                 <div className=" flex flex-col justify-start items-start w-full lg:w-1/2 mt-5">
                     <h2 className="text-4xl lg:text-6xl font-bold text-left px-4 lg:px-0 lg:text-center italic text-green-700">
-                        Football Club Bucovina Vzw
+                        Fotbal Club Bucovina Vzw
                     </h2>
                     <div className={"flex md:flex-row flex-col justify-between px-4 lg:px-0  w-full items-start mt-4"}>
                         <div className="flex md:flex-row flex-col justify-between items-start mt-6 gap-15">
