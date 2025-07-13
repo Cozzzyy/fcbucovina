@@ -1,8 +1,24 @@
+import { useState, useEffect } from "react";
 import { Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export function NameSection() {
     const navigate = useNavigate();
+    const fullText = `"O ECHIPĂ UNITĂ PRIN ÎNCREDERE, CRESCUTĂ PRIN RESPECT, CONDUSĂ DE DORINȚA DE A ÎNVINGE.”`;
+    const [displayedText, setDisplayedText] = useState("");
+
+    useEffect(() => {
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < fullText.length) {
+                setDisplayedText((prev) => prev + fullText.charAt(index));
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50); // Adjust typing speed here
+        return () => clearInterval(interval);
+    }, [fullText]);
 
     const handleCalendarClick = () => {
         navigate("/meciuri");
@@ -23,7 +39,7 @@ export function NameSection() {
                     LOENHOUT
                 </h2>
                 <h2 className="text-[12px] lg:text-md text-center text-[#ffe87c] pt-2 lg:w-1/4 m-0">
-                    "O ECHIPĂ UNITĂ PRIN ÎNCREDERE, CRESCUTĂ PRIN RESPECT, CONDUSĂ DE DORINȚA DE A ÎNVINGE.”
+                    {displayedText}
                 </h2>
             </header>
             <footer className="mb-auto mt-8">
