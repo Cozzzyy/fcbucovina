@@ -54,7 +54,7 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
 
                 {/* Player Position */}
                 <p
-                    className="text-xs px-2 text-white w-6/7 font-bold text-center mb-1 rounded-xl py-2"
+                    className="text-xs text-white lg:w-6/7 w-full font-bold text-center mb-1 rounded-xl py-2"
                     style={{
                         backgroundImage: "linear-gradient(135deg, #28B063 15%, #2F855A 15%)", // green-500 → green-900
                         backgroundSize: "220% 200%",
