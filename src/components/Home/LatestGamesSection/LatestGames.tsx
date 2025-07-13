@@ -17,7 +17,7 @@ const games: Game[] = [
 export function LatestGames() {
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            <div className="flex flex-col w-full lg:w-2/3 mt-4 px-4 sm:px-6 mb-15">
+            <div className="flex flex-col w-full lg:w-2/3 mt-4 px-4 sm:px-6 mb-7">
                 <h1 className="text-lg lg:text-sm font-bold text-white text-center lg:text-left p-2 bg-[#008229]">
                     ULTIMELE MECIURI
                 </h1>

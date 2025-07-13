@@ -38,7 +38,7 @@ export function ScrollingPlayersRow() {
     }, [isDesktop]);
 
     return (
-        <div className="w-full overflow-hidden py-10 mb-15">
+        <div className="w-full overflow-hidden py-10">
             <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold mb-10 italic uppercase">
                 STAFF & JUCĂTORI
             </h2>
@@ -54,7 +54,7 @@ export function ScrollingPlayersRow() {
                 }}
             >
                 <div
-                    className={`flex gap-15 ${
+                    className={`flex ${
                         isDesktop ? "animate-scroll whitespace-nowrap items-center" : "justify-start"
                     }`}
                 >
@@ -65,7 +65,7 @@ export function ScrollingPlayersRow() {
                             className={`${
                                 isDesktop
                                     ? "min-w-[450px] flex-shrink-0"
-                                    : "snap-center min-w-[90%] max-w-[95%] mx-auto"
+                                    : "snap-center min-w-[100%] max-w-[95%] mx-auto"
                             }`}
                         >
                             <PlayerCard player={member} hideDetails scrolling={true} />

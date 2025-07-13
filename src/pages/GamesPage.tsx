@@ -31,7 +31,7 @@ export function GamesPage() {
     }, []);
 
     return (
-        <section className={"flex flex-col items-center justify-center w-full bg-[#f1f1f1] gap-5"}>
+        <section className={"flex flex-col items-center justify-center w-full  gap-5"}>
             <TitleSection />
             <MonthFilter />
             {groupedGames.map(([monthYear, monthGames]) => (

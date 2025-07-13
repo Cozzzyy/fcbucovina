@@ -1,10 +1,10 @@
 export function Footer() {
     return (
-        <footer className="bg-green-700 text-gray-200 mt-10">
+        <footer className="bg-green-800 text-gray-100 mt-10">
             <div className="flex flex-col justify-center items-center w-full">
                 <div className="flex w-full flex-col lg:flex-col justify-center items-center">
                     <img className="w-30 h-auto" src="/teams/FC%20Bucovina%20Loenhout.png" alt="Logo" />
-                    <h2 className="text-lg font-medium text-center">
+                    <h2 className="text-lg font-bold text-yellow-300 text-center">
                         Football Club Bucovina Vzw
                     </h2>
                 </div>
@@ -14,11 +14,9 @@ export function Footer() {
                 </a>
 
                 <div className="flex flex-row justify-center items-center w-full mt-4 gap-10">
-                    <h3 className="opacity-80 text-gray-100">BE79 7340 6867 8433</h3>
-                    <h3 className="opacity-80 text-gray-100">bucovinafc@gmail.com</h3>
+                    <h3 className="opacity-90 text-gray-200">BE79 7340 6867 8433</h3>
+                    <h3 className="opacity-90 text-gray-200">bucovinafc@gmail.com</h3>
                 </div>
-
-                {/*Facebook*/}
 
                 {/* Copyright Section */}
                 <div className="mt-6 mb-4 font-light text-center text-gray-200">

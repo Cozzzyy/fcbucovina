@@ -16,7 +16,7 @@ export function ImageSlideshow() {
     }, [images.length]);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full mb-20">
+        <div className="flex flex-col items-center justify-center w-full">
             <div className="relative w-full h-[550px] lg:h-[650px] overflow-hidden shadow-xl">
                 <AnimatePresence>
                     {images.map((image, index) =>

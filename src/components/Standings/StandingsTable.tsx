@@ -15,7 +15,6 @@ export function StandingsTable() {
         {pos: 13, team: "K. Sint Job FC B", pts: 0, matches: 0, wins: 0, draws: 0, losses: 0},
         {pos: 14, team: "SV Noorse", pts: 0, matches: 0, wins: 0, draws: 0, losses: 0},
         {pos: 15, team: "Sporting Merksem B", pts: 0, matches: 0, wins: 0, draws: 0, losses: 0},
-        {pos: 16, team: "KFC St. Mart. Halle", pts: 0, matches: 0, wins: 0, draws: 0, losses: 0},
     ];
 
 

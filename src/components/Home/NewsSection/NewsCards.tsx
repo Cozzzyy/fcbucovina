@@ -8,12 +8,12 @@ export function NewsCards() {
 
     return (
         <>
-            <h1 className="lg:mt-25 mt-4 w-full text-center text-5xl font-bold mb-8 text-green-700" >
-                Ultimele știri
+            <h1 className="lg:mt-12 mt-4 w-full px-4 text-5xl font-bold lg:mb-8 mb-4 italic text-green-700" >
+                STIRI
             </h1>
 
             {/* Scrollable container */}
-            <div className="w-full overflow-x-auto mb-20">
+            <div className="w-full overflow-x-auto">
                 <div className="flex snap-x snap-mandatory gap-4 px-4 pb-4 w-full overflow-x-auto">
                     {latestNews.map((newsItem: News, index: number) => (
                         <div

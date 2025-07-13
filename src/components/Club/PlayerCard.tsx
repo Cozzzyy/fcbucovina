@@ -42,12 +42,12 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
                             }
                         }}
                     />
-                    <div className="absolute -bottom-2 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-white"></div>
+                    <div className="absolute -bottom-2 left-0 w-full h-1/2"></div>
                 </figure>
 
                 {/* Player Name */}
                 <header className="w-full z-10">
-                    <h2 className="text-xs text-black font-bold border-b-yellow-300 border-4 border-white w-full text-center p-1">
+                    <h2 className="text-xs text-black font-bold border-b-yellow-300 w-full text-center p-1">
                         {player.name.toUpperCase()}
                     </h2>
                 </header>
