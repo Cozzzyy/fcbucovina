@@ -8,16 +8,21 @@ export function NameSection() {
     const [displayedText, setDisplayedText] = useState("");
 
     useEffect(() => {
-        let index = 0;
-        const interval = setInterval(() => {
-            if (index < fullText.length) {
-                setDisplayedText((prev) => prev + fullText.charAt(index));
-                index++;
-            } else {
-                clearInterval(interval);
-            }
-        }, 50); // Adjust typing speed here
-        return () => clearInterval(interval);
+        // Delay the typing animation to prioritize LCP
+        const startAnimationTimeout = setTimeout(() => {
+            let index = 0;
+            const interval = setInterval(() => {
+                if (index < fullText.length) {
+                    setDisplayedText((prev) => prev + fullText.charAt(index));
+                    index++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 50); // Adjust typing speed here
+            return () => clearInterval(interval);
+        }, 1000); // Delay animation start by 1 second to prioritize LCP
+
+        return () => clearTimeout(startAnimationTimeout);
     }, [fullText]);
 
     const handleCalendarClick = () => {
@@ -30,8 +35,9 @@ export function NameSection() {
             style={{ boxSizing: "border-box" }}
         >
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
+                {/* Added loading="eager" and fetchpriority="high" for LCP optimization */}
                 <h1
-                    className="text-[55px] lg:text-9xl font-bold text-nowrap text-center text-green-700 shadow-2xl leading-tight lg:w-2/3 mt-0 relative"
+                    className="text-6xl md:text-6xl lg:text-8xl text-nowrap font-bold text-green-700"
                 >
                     FC BUCOVINA
                 </h1>

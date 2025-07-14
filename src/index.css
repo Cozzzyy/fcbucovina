@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
-
-
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/17580.jpg');
+    background-image: url('/17580.avif');
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
 }
 
 /* For Webkit browsers (Chrome, Safari) */

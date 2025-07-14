@@ -34,6 +34,7 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
                         className="w-full h-full object-cover object-top rounded-t-lg"
                         src={`/jucatori/${player.name.replace(/\s+/g, "-")}.webp`}
                         alt={`Image of ${player.name}`}
+                        loading="lazy"
                         onError={(e) => {
                             try {
                                 (e.target as HTMLImageElement).src = '/jucatori/placeholder.webp';

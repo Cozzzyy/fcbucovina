@@ -16,15 +16,8 @@ export function HomePage() {
 
     return (
         <>
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8 }}
-                variants={sectionVariants}
-            >
-                <NameSection/>
-            </motion.div>
+            {/* Removed animation for LCP optimization */}
+            <NameSection/>
 
             <motion.div
                 ref={newsSeparatorRef}
