@@ -8,21 +8,16 @@ export function NameSection() {
     const [displayedText, setDisplayedText] = useState("");
 
     useEffect(() => {
-        // Delay the typing animation to prioritize LCP
-        const startAnimationTimeout = setTimeout(() => {
-            let index = 0;
-            const interval = setInterval(() => {
-                if (index < fullText.length) {
-                    setDisplayedText((prev) => prev + fullText.charAt(index));
-                    index++;
-                } else {
-                    clearInterval(interval);
-                }
-            }, 50); // Adjust typing speed here
-            return () => clearInterval(interval);
-        }, 1000); // Delay animation start by 1 second to prioritize LCP
-
-        return () => clearTimeout(startAnimationTimeout);
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < fullText.length) {
+                setDisplayedText((prev) => prev + fullText.charAt(index));
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50); // Adjust typing speed here
+        return () => clearInterval(interval); // Cleanup on unmount
     }, [fullText]);
 
     const handleCalendarClick = () => {
@@ -35,7 +30,6 @@ export function NameSection() {
             style={{ boxSizing: "border-box" }}
         >
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
-                {/* Added loading="eager" and fetchpriority="high" for LCP optimization */}
                 <h1
                     className="text-[50px] md:text-6xl lg:text-8xl text-nowrap font-bold text-green-700"
                 >
