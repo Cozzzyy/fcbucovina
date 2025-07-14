@@ -37,7 +37,7 @@ export function NameSection() {
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
                 {/* Added loading="eager" and fetchpriority="high" for LCP optimization */}
                 <h1
-                    className="text-6xl md:text-6xl lg:text-8xl text-nowrap font-bold text-green-700"
+                    className="text-[50px] md:text-6xl lg:text-8xl text-nowrap font-bold text-green-700"
                 >
                     FC BUCOVINA
                 </h1>
