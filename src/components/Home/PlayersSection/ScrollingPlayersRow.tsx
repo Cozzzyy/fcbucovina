@@ -39,7 +39,7 @@ export function ScrollingPlayersRow() {
 
     return (
         <div className="w-full overflow-hidden py-10">
-            <h2 className="text-[45px] sm:text-6xl text-center text-green-700 font-bold italic uppercase">
+            <h2 className="text-[40px] sm:text-6xl text-center text-green-700 font-bold italic uppercase">
                 STAFF & JUCĂTORI
             </h2>
 
