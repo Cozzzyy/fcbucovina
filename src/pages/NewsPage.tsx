@@ -2,14 +2,12 @@ import newsData from '../../data/data.json';
 import type { News } from '../types/News.ts';
 
 export function NewsPage() {
-    // Extract the id from the URL hash
-    const hash = window.location.hash; // e.g., "#news-6"
+    const hash = window.location.hash;
     const id = hash.startsWith("#news-") ? Number(hash.replace("#news-", "")) : null;
 
-    // If no id is present, show all news items in reverse order; otherwise, filter by id
     const filteredNewsData: News[] = id
         ? newsData.filter((news) => news.id === id)
-        : [...newsData].reverse(); // Create a shallow copy before reversing
+        : [...newsData].reverse();
 
     return (
         <div className="w-full lg:w-1/2 mx-auto mt-25">
@@ -17,18 +15,26 @@ export function NewsPage() {
                 {filteredNewsData.map((news: News) => (
                     <div
                         key={news.id}
-                        id={`news-${news.id}`} // Assign a unique id to the news item
-                        className="bg-white shadow-lg border-t-12 border-t-green-700 border-l-white border-r-white border-b-white p-6"
+                        id={`news-${news.id}`}
+                        className="p-2"
                     >
-                        <h2 className="text-2xl font-bold text-gray-800">{news.title}</h2>
-                        <p className="text-sm text-gray-500 mt-2">{news.date}</p>
-                        <div className="text-gray-700 mt-4 space-y-4">
+                        <h2 className="lg:text-5xl text-4xl italic font-bold text-gray-800">{news.title}</h2>
+                        <p className="text-md text-gray-700 mt-4 mb-10 lg:mb-15">{news.date}</p>
+                        {news.image && (
+                            <img
+                                src={news.image}
+                                alt={news.title}
+                                className="w-full h-auto rounded mb-6 "
+                            />
+                        )}
+                        <div className="text-gray-900 mt-4 space-y-2">
                             {news.text
                                 .split('\n')
                                 .map((line, index) => (
                                     <p key={index} className="text-justify">{line.trim()}</p>
                                 ))}
                         </div>
+                        <hr className="mt-15 border-gray-300" />
                     </div>
                 ))}
             </div>

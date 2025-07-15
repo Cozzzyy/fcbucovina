@@ -5,13 +5,13 @@ export function Background() {
     const location = useLocation();
     const [loaded, setLoaded] = useState(false);
 
-    const excludedPaths = ["/club", "/clasament", "/meciuri"];
+    const excludedPaths = ["/club", "/clasament", "/meciuri","/stiri"];
     if (excludedPaths.includes(location.pathname)) return null;
 
     return (
-        <div className="absolute inset-0 -z-10 h-screen">
+        <div className="absolute inset-0 -z-10 h-screen bg-green-600">
             <img
-                className={`w-full h-full object-cover transition-all duration-700 ${loaded ? "blur-0" : "blur-md"}`}
+                className={`w-full h-full object-cover transition-all duration-700 ${loaded ? "opacity-100 blur-0" : "opacity-0 blur-md"}`}
                 src="/team-photo.avif"
                 alt=""
                 aria-hidden="true"
