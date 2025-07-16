@@ -7,6 +7,7 @@ export function Sponsors() {
         {src: "/sponsors/Frtieje-meer.webp", alt: "Frietje Meer"},
         {src: "/sponsors/Afine.webp", alt: "Afine"},
         {src: "/sponsors/fun-tour.webp", alt: "Fun Tour"},
+        {src: "/sponsors/NED.webp", alt: "NED"},
     ];
 
     return (
