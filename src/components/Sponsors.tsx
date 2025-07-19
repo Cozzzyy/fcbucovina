@@ -21,7 +21,7 @@ export function Sponsors() {
                         {[...sponsors, ...sponsors].map((sponsor, index) => (
                             <img
                                 key={index}
-                                className="w-25 lg:w-40 h-auto mx-4"
+                                className="w-25 lg:w-45 lg:h-45 mx-4"
                                 src={sponsor.src}
                                 alt={sponsor.alt}
                                 loading="lazy"

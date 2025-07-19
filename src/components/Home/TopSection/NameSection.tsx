@@ -17,7 +17,7 @@ export function NameSection() {
         >
             <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
                 <h1
-                    className="text-[50px] md:text-6xl lg:text-8xl text-nowrap font-bold text-green-700"
+                    className="text-[55px] md:text-6xl lg:text-8xl text-nowrap font-bold text-[#00853E]"
                 >
                     FC BUCOVINA
                 </h1>
@@ -30,7 +30,7 @@ export function NameSection() {
             </header>
             <footer className="mb-auto mt-8">
                 <button
-                    className="flex items-center gap-2 px-6 py-2 text-md font-bold bg-green-700 text-white rounded hover:bg-green-800 transition-colors"
+                    className="flex items-center gap-2 px-5 py-2 text-md font-medium bg-[#00853E] text-white rounded-xl hover:bg-green-800 transition-colors"
                     onClick={handleCalendarClick}
                     aria-label="Vezi mai multe despre FC Bucovina"
                 >

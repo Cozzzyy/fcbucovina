@@ -2,10 +2,10 @@ import {Link} from "react-router-dom";
 
 export function Footer() {
     return (
-        <footer className="bg-green-800 text-gray-100 mt-25">
+        <footer className="bg-[#018749] text-gray-100 mt-7">
             <div className="flex flex-col justify-center items-center w-full text-center">
                 <div className=" flex flex-col justify-start items-start w-full lg:w-1/2 mt-5">
-                    <h2 className="text-4xl lg:text-6xl font-bold text-left px-4 lg:px-0 lg:text-center italic text-green-700">
+                    <h2 className="text-4xl lg:text-6xl font-bold text-left px-4 lg:px-0 lg:text-center italic ">
                         Fotbal Club Bucovina Vzw
                     </h2>
                     <div className={"flex md:flex-row flex-col justify-between px-4 lg:px-0  w-full items-start mt-4"}>
@@ -50,6 +50,7 @@ export function Footer() {
                 <div className="mt-8 mb-4 font-light">
                     <p>&copy; 2025 Cosmin Nechita. All rights reserved.</p>
                 </div>
+
             </div>
         </footer>
     );
