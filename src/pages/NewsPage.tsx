@@ -1,5 +1,6 @@
 import newsData from '../../data/data.json';
 import type { News } from '../types/News.ts';
+import NewsImages from "../components/News/NewsImages.tsx";
 
 export function NewsPage() {
     const hash = window.location.hash;
@@ -16,18 +17,12 @@ export function NewsPage() {
                     <div
                         key={news.id}
                         id={`news-${news.id}`}
-                        className="p-2"
+                        className="p-4"
                     >
                         <h2 className="lg:text-5xl text-4xl italic font-bold text-gray-800">{news.title}</h2>
-                        <p className="text-md text-gray-700 mt-4 mb-10 lg:mb-15">{news.date}</p>
-                        {news.image && (
-                            <img
-                                src={news.image}
-                                alt={news.title}
-                                className="w-full h-auto rounded mb-6 "
-                            />
-                        )}
-                        <div className="text-gray-900 mt-4 space-y-2">
+                        <p className="text-sm text-gray-700 mt-2 mb-10 lg:mb-15">{news.date}</p>
+                        <NewsImages images={news.images ?? []} />
+                        <div className="text-gray-700 mt-4 space-y-4">
                             {news.text
                                 .split('\n')
                                 .map((line, index) => (
