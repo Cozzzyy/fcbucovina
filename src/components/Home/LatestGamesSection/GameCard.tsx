@@ -37,7 +37,7 @@ export function GameCard({ game }: { game: Game }) {
                 </div>
             </div>
 
-            <h3 className="text-[12px] font-light opacity-50 mt-4 select-none pointer-events-none">
+            <h3 className="text-[12px] text-center font-light opacity-50 mt-4 select-none pointer-events-none">
                 {`${game.date} - ${game.location}`}
             </h3>
             <div className="w-full h-[1px] bg-black opacity-50 mt-2"></div>
