@@ -7,6 +7,8 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
 
+    const { homeScore, awayScore } = parseScore(game.score);
+
     function formatDate(dateString: string): string {
         const date = new Date(dateString);
         const day = String(date.getDate()).padStart(2, '0');
@@ -14,6 +16,17 @@ export function GameCard({ game }: GameCardProps) {
         const dayName = date.toLocaleDateString('ro-RO', { weekday: 'long' }).toUpperCase();
 
         return `${dayName}, ${day}/${month}`;
+    }
+
+    function parseScore(scoreString: string): { homeScore: string; awayScore: string } {
+        if (!scoreString || scoreString.trim() === '') {
+            return { homeScore: ' ', awayScore: ' ' };
+        }
+        const scores = scoreString.split('-');
+        return {
+            homeScore: scores[0] || ' ',
+            awayScore: scores[1] || ' '
+        };
     }
 
     return (
@@ -30,7 +43,7 @@ export function GameCard({ game }: GameCardProps) {
                     <p className="text-base md:text-lg">{game.time}</p>
                     <p className="text-xs md:text-sm opacity-50">{game.location}</p>
                 </div>
-                <div className="flex flex-row items-center justify-between md:justify-center w-full md:w-auto gap-4 md:gap-10">
+                <div className="flex flex-row items-center justify-between md:justify-center w-full md:w-auto gap-3 md:gap-8">
                     <div className="flex flex-col items-center w-[120px] md:w-[150px]">
                         <div className="h-[60px] md:h-[85px] flex items-center justify-center">
                             <img
@@ -45,7 +58,13 @@ export function GameCard({ game }: GameCardProps) {
                         </div>
                         <p className="text-sm md:text-base text-center break-words mt-2">{game.homeTeam}</p>
                     </div>
-                    <p className="text-sm md:text-base font-medium">VS</p>
+                    <p className="text-3xl md:text-base lg:text-3xl  font-medium">{homeScore}</p>
+                    {game.score && game.score.trim() !== '' ? (
+                        <p className="text-md md:text-base lg:text-xl font-medium">-</p>
+                    ) : (
+                        <p className="text-md md:text-base lg:text-md font-light">VS</p>
+                    )}
+                    <p className="text-3xl md:text-base lg:text-3xl font-medium">{awayScore}</p>
                     <div className="flex flex-col items-center w-[120px] md:w-[150px]">
                         <div className="h-[60px] md:h-[85px] flex items-center justify-center">
                             <img

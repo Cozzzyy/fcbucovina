@@ -3,6 +3,16 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "KFC Turnhout B",
+        homeTeamLogo: "/teams/KFC Turnhout B.png",
+        awayTeam: "FC Bucovina Loenhout",
+        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        matchType: "BvA Heren Groep 4 P3/P4",
+        score: "0-1",
+        date: "02-08-2025 18:00",
+        location: "De Leemshoeve / Terrein 4, Stwg. Op Merksplas 80 , 2300 Turnhout",
+    },
+    {
         homeTeam: "FC BUCOVINA LOENHOUT",
         homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
         awayTeam: "K.S.V Wildert",
