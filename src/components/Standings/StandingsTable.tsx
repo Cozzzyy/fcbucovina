@@ -21,8 +21,8 @@ export function StandingsTable() {
                     value={selectedCompetition}
                     onChange={(e) => setSelectedCompetition(e.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mb-8">
-                    <option value="0">Voetbal Vlaanderen 4P</option>
                     <option value="1">BvA Heren Groep 4 P3/P4</option>
+                    <option value="0">Voetbal Vlaanderen 4P</option>
                 </select>
             </form>
 
@@ -69,7 +69,7 @@ export function StandingsTable() {
                                         <span className="select-none pointer-events-none text-wrap font-medium"
                                               contentEditable={false}
                                               suppressContentEditableWarning={true}>
-                                            {team.team}
+                                            {team.team.toUpperCase()}
                                         </span>
                                     </div>
                                 </td>

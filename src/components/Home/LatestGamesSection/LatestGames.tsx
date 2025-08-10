@@ -7,7 +7,7 @@ const games: Game[] = [
         homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
         awayTeam: "K. Gooreind VV",
         awayTeamLogo: "/teams/K. Gooreind VV.png",
-        matchType: "Voetbal Vlaanderen 4P",
+        matchType: "BvA Heren Groep 4 P3/P4",
         score: "3-2",
         date: "2025-08-09",
         location: "Bredabaan, 280 , 2990 Wuustwezel",
