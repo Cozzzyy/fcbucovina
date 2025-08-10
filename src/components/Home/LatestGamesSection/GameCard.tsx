@@ -11,14 +11,14 @@ export function GameCard({ game }: { game: Game }) {
                 {/* Home Team */}
                 <div className="flex flex-row justify-end items-center gap-2 flex-1 min-w-0">
                     <h3
-                        className="text-[10px] lg:text-lg  ml-2 text-left font-light select-none pointer-events-none"
+                        className="text-[10px] lg:text-lg  ml-2 text-right font-light select-none pointer-events-none"
                         contentEditable={false}
                         suppressContentEditableWarning={true}
                     >
                         {game.homeTeam}
                     </h3>
 
-                    <img className="w-10 lg:w-20 h-auto flex-shrink-0" src={game.homeTeamLogo} alt={game.homeTeam} />
+                    <img className="w-10 lg:w-15 h-auto flex-shrink-0" src={game.homeTeamLogo} alt={game.homeTeam} />
                 </div>
 
                 {/* Score */}
@@ -30,7 +30,7 @@ export function GameCard({ game }: { game: Game }) {
 
                 {/* Away Team */}
                 <div className="flex flex-row justify-start items-center gap-2 flex-1 min-w-0">
-                    <img className="w-10 lg:w-20 h-auto flex-shrink-0" src={game.awayTeamLogo} alt={game.awayTeam} />
+                    <img className="w-10 lg:w-15 h-auto flex-shrink-0" src={game.awayTeamLogo} alt={game.awayTeam} />
                     <h3 className="text-[10px] lg:text-lg mr-2 font-light text-left whitespace-normal break-words select-none pointer-events-none">
                         {game.awayTeam}
                     </h3>

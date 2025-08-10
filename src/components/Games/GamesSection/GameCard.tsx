@@ -31,7 +31,7 @@ export function GameCard({ game }: GameCardProps) {
 
     return (
         <motion.section
-            className="flex flex-row w-11/12 md:w-2/3 mb-5"
+            className="flex flex-row w-11/12 md:w-2/3"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}

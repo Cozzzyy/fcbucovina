@@ -35,7 +35,7 @@ export function GamesPage() {
             <TitleSection />
             <MonthFilter />
             {groupedGames.map(([monthYear, monthGames]) => (
-                <div key={monthYear} className="w-full flex flex-col items-center gap-5">
+                <div key={monthYear} className="w-full flex flex-col items-center gap-3">
                     <MonthTitle date={monthYear + "-01"} />
                     {monthGames.map((game) => (
                         <GameCard key={game.date} game={game} />

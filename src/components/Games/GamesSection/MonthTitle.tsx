@@ -20,7 +20,7 @@ export function MonthTitle({ date }: MonthTitleProps) {
     const { monthAbbr, fullDate } = getMonthData(date);
 
     return (
-        <h1 id={monthAbbr} className={"w-11/12 md:w-2/3 text-black text-xl font-bold"}>
+        <h1 id={monthAbbr} className={"w-11/12 md:w-2/3 text-black text-xl font-bold mb-4"}>
             {fullDate.charAt(0).toUpperCase() + fullDate.slice(1)}
         </h1>
     );

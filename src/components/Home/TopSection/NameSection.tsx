@@ -30,7 +30,7 @@ export function NameSection() {
             </header>
             <footer className="mb-auto mt-8">
                 <button
-                    className="flex items-center gap-2 px-5 py-2 text-md font-medium bg-[#00853E] text-white rounded-xl hover:bg-green-800 transition-colors"
+                    className="flex items-center gap-2 px-6 py-2 text-md font-medium bg-[#00853E] text-white rounded-xl hover:bg-green-800 transition-colors"
                     onClick={handleCalendarClick}
                     aria-label="Vezi mai multe despre FC Bucovina"
                 >

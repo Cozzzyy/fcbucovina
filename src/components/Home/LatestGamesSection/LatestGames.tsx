@@ -3,6 +3,17 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "FC Bucovina Loenhout",
+        homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        awayTeam: "K. Gooreind VV",
+        awayTeamLogo: "/teams/K. Gooreind VV.png",
+        matchType: "Voetbal Vlaanderen 4P",
+        score: "3-2",
+        date: "2025-08-09",
+        location: "Bredabaan, 280 , 2990 Wuustwezel",
+        time: "18:30"
+    },
+    {
         homeTeam: "KFC Turnhout B",
         homeTeamLogo: "/teams/KFC Turnhout B.png",
         awayTeam: "FC Bucovina Loenhout",

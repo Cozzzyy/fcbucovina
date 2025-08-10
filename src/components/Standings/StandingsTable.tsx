@@ -10,35 +10,33 @@ export function StandingsTable() {
         : standingsData.standingsBvA as Team[];
 
     return (
-        <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-30">
-            <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-2">CLASAMENT</h2>
+        <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+            <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">CLASAMENT</h2>
             <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">2025-2026</h2>
 
-            { /* Dropdown for selecting competition */}
-            <form className="max-w-xs mb-4">
-                <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-500  ">Alege competiția</label>
+            <form className="max-w-xs mb-8">
+                <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-500">Alege competiția</label>
                 <select
                     id="countries"
                     value={selectedCompetition}
                     onChange={(e) => setSelectedCompetition(e.target.value)}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mb-10">
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mb-8">
                     <option value="0">Voetbal Vlaanderen 4P</option>
                     <option value="1">BvA Heren Groep 4 P3/P4</option>
                 </select>
             </form>
 
-
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white rounded-xl shadow-md">
                     <thead className="bg-gray-100 text-gray-700 text-xs sm:text-sm uppercase">
                     <tr>
-                        <th className="px-2 sm:px-4 py-2 text-center">Loc</th>
-                        <th className="px-4 sm:px-4 py-2 text-left">Echipă</th>
-                        <th className="px-2 sm:px-4 py-2 text-center">Puncte</th>
-                        <th className="px-2 sm:px-4 py-2 text-center">Meciuri</th>
-                        <th className="px-2 sm:px-4 py-2 text-center">Victorii</th>
-                        <th className="px-2 sm:px-4 py-2 text-center">Egaluri</th>
-                        <th className="px-2 sm:px-4 py-2 text-center">Înfrângeri</th>
+                        <th className="px-4 py-3 text-center">Loc</th>
+                        <th className="px-4 py-3 text-left">Echipă</th>
+                        <th className="px-2 py-3 text-center">Puncte</th>
+                        <th className="px-4 py-3 text-center">Meciuri</th>
+                        <th className="px-4 py-3 text-center">Victorii</th>
+                        <th className="px-4 py-3 text-center">Egaluri</th>
+                        <th className="px-4 py-3 text-center">Înfrângeri</th>
                     </tr>
                     </thead>
                     <tbody className="text-gray-800">
@@ -55,8 +53,8 @@ export function StandingsTable() {
                                             : "bg-gray-100"
                                 } hover:bg-green-200 transition font-medium`}
                             >
-                                <td className="px-2 py-3 text-center">{team.pos}</td>
-                                <td className="px-2 pr-10 py-3 text-left flex items-center gap-3 whitespace-nowrap">
+                                <td className="px-4 py-3 text-center">{team.pos}</td>
+                                <td className="px-4 py-3 text-left">
                                     <div className="flex items-center gap-3 select-none pointer-events-none"
                                          contentEditable={false}
                                          suppressContentEditableWarning={true}>
@@ -68,15 +66,18 @@ export function StandingsTable() {
                                             alt={team.team}
                                             className="w-7 h-7 flex-shrink-0"
                                         />
-                                        <span className={"select-none pointer-events-none text-wrap"} contentEditable={false}
-                                              suppressContentEditableWarning={true}>{team.team}</span>
+                                        <span className="select-none pointer-events-none text-wrap font-medium"
+                                              contentEditable={false}
+                                              suppressContentEditableWarning={true}>
+                                            {team.team}
+                                        </span>
                                     </div>
                                 </td>
-                                <td className="px-2  py-3 text-center">{team.pts}</td>
-                                <td className="px-2  py-3 text-center">{team.matches}</td>
-                                <td className="px-2 py-3 text-center">{team.wins}</td>
-                                <td className="px-2  py-3 text-center">{team.draws}</td>
-                                <td className="px-2  py-3 text-center">{team.losses}</td>
+                                <td className="px-4 py-3 text-center font-bold">{team.pts}</td>
+                                <td className="px-4 py-3 text-center">{team.matches}</td>
+                                <td className="px-4 py-3 text-center">{team.wins}</td>
+                                <td className="px-4 py-3 text-center">{team.draws}</td>
+                                <td className="px-4 py-3 text-center">{team.losses}</td>
                             </tr>
                         );
                     })}
@@ -84,6 +85,5 @@ export function StandingsTable() {
                 </table>
             </div>
         </div>
-    )
-        ;
+    );
 }
