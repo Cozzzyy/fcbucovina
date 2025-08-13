@@ -3,22 +3,25 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function ImageSlideshow() {
     const images = [
-        "https://storage.googleapis.com/bucovina-images/Game-images/Game-images_wilders-1.webp",
-        "https://storage.googleapis.com/bucovina-images/Game-images/Game-images_wilders-2.webp",
-        "https://storage.googleapis.com/bucovina-images/Game-images/Game-images_wilders-3.webp"];
+        "/games-images/game-09-02/1.jpg",
+        "/games-images/game-09-02/2.jpg",
+        "/games-images/game-09-02/3.jpg",
+        "/games-images/game-09-02/4.jpg"
+    ];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 4000); // Change every 4s
-        return () => clearInterval(interval); // Clean up on unmount
+        }, 4000);
+        return () => clearInterval(interval);
     }, [images.length]);
+
 
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            <div className="relative w-full h-[550px] lg:h-[650px] overflow-hidden shadow-xl">
-                <AnimatePresence>
+            <div className="relative w-full h-[550px] lg:h-[750px] overflow-hidden shadow-xl">
+                <AnimatePresence mode="wait">
                     {images.map((image, index) =>
                         index === currentIndex ? (
                             <motion.div
@@ -28,16 +31,21 @@ export function ImageSlideshow() {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 1 }}
+                                drag="x"
+                                dragConstraints={{ left: 0, right: 0 }}
+                                dragElastic={0.1}
+                                style={{ cursor: 'grab' }}
+                                whileDrag={{ cursor: 'grabbing' }}
                             >
                                 <img
                                     src={image}
                                     alt={`Slideshow ${index + 1}`}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover pointer-events-none"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-80"></div>
-                                <div className="absolute left-5 top-8 sm:left-10 lg:left-20 text-white text-2xl lg:text-5xl font-bold drop-shadow-md before:content-[''] before:absolute before:left-[-10px] sm:before:left-[-15px] before:top-1 before:bottom-2 before:w-1 sm:before:w-2 before:bg-green-500">
-                                    K.S.V Wildert - FC Bucovina
+                                <div className="absolute left-5 top-10 sm:left-10 lg:left-20 text-white text-2xl lg:text-5xl font-bold drop-shadow-md before:content-[''] before:absolute before:left-[-10px] sm:before:left-[-15px] before:top-1 before:bottom-2 before:w-1 sm:before:w-2 ">
+                                    K. Gooreind VV - FC Bucovina
                                 </div>
                             </motion.div>
                         ) : null
