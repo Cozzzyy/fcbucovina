@@ -3,7 +3,7 @@ import type {Team} from "../../types/Team.ts";
 import standingsData from "../../../data/standings.json";
 
 export function StandingsTable() {
-    const [selectedCompetition, setSelectedCompetition] = useState("0");
+    const [selectedCompetition, setSelectedCompetition] = useState("1");
 
     const standings: Team[] = selectedCompetition === "0"
         ? standingsData.standingsVoetbalVlaanderen4P as Team[]

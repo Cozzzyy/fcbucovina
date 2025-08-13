@@ -3,7 +3,7 @@ import { NewsCards } from "../components/Home/NewsSection/NewsCards.tsx";
 import { ImageSlideshow } from "../components/Home/GameImagesSection/ImageSlideshow.tsx";
 import { ScrollingPlayersRow } from "../components/Home/PlayersSection/ScrollingPlayersRow.tsx";
 import { LatestGames } from "../components/Home/LatestGamesSection/LatestGames.tsx";
-import { Sponsors } from "../components/Sponsors.tsx";
+import { Sponsors } from "../components/Shared/Sponsors.tsx";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 

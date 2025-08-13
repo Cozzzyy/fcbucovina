@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const mobileLinks = [
+const navLinks = [
     { name: "ACASA", path: "/" },
     { name: "STIRI", path: "/stiri" },
     { name: "CLUB", path: "/club" },
@@ -49,11 +49,11 @@ export function NavigationBar() {
 
                     {/* Desktop links */}
                     <div className="hidden sm:flex sm:items-center sm:space-x-2">
-                        {mobileLinks.map((item) => (
+                        {navLinks.map((item) => (
                             <Link
                                 key={item.name}
                                 to={item.path}
-                                className="rounded-md px-3 py-2 text-lg font-medium text-white hover:text-green-300 hover:scale-105 transition-transform"
+                                className="rounded-md px-3 py-2 text-lg font-bold text-white hover:text-green-300 hover:scale-105 transition-transform"
                             >
                                 {item.name}
                             </Link>
@@ -75,7 +75,7 @@ export function NavigationBar() {
                         className="overflow-hidden"
                     >
                         <div className="space-y-1 px-2 pt-2 pb-3">
-                            {mobileLinks.map((item, index) => (
+                            {navLinks.map((item, index) => (
                                 <motion.div
                                     key={item.name}
                                     initial={{ opacity: 0, y: -10 }}

@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function ImageSlideshow() {
     const images = [
-        "/games-images/game-09-02/1.jpg",
-        "/games-images/game-09-02/2.jpg",
-        "/games-images/game-09-02/3.jpg",
-        "/games-images/game-09-02/4.jpg"
+        "/games-images/game-09-02/1.webp",
+        "/games-images/game-09-02/2.webp",
+        "/games-images/game-09-02/3.webp",
+        "/games-images/game-09-02/4.webp"
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,6 +42,7 @@ export function ImageSlideshow() {
                                     alt={`Slideshow ${index + 1}`}
                                     className="w-full h-full object-cover pointer-events-none"
                                     loading="lazy"
+                                    decoding='async'
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-80"></div>
                                 <div className="absolute left-5 top-10 sm:left-10 lg:left-20 text-white text-2xl lg:text-5xl font-bold drop-shadow-md before:content-[''] before:absolute before:left-[-10px] sm:before:left-[-15px] before:top-1 before:bottom-2 before:w-1 sm:before:w-2 ">

@@ -1,11 +1,11 @@
 import './App.css';
-import {Background} from "./components/Background.tsx";
-import {NavigationBar} from "./components/NavigationBar.tsx";
-import {Footer} from "./components/Footer.tsx";
+import {Background} from "./components/Shared/Background.tsx";
+import {NavigationBar} from "./components/Shared/NavigationBar.tsx";
+import {Footer} from "./components/Shared/Footer.tsx";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {NewsPage} from "./pages/NewsPage.tsx";
 import {motion} from "framer-motion";
-import {ScrollToTop} from "./components/ScrollToTop.tsx";
+import {ScrollToTop} from "./components/Shared/ScrollToTop.tsx";
 import {StandingsPage} from "./pages/StandingsPage.tsx";
 import {GamesPage} from "./pages/GamesPage.tsx";
 import {HomePage} from "./pages/HomePage.tsx";
