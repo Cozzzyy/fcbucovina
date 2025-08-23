@@ -3,6 +3,16 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "K.F.C. ST-MARTINUS HALLE",
+        homeTeamLogo: "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02500.jpg",
+        awayTeam: "FC Bucovina Loenhout",
+        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        matchType: "BvA Heren Groep 4 P3/P4",
+        score: "3-1",
+        date: "16/08/2025 18:30",
+        location: "Lotelinglaan 1 , 2980 Halle",
+    },
+    {
         homeTeam: "FC Bucovina Loenhout",
         homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
         awayTeam: "K. Gooreind VV",
@@ -22,16 +32,6 @@ const games: Game[] = [
         score: "0-1",
         date: "02-08-2025 18:00",
         location: "De Leemshoeve / Terrein 4, Stwg. Op Merksplas 80 , 2300 Turnhout",
-    },
-    {
-        homeTeam: "FC BUCOVINA LOENHOUT",
-        homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        awayTeam: "K.S.V Wildert",
-        awayTeamLogo: "/teams/KSV Wildert.png",
-        matchType: "Voetbal Vlaanderen 4P",
-        score: "2-3",
-        date: "24/05/2025 18:00",
-        location: "Bredabaan 280 2990 Wuustwezel",
     }
 ];
 
