@@ -2,96 +2,60 @@
   "standingsVoetbalVlaanderen4P": [
     {
       "pos": 1,
-      "team": "R. Cappellen FC B",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
+      "team": "Putte SK",
+      "pts": 3,
+      "matches": 1,
+      "wins": 1,
       "draws": 0,
       "losses": 0
     },
     {
-      "pos": 2,
-      "team": "K. Wuustwezel FC B",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
+      "pos": 1,
+      "team": "Zandvliet Sport B",
+      "pts": 3,
+      "matches": 1,
+      "wins": 1,
       "draws": 0,
       "losses": 0
     },
     {
-      "pos": 3,
-      "team": "KSOC Maria Ter Heide",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
+      "pos": 1,
+      "team": "SV Noorse",
+      "pts": 3,
+      "matches": 1,
+      "wins": 1,
       "draws": 0,
       "losses": 0
     },
     {
-      "pos": 4,
-      "team": "K. Kalmthout SK B",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
+      "pos": 1,
+      "team": "Horendonk FC",
+      "pts": 3,
+      "matches": 1,
+      "wins": 1,
       "draws": 0,
       "losses": 0
     },
     {
       "pos": 5,
-      "team": "FC Bucovina Loenhout",
-      "pts": 0,
-      "matches": 0,
+      "team": "EXC. FC Essen",
+      "pts": 1,
+      "matches": 1,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 0
     },
     {
-      "pos": 6,
-      "team": "EXC. FC Essen",
-      "pts": 0,
-      "matches": 0,
+      "pos": 5,
+      "team": "FC Bucovina Loenhout",
+      "pts": 1,
+      "matches": 1,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 0
     },
     {
       "pos": 7,
-      "team": "Putte SK",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    },
-    {
-      "pos": 8,
-      "team": "Horendonk FC",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    },
-    {
-      "pos": 9,
-      "team": "KSV Wildert",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    },
-    {
-      "pos": 10,
-      "team": "Excelsior Mariaburg B",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    },
-    {
-      "pos": 11,
       "team": "K. Heibos SV",
       "pts": 0,
       "matches": 0,
@@ -100,422 +64,76 @@
       "losses": 0
     },
     {
-      "pos": 12,
-      "team": "Zandvliet Sport B",
+      "pos": 7,
+      "team": "K. Kalmthout SK B",
       "pts": 0,
       "matches": 0,
       "wins": 0,
       "draws": 0,
       "losses": 0
-    },
-    {
-      "pos": 13,
-      "team": "K. Sint Job FC B",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    },
-    {
-      "pos": 14,
-      "team": "SV Noorse",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    },
-    {
-      "pos": 15,
-      "team": "Sporting Merksem B",
-      "pts": 0,
-      "matches": 0,
-      "wins": 0,
-      "draws": 0,
-      "losses": 0
-    }
-  ],
-  "standingsBvA": [
-    {
-      "pos": 1,
-      "team": "K. MERKSPLAS S.K.",
-      "pts": 9,
-      "matches": 3,
-      "wins": 3,
-      "draws": 0,
-      "losses": 0,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03256.jpg"
-    },
-    {
-      "pos": 2,
-      "team": "K.F.C. DESSEL SPORT B",
-      "pts": 9,
-      "matches": 3,
-      "wins": 3,
-      "draws": 0,
-      "losses": 0,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00606.jpg"
-    },
-    {
-      "pos": 3,
-      "team": "KFC DE KEMPEN TIELEN-LICHTAART B",
-      "pts": 9,
-      "matches": 3,
-      "wins": 3,
-      "draws": 0,
-      "losses": 0,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04469.jpg"
-    },
-    {
-      "pos": 4,
-      "team": "ROYAL FOOTBALL CLUB ZWANEVEN",
-      "pts": 9,
-      "matches": 3,
-      "wins": 3,
-      "draws": 0,
-      "losses": 0,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07719.jpg"
-    },
-    {
-      "pos": 5,
-      "team": "K. ZWALUWEN OLMEN",
-      "pts": 7,
-      "matches": 3,
-      "wins": 2,
-      "draws": 1,
-      "losses": 0,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02218.jpg"
-    },
-    {
-      "pos": 6,
-      "team": "K.F.C. ZWARTE LEEUW B",
-      "pts": 7,
-      "matches": 3,
-      "wins": 2,
-      "draws": 1,
-      "losses": 0,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01124.jpg"
     },
     {
       "pos": 7,
-      "team": "K. VLIMMEREN SPORT",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02646.jpg"
-    },
-    {
-      "pos": 8,
-      "team": "K. WUUSTWEZEL F.C. A",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg"
-    },
-    {
-      "pos": 9,
-      "team": "FC BUCOVINA LOENHOUT",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09802.jpg"
-    },
-    {
-      "pos": 9,
-      "team": "K.F.C. HEIDEBLOEM PULDERBOS",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01792.jpg"
-    },
-    {
-      "pos": 11,
-      "team": "K.F.C. BEEKHOEK SPORT",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05925.jpg"
-    },
-    {
-      "pos": 12,
-      "team": "K. TURNHOUTSE S.K. H.I.H.",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00210.jpg"
-    },
-    {
-      "pos": 13,
-      "team": "K.V.V. RAUW SPORT MOL",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02969.jpg"
-    },
-    {
-      "pos": 14,
-      "team": "K. MEERLE F.C.",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02510.jpg"
-    },
-    {
-      "pos": 15,
-      "team": "K. GOOREIND V.V.",
-      "pts": 6,
-      "matches": 3,
-      "wins": 2,
-      "draws": 0,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg"
-    },
-    {
-      "pos": 16,
-      "team": "W.S. SCHORVOORT TURNHOUT",
-      "pts": 4,
-      "matches": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07025.jpg"
-    },
-    {
-      "pos": 17,
-      "team": "K. BRECHT S.K.",
-      "pts": 4,
-      "matches": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01775.jpg"
-    },
-    {
-      "pos": 18,
-      "team": "K.V.C. OOSTMALLE SP.",
-      "pts": 4,
-      "matches": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01456.jpg"
-    },
-    {
-      "pos": 19,
-      "team": "K.S.K. KASTERLEE",
-      "pts": 4,
-      "matches": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03734.jpg"
-    },
-    {
-      "pos": 20,
-      "team": "K.F.C. ST-MARTINUS HALLE",
-      "pts": 4,
-      "matches": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02500.jpg"
-    },
-    {
-      "pos": 21,
-      "team": "K. ANTONIA F.C. B",
-      "pts": 4,
-      "matches": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01143.jpg"
-    },
-    {
-      "pos": 22,
-      "team": "RBW Molse SK",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09847.jpg"
-    },
-    {
-      "pos": 23,
-      "team": "K.F.C. FLANDRIA RAVELS",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03194.jpg"
-    },
-    {
-      "pos": 24,
-      "team": "V.N.A. WORTEL",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03811.jpg"
-    },
-    {
-      "pos": 25,
-      "team": "FC ST-JOZEF S.K. RIJKEVORSEL",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00727.jpg"
-    },
-    {
-      "pos": 26,
-      "team": "K. MINDERHOUT V.V. B",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07436.jpg"
-    },
-    {
-      "pos": 27,
-      "team": "K.F.C. ST.-LENAARTS B",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01357.jpg"
-    },
-    {
-      "pos": 28,
-      "team": "K. WUUSTWEZEL F.C. B",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg"
-    },
-    {
-      "pos": 29,
-      "team": "K.V. WESTMALLE",
-      "pts": 3,
-      "matches": 3,
-      "wins": 1,
-      "draws": 0,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00577.jpg"
-    },
-    {
-      "pos": 30,
-      "team": "K. SINT-JOB F.C. B",
-      "pts": 2,
-      "matches": 3,
-      "wins": 0,
-      "draws": 2,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03514.jpg"
-    },
-    {
-      "pos": 31,
-      "team": "K.F.C. POPPEL",
-      "pts": 2,
-      "matches": 3,
-      "wins": 0,
-      "draws": 2,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06537.jpg"
-    },
-    {
-      "pos": 32,
-      "team": "ALBERTA FC SCHILDE",
-      "pts": 2,
-      "matches": 3,
-      "wins": 0,
-      "draws": 2,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09659.jpg"
-    },
-    {
-      "pos": 33,
-      "team": "K. EENDRACHT F.C. ZOERSEL B",
-      "pts": 2,
-      "matches": 3,
-      "wins": 0,
-      "draws": 2,
-      "losses": 1,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01140.jpg"
-    },
-    {
-      "pos": 34,
-      "team": "K.S.V. OUD-TURNHOUT",
-      "pts": 1,
-      "matches": 3,
-      "wins": 0,
-      "draws": 1,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03327.jpg"
-    },
-    {
-      "pos": 35,
-      "team": "K.F.C. DE VREDE WECHELDERZANDE",
-      "pts": 1,
-      "matches": 3,
-      "wins": 0,
-      "draws": 1,
-      "losses": 2,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01086.jpg"
-    },
-    {
-      "pos": 36,
-      "team": "KFC TURNHOUT B",
+      "team": "KSOC Maria Ter Heide",
       "pts": 0,
-      "matches": 3,
+      "matches": 0,
       "wins": 0,
       "draws": 0,
-      "losses": 3,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00148.jpg"
+      "losses": 0
     },
     {
-      "pos": 37,
-      "team": "K.F.C. MOL",
+      "pos": 7,
+      "team": "KSV Wildert",
       "pts": 0,
-      "matches": 3,
+      "matches": 0,
       "wins": 0,
       "draws": 0,
-      "losses": 3,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00852.jpg"
+      "losses": 0
     },
     {
-      "pos": 38,
-      "team": "K.S.K. OOSTHOVEN",
+      "pos": 7,
+      "team": "R. Cappellen FC B",
       "pts": 0,
-      "matches": 3,
+      "matches": 0,
       "wins": 0,
       "draws": 0,
-      "losses": 3,
-      "image": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02820.jpg"
+      "losses": 0
+    },
+    {
+      "pos": 7,
+      "team": "K. Wuustwezel FC B",
+      "pts": 0,
+      "matches": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1
+    },
+    {
+      "pos": 7,
+      "team": "K. Sint Job FC B",
+      "pts": 0,
+      "matches": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1
+    },
+    {
+      "pos": 7,
+      "team": "Excelsior Mariaburg B",
+      "pts": 0,
+      "matches": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1
+    },
+    {
+      "pos": 7,
+      "team": "Sporting Merksem B",
+      "pts": 0,
+      "matches": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1
     }
   ]
 }

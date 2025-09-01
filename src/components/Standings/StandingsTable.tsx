@@ -5,9 +5,7 @@ import standingsData from "../../../data/standings.json";
 export function StandingsTable() {
     const [selectedCompetition, setSelectedCompetition] = useState("1");
 
-    const standings: Team[] = selectedCompetition === "0"
-        ? standingsData.standingsVoetbalVlaanderen4P as Team[]
-        : standingsData.standingsBvA as Team[];
+    const standings: Team[] = standingsData.standingsVoetbalVlaanderen4P
 
     return (
         <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
@@ -21,7 +19,6 @@ export function StandingsTable() {
                     value={selectedCompetition}
                     onChange={(e) => setSelectedCompetition(e.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mb-8">
-                    <option value="1">BvA Heren Groep 4 P3/P4</option>  
                     <option value="0">Voetbal Vlaanderen 4P</option>
                 </select>
             </form>

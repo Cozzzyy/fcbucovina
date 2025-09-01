@@ -3,6 +3,28 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "FC Bucovina Loenhout",
+        homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        awayTeam: "K. Sint Job FC B",
+        awayTeamLogo: "/teams/K. Sint Job FC B.png",
+        matchType: "Voetbal Vlaanderen 4P",
+        score: "1-2",
+        date: "2025-08-24",
+        location: "Bredabaan, 280 , 2990 Wuustwezel",
+        time: "15:00"
+    },
+    {
+        homeTeam: "EXC. FC Essen",
+        homeTeamLogo: "/teams/EXC. FC Essen.png",
+        awayTeam: "FC Bucovina Loenhout",
+        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        matchType: "Voetbal Vlaanderen 4P",
+        score: "0-0",
+        date: "2025-08-30",
+        location: "Oude Baan 112 , 2910 Essen",
+        time: "19:30"
+    },
+    {
         homeTeam: "K.F.C. ST-MARTINUS HALLE",
         homeTeamLogo: "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02500.jpg",
         awayTeam: "FC Bucovina Loenhout",
@@ -11,27 +33,6 @@ const games: Game[] = [
         score: "3-1",
         date: "16/08/2025 18:30",
         location: "Lotelinglaan 1 , 2980 Halle",
-    },
-    {
-        homeTeam: "FC Bucovina Loenhout",
-        homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        awayTeam: "K. Gooreind VV",
-        awayTeamLogo: "/teams/K. Gooreind VV.png",
-        matchType: "BvA Heren Groep 4 P3/P4",
-        score: "3-2",
-        date: "2025-08-09",
-        location: "Bredabaan, 280 , 2990 Wuustwezel",
-        time: "18:30"
-    },
-    {
-        homeTeam: "KFC Turnhout B",
-        homeTeamLogo: "/teams/KFC Turnhout B.png",
-        awayTeam: "FC Bucovina Loenhout",
-        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        matchType: "BvA Heren Groep 4 P3/P4",
-        score: "0-1",
-        date: "02-08-2025 18:00",
-        location: "De Leemshoeve / Terrein 4, Stwg. Op Merksplas 80 , 2300 Turnhout",
     }
 ];
 

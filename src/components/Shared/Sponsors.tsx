@@ -4,7 +4,7 @@ export function Sponsors() {
         {src: "/sponsors/Pravalia-mariei.webp", alt: "Pravalia Mariei"},
         {src: "/sponsors/Anditrans.webp", alt: "Anditrans"},
         {src: "/sponsors/Rino-Dental-Center.webp", alt: "Rino Dental Center"},
-        {src: "/sponsors/Frtieje-meer.webp", alt: "Frietje Meer"},
+        {src: "/sponsors/Frietje-meer.jpg", alt: "Frietje Meer"},
         {src: "/sponsors/Afine.webp", alt: "Afine"},
         {src: "/sponsors/fun-tour.webp", alt: "Fun Tour"},
         {src: "/sponsors/NED.webp", alt: "NED"},

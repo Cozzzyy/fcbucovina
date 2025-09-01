@@ -38,7 +38,7 @@
     "awayTeam": "K. Sint Job FC B",
     "awayTeamLogo": "K. Sint Job FC B.png",
     "matchType": "Voetbal Vlaanderen 4P",
-    "score": "",
+    "score": "1-2",
     "date": "2025-08-24",
     "location": "Bredabaan, 280 , 2990 Wuustwezel",
     "time": "15:00"
@@ -49,7 +49,7 @@
     "awayTeam": "FC Bucovina Loenhout",
     "awayTeamLogo": "FC Bucovina Loenhout.png",
     "matchType": "Voetbal Vlaanderen 4P",
-    "score": "",
+    "score": "0-0",
     "date": "2025-08-30",
     "location": "Oude Baan 112 , 2910 Essen",
     "time": "19:30"
@@ -132,10 +132,10 @@
     "time": "19:30"
   },
   {
-    "homeTeam": "Excelsior Mariaburg B",
-    "homeTeamLogo": "Excelsior Mariaburg B.png",
-    "awayTeam": "FC Bucovina Loenhout",
-    "awayTeamLogo": "FC Bucovina Loenhout.png",
+    "homeTeam": "FC Bucovina Loenhout",
+    "homeTeamLogo": "FC Bucovina Loenhout.png",
+    "awayTeam": "Excelsior Mariaburg B",
+    "awayTeamLogo": "Excelsior Mariaburg B.png",
     "matchType": "Voetbal Vlaanderen 4P",
     "score": "",
     "date": "2025-11-02",
@@ -154,10 +154,10 @@
     "time": "20:00"
   },
   {
-    "homeTeam": "Zandvliet Sport B",
-    "homeTeamLogo": "Zandvliet Sport B.png",
-    "awayTeam": "FC Bucovina Loenhout",
-    "awayTeamLogo": "FC Bucovina Loenhout.png",
+    "homeTeam": "FC Bucovina Loenhout",
+    "homeTeamLogo": "FC Bucovina Loenhout.png",
+    "awayTeam": "Zandvliet Sport B",
+    "awayTeamLogo": "Zandvliet Sport B.png",
     "matchType": "Voetbal Vlaanderen 4P",
     "score": "",
     "date": "2025-11-16",
