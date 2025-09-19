@@ -3,6 +3,17 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "R. Cappellen FC B",
+        homeTeamLogo: "/teams/R. Cappellen FC B.png",
+        awayTeam: "FC Bucovina Loenhout",
+        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        matchType: "Voetbal Vlaanderen 4P",
+        score: "1-0",
+        date: "2025-09-13",
+        location: "René de Pauwstraat,69 , 2950 Kapellen",
+        time: "18:00"
+    },
+    {
         homeTeam: "FC Bucovina Loenhout",
         homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
         awayTeam: "K. Sint Job FC B",
@@ -24,16 +35,6 @@ const games: Game[] = [
         location: "Oude Baan 112 , 2910 Essen",
         time: "19:30"
     },
-    {
-        homeTeam: "K.F.C. ST-MARTINUS HALLE",
-        homeTeamLogo: "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02500.jpg",
-        awayTeam: "FC Bucovina Loenhout",
-        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        matchType: "BvA Heren Groep 4 P3/P4",
-        score: "3-1",
-        date: "16/08/2025 18:30",
-        location: "Lotelinglaan 1 , 2980 Halle",
-    }
 ];
 
 export function LatestGames() {
