@@ -3,6 +3,17 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "FC Bucovina Loenhout",
+        homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        awayTeam: "KSOC Maria Ter Heide",
+        awayTeamLogo: "/teams/KSOC Maria Ter Heide.png",
+        matchType: "Voetbal Vlaanderen 4P",
+        score: "3-2",
+        date: "2025-09-21",
+        location: "Bredabaan, 280 , 2990 Wuustwezel",
+        time: "15:00"
+    },
+    {
         homeTeam: "R. Cappellen FC B",
         homeTeamLogo: "/teams/R. Cappellen FC B.png",
         awayTeam: "FC Bucovina Loenhout",
@@ -23,17 +34,6 @@ const games: Game[] = [
         date: "2025-08-24",
         location: "Bredabaan, 280 , 2990 Wuustwezel",
         time: "15:00"
-    },
-    {
-        homeTeam: "EXC. FC Essen",
-        homeTeamLogo: "/teams/EXC. FC Essen.png",
-        awayTeam: "FC Bucovina Loenhout",
-        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        matchType: "Voetbal Vlaanderen 4P",
-        score: "0-0",
-        date: "2025-08-30",
-        location: "Oude Baan 112 , 2910 Essen",
-        time: "19:30"
     },
 ];
 
