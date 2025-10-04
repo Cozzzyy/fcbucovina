@@ -3,6 +3,18 @@ import type { Game } from "../../../types/Game.ts";
 
 const games: Game[] = [
     {
+        homeTeam: "Putte SK",
+        homeTeamLogo: "/teams/Putte SK.png",
+        awayTeam: "FC Bucovina Loenhout",
+        awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
+        matchType: "Voetbal Vlaanderen 4P",
+        score: "1-4",
+        date: "2025-09-28",
+        location: "Grensstraat 141 , 2950 Kapellen",
+        time: "15:00"
+    },
+
+    {
         homeTeam: "FC Bucovina Loenhout",
         homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
         awayTeam: "KSOC Maria Ter Heide",
@@ -23,17 +35,6 @@ const games: Game[] = [
         date: "2025-09-13",
         location: "René de Pauwstraat,69 , 2950 Kapellen",
         time: "18:00"
-    },
-    {
-        homeTeam: "FC Bucovina Loenhout",
-        homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
-        awayTeam: "K. Sint Job FC B",
-        awayTeamLogo: "/teams/K. Sint Job FC B.png",
-        matchType: "Voetbal Vlaanderen 4P",
-        score: "1-2",
-        date: "2025-08-24",
-        location: "Bredabaan, 280 , 2990 Wuustwezel",
-        time: "15:00"
     },
 ];
 
