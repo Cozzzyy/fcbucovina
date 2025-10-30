@@ -1,41 +1,10 @@
 import { GameCard } from "./GameCard.tsx";
-import type { Game } from "../../../types/Game.ts";
+import gamesData from '../../../../data/games.json';
 
-const games: Game[] = [
-  {
-    homeTeam: "FC Bucovina Loenhout",
-    homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
-    awayTeam: "KSV Wildert",
-    awayTeamLogo: "/teams/KSV Wildert.png",
-    matchType: "Voetbal Vlaanderen 4P",
-    score: "1-2",
-    date: "2025-10-05",
-    location: "Bredabaan, 280 , 2990 Wuustwezel",
-    time: "15:00",
-  },
-  {
-    homeTeam: "Putte SK",
-    homeTeamLogo: "/teams/Putte SK.png",
-    awayTeam: "FC Bucovina Loenhout",
-    awayTeamLogo: "/teams/FC Bucovina Loenhout.png",
-    matchType: "Voetbal Vlaanderen 4P",
-    score: "1-4",
-    date: "2025-09-28",
-    location: "Grensstraat 141 , 2950 Kapellen",
-    time: "15:00",
-  },
-  {
-    homeTeam: "FC Bucovina Loenhout",
-    homeTeamLogo: "/teams/FC Bucovina Loenhout.png",
-    awayTeam: "KSOC Maria Ter Heide",
-    awayTeamLogo: "/teams/KSOC Maria Ter Heide.png",
-    matchType: "Voetbal Vlaanderen 4P",
-    score: "3-2",
-    date: "2025-09-21",
-    location: "Bredabaan, 280 , 2990 Wuustwezel",
-    time: "15:00",
-  },
-];
+const latestScoredGames = (gamesData as any[])
+  .filter(g => g.score && g.score.toString().trim() !== '')
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3);
 
 export function LatestGames() {
   return (
@@ -44,7 +13,7 @@ export function LatestGames() {
         <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold italic uppercase">
           ULTIMELE MECIURI
         </h2>
-        {games.map((game, index) => (
+        {latestScoredGames.map((game, index) => (
           <GameCard key={index} game={game} />
         ))}
       </div>

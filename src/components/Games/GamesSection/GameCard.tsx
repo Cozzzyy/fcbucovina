@@ -49,7 +49,7 @@ export function GameCard({ game }: GameCardProps) {
                             <img
                                 className="w-[60px] md:w-[85px] h-[60px] md:h-[85px] object-contain"
                                 alt={`${game.homeTeam} Logo`}
-                                src={`/teams/${game.homeTeamLogo}`}
+                                src={`${game.homeTeamLogo}`}
                                 loading="lazy"
                                 width={85}
                                 height={85}
@@ -70,7 +70,7 @@ export function GameCard({ game }: GameCardProps) {
                             <img
                                 className="w-[60px] md:w-[85px] h-[60px] md:h-[85px] object-contain"
                                 alt={`${game.awayTeam} Logo`}
-                                src={`/teams/${game.awayTeamLogo}`}
+                                src={`${game.awayTeamLogo}`}
                                 loading="lazy"
                                 width={85}
                                 height={85}
