@@ -137,10 +137,22 @@
     "awayTeam": "Excelsior Mariaburg B",
     "awayTeamLogo": "/teams/Excelsior Mariaburg B.png",
     "matchType": "Voetbal Vlaanderen 4P",
-    "score": "",
+    "score": "5-2",
     "date": "2025-11-02",
     "location": "Bredabaan, 280 , 2990 Wuustwezel",
     "time": "14:30"
+  },
+  {
+    
+    "homeTeam": "R. Cappellen FC B",
+    "homeTeamLogo": "/teams/R. Cappellen FC B.png",
+    "awayTeam": "FC Bucovina Loenhout",
+    "awayTeamLogo": "/teams/FC Bucovina Loenhout.png",
+    "matchType": "Voetbal Vlaanderen 4P",
+    "score": "3-1",
+    "date": "2025-11-05",
+    "location": "Stadion Jos Van Wellen / Terrein 1 René de Pauwstraat,69 , 2950 Kapellen",
+    "time": "20:00"
   },
   {
     "homeTeam": "SV Noorse",
@@ -148,7 +160,7 @@
     "awayTeam": "FC Bucovina Loenhout",
     "awayTeamLogo": "/teams/FC Bucovina Loenhout.png",
     "matchType": "Voetbal Vlaanderen 4P",
-    "score": "",
+    "score": "1-1",
     "date": "2025-11-08",
     "location": "Frans De Peuterstraat 50 , 2950 Kapellen",
     "time": "20:00"
@@ -159,7 +171,7 @@
     "awayTeam": "Zandvliet Sport B",
     "awayTeamLogo": "/teams/Zandvliet Sport B.png",
     "matchType": "Voetbal Vlaanderen 4P",
-    "score": "",
+    "score": "4-3",
     "date": "2025-11-16",
     "location": "Bredabaan, 280 , 2990 Wuustwezel",
     "time": "14:30"
