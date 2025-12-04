@@ -3,11 +3,11 @@ import { TitleSection } from "../components/Games/TitleSection.tsx";
 import { MonthFilter } from "../components/Games/MonthFilter.tsx";
 import { MonthTitle } from "../components/Games/GamesSection/MonthTitle.tsx";
 import { GameCard } from "../components/Games/GamesSection/GameCard.tsx";
-import gamesData from "../../data/games.json";
 import type { Game } from "../types/Game.ts";
+import { useGames } from "../components/Games/api/hooks/useGames.ts";
 
 export function GamesPage() {
-    const games: Game[] = gamesData;
+    const { data: games = [] } = useGames();
 
     const groupGamesByMonth = (games: Game[]) => {
         const grouped: { [key: string]: Game[] } = {};
