@@ -1,10 +1,11 @@
 import type { GraphQLResponse, SeriesRankingsData } from '../model/model';
 
 const GRAPHQL_ENDPOINT = 'https://datalake-prod2018.rbfa.be/graphql';
+const SERIES_ID = 'CHP_125628';
 
 const STANDINGS_QUERY = `
-  query GetSeriesRankings {
-    seriesRankings(id: "CHP_125628") {
+  query GetSeriesRankings($seriesId: ID!, $language: Language!) {
+    seriesRankings(seriesId: $seriesId, language: $language) {
       id
       name
       rankings {
@@ -35,6 +36,10 @@ export async function fetchSeriesRankings(): Promise<SeriesRankingsData> {
     },
     body: JSON.stringify({
       query: STANDINGS_QUERY,
+      variables: {
+        seriesId: SERIES_ID,
+        language: 'nl',
+      },
     }),
   });
 
@@ -45,6 +50,9 @@ export async function fetchSeriesRankings(): Promise<SeriesRankingsData> {
   const data: GraphQLResponse<SeriesRankingsData> = await response.json();
 
   if (!data.data?.seriesRankings) {
+    if (data.data?.errors) {
+      console.error('GraphQL Errors:', data.data.errors);
+    }
     throw new Error('Invalid response structure from API');
   }
 

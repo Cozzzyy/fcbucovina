@@ -23,5 +23,6 @@ export interface SeriesRankingsData {
 export interface GraphQLResponse<T> {
   data: {
     seriesRankings: T;
+    errors?: Array<{ message: string }>;
   };
 }

@@ -1,5 +1,6 @@
 import type { MatchDetail, ClubMatchesData, GraphQLResponse } from "../model/model";
 import type { Game } from "../../../../types/Game";
+import { enrichGamesWithLocations } from "../utils/utils";
 
 const GRAPHQL_ENDPOINT = "https://datalake-prod2018.rbfa.be/graphql";
 const CLUB_ID = "9585"; // FC Bucovina
@@ -67,7 +68,7 @@ export async function fetchClubMatches(): Promise<ClubMatchesData> {
 }
 
 export function transformToGameFormat(matches: MatchDetail[]): Game[] {
-  return matches.map((match) => {
+  const games = matches.map((match) => {
     const homeTeam = match.homeTeam.name;
     const awayTeam = match.awayTeam.name;
     const homeTeamLogo = match.homeTeam.logo;
@@ -106,4 +107,6 @@ export function transformToGameFormat(matches: MatchDetail[]): Game[] {
       time,
     };
   });
+
+  return enrichGamesWithLocations(games);
 }
