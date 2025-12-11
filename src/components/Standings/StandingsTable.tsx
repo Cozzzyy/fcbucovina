@@ -1,13 +1,29 @@
 import {useState} from "react";
-import type {Team} from "../../types/Team.ts";
-import standingsData from "../../../data/standings.json";
+import { useStandings } from "./api/hooks/useStandings";
 import { useTranslation } from "react-i18next";
 
 export function StandingsTable() {
     const [selectedCompetition, setSelectedCompetition] = useState("1");
     const { t } = useTranslation();
+    const { data: standings, isPending: loading, error } = useStandings();
 
-    const standings: Team[] = standingsData.standingsVoetbalVlaanderen4P
+    if (loading) {
+        return (
+            <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+                <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
+                <p className="text-gray-600">{t('common.loading')}</p>
+            </div>
+        );
+    }
+
+    if (error || !standings) {
+        return (
+            <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+                <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
+                <p className="text-red-600">{t('common.error')}: {error?.message || t('common.noData')}</p>
+            </div>
+        );
+    }
 
     return (
         <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
