@@ -15,7 +15,10 @@ export function GameCard({ game }: GameCardProps) {
         const date = new Date(dateString);
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0');
-        const dayName = date.toLocaleDateString('ro-RO', { weekday: 'long' }).toUpperCase();
+        const dayIndex = date.getDay();
+        
+        const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+        const dayName = t(`days.${dayNames[dayIndex]}`);
 
         return `${dayName}, ${day}/${month}`;
     }

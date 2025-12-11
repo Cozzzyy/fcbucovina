@@ -10,7 +10,7 @@ export function NewsCards() {
 
     return (
         <>
-            <h1 className="lg:mt-12 mt-4 w-full px-4 text-5xl font-bold lg:mb-8 mb-4 italic text-green-700" >
+            <h1 className="lg:mt-12 mt-4 w-full px-4 text-3xl sm:text-4xl md:text-5xl font-bold lg:mb-8 mb-4 italic text-green-700" >
                 {t('news.newsTitle')}
             </h1>
 

@@ -64,7 +64,7 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
                         backgroundSize: "220% 200%",
                     }}
                 >
-                    {player.position.toUpperCase()}
+                    {t(`club.positions.${player.position}`) || player.position.toUpperCase()}
                 </p>
 
 

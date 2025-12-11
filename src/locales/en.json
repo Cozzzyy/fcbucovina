@@ -39,7 +39,8 @@
     "title": "GAMES",
     "allGames": "All Games",
     "filter": "Filter by month",
-    "gamesTitle": "GAMES 25-26",
+    "gamesTitle": "GAMES",
+    "gamesSeason": "2025-2026",
     "latestGames": "LATEST GAMES",
     "versus": "VS"
   },
@@ -50,7 +51,26 @@
     "staffAndPlayers": "STAFF & PLAYERS",
     "playersTitle": "PLAYERS",
     "experience": "EXPERIENCE",
-    "season": "2025-2026"
+    "season": "2025-2026",
+    "positions": {
+      "portar": "Goalkeeper",
+      "fundaș dreapta": "Right Back",
+      "fundaș stânga": "Left Back",
+      "fundaș central": "Center Back",
+      "mijlocaș central": "Central Midfielder",
+      "mijlocaș dreapta": "Right Midfielder",
+      "mijlocaș stânga": "Left Midfielder",
+      "atacant": "Forward",
+      "antrenor": "Coach",
+      "antrenor principal": "Head Coach",
+      "antrenor secund": "Assistant Coach",
+      "kinetoterapeut": "Physiotherapist",
+      "team manager": "Team Manager",
+      "președintele echipei": "Club President",
+      "doctorul echipei": "Team Doctor",
+      "delegatul echipei": "Team Delegate",
+      "fotograful echipei": "Team Photographer"
+    }
   },
   "news": {
     "title": "NEWS",
@@ -77,6 +97,29 @@
     "feb": "FEB",
     "mar": "MAR",
     "apr": "APR"
+  },
+  "monthsFull": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "days": {
+    "monday": "MONDAY",
+    "tuesday": "TUESDAY",
+    "wednesday": "WEDNESDAY",
+    "thursday": "THURSDAY",
+    "friday": "FRIDAY",
+    "saturday": "SATURDAY",
+    "sunday": "SUNDAY"
   },
   "sponsors": {
     "title": "SPONSORS"

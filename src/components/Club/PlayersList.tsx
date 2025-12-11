@@ -17,10 +17,10 @@ export function PlayersList() {
     const { t } = useTranslation();
     
     return (
-        <div className="w-full mt-35 lg:mt-45">
+        <div className="w-full p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
             {/* Staff Header */}
-            <div className="w-full h-20 flex flex-col justify-center items-center text-center mb-13">
-                <h2 className="text-4xl lg:text-7xl text-green-700 font-bold italic mb-2">{t('club.staffAndPlayers')}</h2>
+            <div className="mb-13">
+                <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('club.staffAndPlayers')}</h2>
                 <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">{t('club.season')}</h2>
             </div>
 
@@ -46,10 +46,10 @@ export function PlayersList() {
             </div>
 
             {/* Players Header */}
-            <div className="w-full h-20 flex justify-center items-center mb-20">
-                <h1 className="text-5xl text-green-700 font-bold mb-10 italic uppercase text-center tracking-wider">
+            <div className="mb-8 mt-12">
+                <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic uppercase">
                     {t('club.playersTitle')}
-                </h1>
+                </h2>
             </div>
 
             {/* Players Grid */}

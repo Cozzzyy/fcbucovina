@@ -34,9 +34,24 @@ i18n
     
     // Language detection options
     detection: {
-      order: ['navigator', 'localStorage', 'htmlTag'],
+      order: ['querystring', 'navigator', 'localStorage', 'htmlTag', 'path', 'subdomain'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
+      lookupQuerystring: 'lng',
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0,
+
+      convertDetectedLanguage: (lng) => {
+        const baseLang = lng.split('-')[0].toLowerCase();
+        const supported = ['en', 'nl', 'fr', 'ro'];
+        
+        if (supported.includes(baseLang)) {
+          return baseLang;
+        }
+        
+        console.log(`Language ${lng} not supported, using fallback`);
+        return 'ro'; // fallback
+      },
     },
 
     interpolation: {
@@ -46,6 +61,14 @@ i18n
     react: {
       useSuspense: false,
     },
+    
+    debug: false, // Set to true to see detection logs
   });
+
+// Log when language changes
+i18n.on('languageChanged', (lng) => {
+  console.log('Language changed to:', lng);
+  document.documentElement.lang = lng; // Update HTML lang attribute for SEO
+});
 
 export default i18n;

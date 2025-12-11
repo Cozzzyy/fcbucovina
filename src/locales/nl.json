@@ -39,7 +39,8 @@
     "title": "WEDSTRIJDEN",
     "allGames": "Alle Wedstrijden",
     "filter": "Filter op maand",
-    "gamesTitle": "WEDSTRIJDEN 25-26",
+    "gamesTitle": "WEDSTRIJDEN",
+    "gamesSeason": "2025-2026",
     "latestGames": "LAATSTE WEDSTRIJDEN",
     "versus": "VS"
   },
@@ -50,7 +51,26 @@
     "staffAndPlayers": "STAF & SPELERS",
     "playersTitle": "SPELERS",
     "experience": "ERVARING",
-    "season": "2025-2026"
+    "season": "2025-2026",
+    "positions": {
+      "portar": "Doelman",
+      "fundaș dreapta": "Rechter Verdediger",
+      "fundaș stânga": "Linker Verdediger",
+      "fundaș central": "Centrale Verdediger",
+      "mijlocaș central": "Centrale Middenvelder",
+      "mijlocaș dreapta": "Rechter Middenvelder",
+      "mijlocaș stânga": "Linker Middenvelder",
+      "atacant": "Aanvaller",
+      "antrenor": "Trainer",
+      "antrenor principal": "Hoofdtrainer",
+      "antrenor secund": "Assistent Trainer",
+      "kinetoterapeut": "Fysiotherapeut",
+      "team manager": "Team Manager",
+      "președintele echipei": "Voorzitter",
+      "doctorul echipei": "Teamarts",
+      "delegatul echipei": "Teamafgevaardigde",
+      "fotograful echipei": "Teamfotograaf"
+    }
   },
   "news": {
     "title": "NIEUWS",
@@ -77,6 +97,29 @@
     "feb": "FEB",
     "mar": "MRT",
     "apr": "APR"
+  },
+  "monthsFull": {
+    "january": "Januari",
+    "february": "Februari",
+    "march": "Maart",
+    "april": "April",
+    "may": "Mei",
+    "june": "Juni",
+    "july": "Juli",
+    "august": "Augustus",
+    "september": "September",
+    "october": "Oktober",
+    "november": "November",
+    "december": "December"
+  },
+  "days": {
+    "monday": "MAANDAG",
+    "tuesday": "DINSDAG",
+    "wednesday": "WOENSDAG",
+    "thursday": "DONDERDAG",
+    "friday": "VRIJDAG",
+    "saturday": "ZATERDAG",
+    "sunday": "ZONDAG"
   },
   "sponsors": {
     "title": "SPONSORS"
