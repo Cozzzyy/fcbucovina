@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import players from "../../../../data/players.json";
 import staff from "../../../../data/staff.json";
 import { PlayerCard } from "../../Club/PlayerCard.tsx";
+import { useTranslation } from "react-i18next";
 
 export function ScrollingPlayersRow() {
+    const { t } = useTranslation();
     const scrollRef = useRef<HTMLDivElement>(null);
     const firstCardRef = useRef<HTMLDivElement>(null);
     const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
@@ -40,7 +42,7 @@ export function ScrollingPlayersRow() {
     return (
         <div className="w-full overflow-hidden py-10">
             <h2 className="text-[40px] sm:text-6xl text-center text-green-700 font-bold italic uppercase">
-                STAFF & JUCĂTORI
+                {t('club.staffAndPlayers')}
             </h2>
 
             <div
