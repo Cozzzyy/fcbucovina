@@ -1,4 +1,5 @@
 import type { Player } from "../../types/Player.ts";
+import { useTranslation } from "react-i18next";
 
 interface PlayerCardProps {
     player: Player;
@@ -7,6 +8,8 @@ interface PlayerCardProps {
 }
 
 export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) {
+    const { t } = useTranslation();
+    
     return (
         <article className="flex flex-col w-full justify-center items-center min-h-[400px]">
             <section className="relative flex flex-col justify-center items-center bg-transparent pt-6 w-[90%] md:w-[300px] lg:w-[300px] overflow-hidden">
@@ -70,7 +73,7 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
                 {!hideDetails && (
                     <section className="flex flex-col justify-center items-center">
                         <p className="text-xs sm:text-sm text-gray-500 mb-2">{player.dateOfBirth}</p>
-                        <p className={'text-sm italic font-bold mb-1'}>EXPERIENȚA</p>
+                        <p className={'text-sm italic font-bold mb-1'}>{t('club.experience')}</p>
                         <p className="text-xs sm:text-sm text-gray-900 text-center mb-2 w-full h-[80px] sm:h-[100px] overflow-hidden">
                             {player.description}
                         </p>

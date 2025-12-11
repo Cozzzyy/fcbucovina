@@ -8,8 +8,8 @@ export function MonthTitle({ date }: MonthTitleProps) {
         const month = date.getMonth();
 
         const monthAbbreviations = [
-            "IAN", "FEB", "MAR", "APR", "MAI", "IUN",
-            "IUL", "AUG", "SEP", "OCT", "NOI", "DEC"
+            "jan", "feb", "mar", "apr", "may", "jun",
+            "jul", "aug", "sep", "oct", "nov", "dec"
         ];
 
         const monthAbbr = monthAbbreviations[month];

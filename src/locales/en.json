@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "HOME",
+    "news": "NEWS",
+    "club": "CLUB",
+    "games": "GAMES",
+    "standings": "STANDINGS",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "clubName": "Football Club Bucovina Vzw",
+    "links": "LINKS",
+    "contact": "CONTACT",
+    "home": "HOME",
+    "news": "NEWS",
+    "games": "GAMES",
+    "club": "CLUB",
+    "standings": "STANDINGS",
+    "copyright": "© 2025 Cosmin Nechita. All rights reserved."
+  },
+  "standings": {
+    "title": "STANDINGS",
+    "position": "Position",
+    "team": "Team",
+    "games": "Games",
+    "wins": "W",
+    "draws": "D",
+    "losses": "L",
+    "goalsFor": "GF",
+    "goalsAgainst": "GA",
+    "goalDifference": "GD",
+    "points": "Points",
+    "selectCompetition": "Select competition",
+    "competition": "Voetbal Vlaanderen 4P",
+    "season": "2025-2026"
+  },
+  "games": {
+    "title": "GAMES",
+    "allGames": "All Games",
+    "filter": "Filter by month",
+    "gamesTitle": "GAMES 25-26",
+    "latestGames": "LATEST GAMES",
+    "versus": "VS"
+  },
+  "club": {
+    "title": "CLUB",
+    "players": "Players",
+    "staff": "Staff",
+    "staffAndPlayers": "STAFF & PLAYERS",
+    "playersTitle": "PLAYERS",
+    "experience": "EXPERIENCE",
+    "season": "2025-2026"
+  },
+  "news": {
+    "title": "NEWS",
+    "latestNews": "Latest News",
+    "readMore": "Read more",
+    "newsTitle": "NEWS"
+  },
+  "home": {
+    "teamMotto": "A TEAM UNITED BY TRUST, RAISED BY RESPECT, DRIVEN BY THE DESIRE TO WIN.",
+    "calendar": "Calendar"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "noData": "No data available"
+  },
+  "months": {
+    "aug": "AUG",
+    "sep": "SEP",
+    "oct": "OCT",
+    "nov": "NOV",
+    "dec": "DEC",
+    "jan": "JAN",
+    "feb": "FEB",
+    "mar": "MAR",
+    "apr": "APR"
+  },
+  "sponsors": {
+    "title": "SPONSORS"
+  },
+  "underConstruction": {
+    "title": "Page Under Construction",
+    "message": "This page is currently under development. Thank you for your patience!"
+  },
+  "languages": {
+    "romanian": "Română",
+    "english": "English",
+    "dutch": "Nederlands",
+    "french": "Français",
+    "selectLanguage": "Select language",
+    "languageLabel": "Language / Taal / Langue"
+  }
+}

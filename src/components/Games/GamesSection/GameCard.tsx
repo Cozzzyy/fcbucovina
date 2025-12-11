@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import type { Game } from "../../../types/Game.ts";
+import { useTranslation } from "react-i18next";
 
 interface GameCardProps {
     game: Game;
 }
 
 export function GameCard({ game }: GameCardProps) {
+    const { t } = useTranslation();
 
     const { homeScore, awayScore } = parseScore(game.score);
 
@@ -62,7 +64,7 @@ export function GameCard({ game }: GameCardProps) {
                     {game.score && game.score.trim() !== '' ? (
                         <p className="text-md md:text-base lg:text-xl font-medium">-</p>
                     ) : (
-                        <p className="text-md md:text-base lg:text-md font-light">VS</p>
+                        <p className="text-md md:text-base lg:text-md font-light">{t('games.versus')}</p>
                     )}
                     <p className="text-3xl md:text-base lg:text-3xl font-medium">{awayScore}</p>
                     <div className="flex flex-col items-center w-[120px] md:w-[150px]">

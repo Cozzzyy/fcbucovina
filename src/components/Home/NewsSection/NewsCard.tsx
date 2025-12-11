@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface NewsCardProps {
     id: number;
@@ -9,6 +10,7 @@ interface NewsCardProps {
 
 export function NewsCard({ id, title, date, first }: NewsCardProps) {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const handleNavigate = (id: number | undefined) => {
         if (id) {
@@ -57,7 +59,7 @@ export function NewsCard({ id, title, date, first }: NewsCardProps) {
                         first ? "lg:px-5 lg:py-2 lg:text-md md:px-5 md:py-3" : ""
                     }`}
                 >
-                    CITESTE TOT
+                    {t('news.readMore').toUpperCase()}
                 </a>
             </div>
         </div>

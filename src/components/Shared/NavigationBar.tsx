@@ -1,17 +1,35 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Globe } from "lucide-react";
 
 const navLinks = [
-    { name: "ACASA", path: "/" },
-    { name: "STIRI", path: "/stiri" },
-    { name: "CLUB", path: "/club" },
-    { name: "MECIURI", path: "/meciuri" },
-    { name: "CLASAMENT", path: "/clasament" },
+    { nameKey: "nav.home", path: "/" },
+    { nameKey: "nav.news", path: "/stiri" },
+    { nameKey: "nav.club", path: "/club" },
+    { nameKey: "nav.games", path: "/meciuri" },
+    { nameKey: "nav.standings", path: "/clasament" },
+];
+
+const languages = [
+    { code: "ro", name: "RO", flag: "🇷🇴" },
+    { code: "en", name: "EN", flag: "🇬🇧" },
+    { code: "nl", name: "NL", flag: "🇳🇱" },
+    { code: "fr", name: "FR", flag: "🇫🇷" },
 ];
 
 export function NavigationBar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [langMenuOpen, setLangMenuOpen] = useState(false);
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (langCode: string) => {
+        i18n.changeLanguage(langCode);
+        setLangMenuOpen(false);
+    };
+
+    const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
     return (
         <nav className="bg-[#018749] fixed top-0 w-full z-50 drop-shadow-black">
@@ -25,10 +43,10 @@ export function NavigationBar() {
                             className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-green-800 focus:outline-none focus:ring-0"
                             aria-controls="mobile-menu"
                             aria-expanded={menuOpen}
-                            aria-label={menuOpen ? "Închide meniul" : "Deschide meniul"}
+                            aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
                         >
               <span className="sr-only">
-                {menuOpen ? "Închide meniul principal" : "Deschide meniul principal"}
+                {menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
               </span>
                             {menuOpen ? (
                                 <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
@@ -47,17 +65,53 @@ export function NavigationBar() {
                         <img className="h-20 lg:h-35 lg:ml-10 lg:mt-8 w-auto" src="/teams/FC%20Bucovina%20Loenhout.png" alt="Logo" />
                     </div>
 
-                    {/* Desktop links */}
+                    {/* Desktop links and language selector */}
                     <div className="hidden sm:flex sm:items-center sm:space-x-2">
                         {navLinks.map((item) => (
                             <Link
-                                key={item.name}
+                                key={item.nameKey}
                                 to={item.path}
                                 className="rounded-md px-3 py-2 text-lg font-bold text-white hover:text-green-300 hover:scale-105 transition-transform"
                             >
-                                {item.name}
+                                {t(item.nameKey)}
                             </Link>
                         ))}
+                        
+                        {/* Language selector */}
+                        <div className="relative ml-4">
+                            <button
+                                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                                className="flex items-center gap-2 rounded-md px-3 py-2 text-lg font-bold text-white hover:bg-green-800 transition-colors"
+                                aria-label={t('languages.selectLanguage')}
+                            >
+                                <Globe className="w-5 h-5" />
+                                {currentLanguage.name}
+                            </button>
+                            
+                            <AnimatePresence>
+                                {langMenuOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        transition={{ duration: 0.2 }}
+                                        className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-50"
+                                    >
+                                        {languages.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                onClick={() => changeLanguage(lang.code)}
+                                                className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
+                                                    i18n.language === lang.code ? 'bg-green-50 text-green-700 font-bold' : 'text-gray-700'
+                                                }`}
+                                            >
+                                                {t(`languages.${lang.code === 'ro' ? 'romanian' : lang.code === 'en' ? 'english' : lang.code === 'nl' ? 'dutch' : 'french'}`)}
+                                            </button>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +131,7 @@ export function NavigationBar() {
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             {navLinks.map((item, index) => (
                                 <motion.div
-                                    key={item.name}
+                                    key={item.nameKey}
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.15 * index }}
@@ -87,10 +141,28 @@ export function NavigationBar() {
                                         onClick={() => setMenuOpen(false)}
                                         className="block rounded-md px-3 py-2 text-base font-bold text-white hover:bg-green-800"
                                     >
-                                        {item.name}
+                                        {t(item.nameKey)}
                                     </Link>
                                 </motion.div>
                             ))}
+                            
+                            {/* Mobile language selector */}
+                            <div className="pt-2 border-t border-green-600 mt-2">
+                                <p className="px-3 py-2 text-sm text-green-200 font-semibold">{t('languages.languageLabel')}</p>
+                                {languages.map((lang) => (
+                                    <button
+                                        key={lang.code}
+                                        onClick={() => changeLanguage(lang.code)}
+                                        className={`block w-full text-left rounded-md px-3 py-2 ${
+                                            i18n.language === lang.code 
+                                                ? 'text-white font-bold text-base' 
+                                                : 'text-white hover:bg-green-800 text-sm font-light'
+                                        }`}
+                                    >
+                                        {t(`languages.${lang.code === 'ro' ? 'romanian' : lang.code === 'en' ? 'english' : lang.code === 'nl' ? 'dutch' : 'french'}`)}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </motion.div>
                 )}

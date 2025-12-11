@@ -1,15 +1,17 @@
 import { NewsCard } from "./NewsCard.tsx";
 import type { News } from "../../../types/News.ts";
 import newsData from '../../../../data/data.json';
+import { useTranslation } from "react-i18next";
 
 export function NewsCards() {
+    const { t } = useTranslation();
     const latestNews: News[] = [...newsData]
         .sort((a: News, b: News): number => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
         <>
             <h1 className="lg:mt-12 mt-4 w-full px-4 text-5xl font-bold lg:mb-8 mb-4 italic text-green-700" >
-                STIRI
+                {t('news.newsTitle')}
             </h1>
 
             {/* Scrollable container */}

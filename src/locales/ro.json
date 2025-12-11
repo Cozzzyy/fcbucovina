@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "ACASĂ",
+    "news": "ȘTIRI",
+    "club": "CLUB",
+    "games": "MECIURI",
+    "standings": "CLASAMENT",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul"
+  },
+  "footer": {
+    "clubName": "Fotbal Club Bucovina Vzw",
+    "links": "LINKS",
+    "contact": "CONTACT",
+    "home": "ACASĂ",
+    "news": "ȘTIRI",
+    "games": "MECIURI",
+    "club": "CLUB",
+    "standings": "CLASAMENT",
+    "copyright": "© 2025 Cosmin Nechita. Toate drepturile rezervate."
+  },
+  "standings": {
+    "title": "CLASAMENT",
+    "position": "Poziție",
+    "team": "Echipă",
+    "games": "Meciuri",
+    "wins": "V",
+    "draws": "E",
+    "losses": "Î",
+    "goalsFor": "GM",
+    "goalsAgainst": "GP",
+    "goalDifference": "GD",
+    "points": "Puncte",
+    "selectCompetition": "Alege competiția",
+    "competition": "Voetbal Vlaanderen 4P",
+    "season": "2025-2026"
+  },
+  "games": {
+    "title": "MECIURI",
+    "allGames": "Toate Meciurile",
+    "filter": "Filtrează după lună",
+    "gamesTitle": "MECIURI 25-26",
+    "latestGames": "ULTIMELE MECIURI",
+    "versus": "VS"
+  },
+  "club": {
+    "title": "CLUB",
+    "players": "Jucători",
+    "staff": "Staff",
+    "staffAndPlayers": "STAFF & JUCĂTORI",
+    "playersTitle": "JUCĂTORI",
+    "experience": "EXPERIENȚĂ",
+    "season": "2025-2026"
+  },
+  "news": {
+    "title": "ȘTIRI",
+    "latestNews": "Ultimele Știri",
+    "readMore": "Citește mai mult",
+    "newsTitle": "ȘTIRI"
+  },
+  "home": {
+    "teamMotto": "O ECHIPĂ UNITĂ PRIN ÎNCREDERE, CRESCUTĂ PRIN RESPECT, CONDUSĂ DE DORINȚA DE A ÎNVINGE.",
+    "calendar": "Calendar"
+  },
+  "common": {
+    "loading": "Se încarcă...",
+    "error": "A apărut o eroare",
+    "noData": "Nu sunt date disponibile"
+  },
+  "months": {
+    "aug": "AUG",
+    "sep": "SEP",
+    "oct": "OCT",
+    "nov": "NOI",
+    "dec": "DEC",
+    "jan": "IAN",
+    "feb": "FEB",
+    "mar": "MAR",
+    "apr": "APR"
+  },
+  "sponsors": {
+    "title": "SPONSORI"
+  },
+  "underConstruction": {
+    "title": "Pagină în construcție",
+    "message": "Această pagină este în curs de dezvoltare. Vă mulțumim pentru răbdare!"
+  },
+  "languages": {
+    "romanian": "Română",
+    "english": "English",
+    "dutch": "Nederlands",
+    "french": "Français",
+    "selectLanguage": "Selectează limba",
+    "languageLabel": "Limba / Language / Taal / Langue"
+  }
+}

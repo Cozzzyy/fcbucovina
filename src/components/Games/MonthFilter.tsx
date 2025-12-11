@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function MonthFilter() {
-    const [selectedMonth, setSelectedMonth] = useState<string>("AUG");
+    const { t } = useTranslation();
+    const [selectedMonth, setSelectedMonth] = useState<string>("aug");
 
     const months = [
-        "AUG", "SEP", "OCT", "NOI", "DEC",
-        "IAN", "FEB", "MAR", "APR"
+        "aug", "sep", "oct", "nov", "dec",
+        "jan", "feb", "mar", "apr"
     ];
 
     const handleMonthClick = (month: string) => {
@@ -35,7 +37,7 @@ export function MonthFilter() {
                             : "opacity-50 hover:text-green-700 hover:scale-105"
                         } px-2`}
                     >
-                        {month}
+                        {t(`months.${month}`)}
                     </p>
                 ))}
             </div>

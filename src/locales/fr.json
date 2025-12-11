@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "ACCUEIL",
+    "news": "ACTUALITÉS",
+    "club": "CLUB",
+    "games": "MATCHS",
+    "standings": "CLASSEMENT",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "footer": {
+    "clubName": "Football Club Bucovina Vzw",
+    "links": "LIENS",
+    "contact": "CONTACT",
+    "home": "ACCUEIL",
+    "news": "ACTUALITÉS",
+    "games": "MATCHS",
+    "club": "CLUB",
+    "standings": "CLASSEMENT",
+    "copyright": "© 2025 Cosmin Nechita. Tous droits réservés."
+  },
+  "standings": {
+    "title": "CLASSEMENT",
+    "position": "Position",
+    "team": "Équipe",
+    "games": "Matchs",
+    "wins": "V",
+    "draws": "N",
+    "losses": "D",
+    "goalsFor": "BP",
+    "goalsAgainst": "BC",
+    "goalDifference": "DB",
+    "points": "Points",
+    "selectCompetition": "Choisir la compétition",
+    "competition": "Voetbal Vlaanderen 4P",
+    "season": "2025-2026"
+  },
+  "games": {
+    "title": "MATCHS",
+    "allGames": "Tous les Matchs",
+    "filter": "Filtrer par mois",
+    "gamesTitle": "MATCHS 25-26",
+    "latestGames": "DERNIERS MATCHS",
+    "versus": "VS"
+  },
+  "club": {
+    "title": "CLUB",
+    "players": "Joueurs",
+    "staff": "Staff",
+    "staffAndPlayers": "STAFF & JOUEURS",
+    "playersTitle": "JOUEURS",
+    "experience": "EXPÉRIENCE",
+    "season": "2025-2026"
+  },
+  "news": {
+    "title": "ACTUALITÉS",
+    "latestNews": "Dernières Actualités",
+    "readMore": "Lire la suite",
+    "newsTitle": "ACTUALITÉS"
+  },
+  "home": {
+    "teamMotto": "UNE ÉQUIPE UNIE PAR LA CONFIANCE, ÉLEVÉE PAR LE RESPECT, MOTIVÉE PAR LE DÉSIR DE GAGNER.",
+    "calendar": "Calendrier"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "noData": "Aucune donnée disponible"
+  },
+  "months": {
+    "aug": "AOÛ",
+    "sep": "SEP",
+    "oct": "OCT",
+    "nov": "NOV",
+    "dec": "DÉC",
+    "jan": "JAN",
+    "feb": "FÉV",
+    "mar": "MAR",
+    "apr": "AVR"
+  },
+  "sponsors": {
+    "title": "SPONSORS"
+  },
+  "underConstruction": {
+    "title": "Page en construction",
+    "message": "Cette page est actuellement en développement. Merci pour votre patience!"
+  },
+  "languages": {
+    "romanian": "Română",
+    "english": "English",
+    "dutch": "Nederlands",
+    "french": "Français",
+    "selectLanguage": "Sélectionner la langue",
+    "languageLabel": "Langue / Language / Taal / Limba"
+  }
+}

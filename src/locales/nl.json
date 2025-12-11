@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "HOME",
+    "news": "NIEUWS",
+    "club": "CLUB",
+    "games": "WEDSTRIJDEN",
+    "standings": "KLASSEMENT",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten"
+  },
+  "footer": {
+    "clubName": "Voetbal Club Bucovina Vzw",
+    "links": "LINKS",
+    "contact": "CONTACT",
+    "home": "HOME",
+    "news": "NIEUWS",
+    "games": "WEDSTRIJDEN",
+    "club": "CLUB",
+    "standings": "KLASSEMENT",
+    "copyright": "© 2025 Cosmin Nechita. Alle rechten voorbehouden."
+  },
+  "standings": {
+    "title": "KLASSEMENT",
+    "position": "Positie",
+    "team": "Team",
+    "games": "Wedstrijden",
+    "wins": "W",
+    "draws": "G",
+    "losses": "V",
+    "goalsFor": "DV",
+    "goalsAgainst": "DT",
+    "goalDifference": "DS",
+    "points": "Punten",
+    "selectCompetition": "Kies competitie",
+    "competition": "Voetbal Vlaanderen 4P",
+    "season": "2025-2026"
+  },
+  "games": {
+    "title": "WEDSTRIJDEN",
+    "allGames": "Alle Wedstrijden",
+    "filter": "Filter op maand",
+    "gamesTitle": "WEDSTRIJDEN 25-26",
+    "latestGames": "LAATSTE WEDSTRIJDEN",
+    "versus": "VS"
+  },
+  "club": {
+    "title": "CLUB",
+    "players": "Spelers",
+    "staff": "Staf",
+    "staffAndPlayers": "STAF & SPELERS",
+    "playersTitle": "SPELERS",
+    "experience": "ERVARING",
+    "season": "2025-2026"
+  },
+  "news": {
+    "title": "NIEUWS",
+    "latestNews": "Laatste Nieuws",
+    "readMore": "Lees meer",
+    "newsTitle": "NIEUWS"
+  },
+  "home": {
+    "teamMotto": "EEN TEAM VERENIGD DOOR VERTROUWEN, GROOT GEBRACHT DOOR RESPECT, GEDREVEN DOOR DE WENS OM TE WINNEN.",
+    "calendar": "Kalender"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "noData": "Geen gegevens beschikbaar"
+  },
+  "months": {
+    "aug": "AUG",
+    "sep": "SEP",
+    "oct": "OKT",
+    "nov": "NOV",
+    "dec": "DEC",
+    "jan": "JAN",
+    "feb": "FEB",
+    "mar": "MRT",
+    "apr": "APR"
+  },
+  "sponsors": {
+    "title": "SPONSORS"
+  },
+  "underConstruction": {
+    "title": "Pagina in aanbouw",
+    "message": "Deze pagina is momenteel in ontwikkeling. Bedankt voor uw geduld!"
+  },
+  "languages": {
+    "romanian": "Română",
+    "english": "English",
+    "dutch": "Nederlands",
+    "french": "Français",
+    "selectLanguage": "Selecteer taal",
+    "languageLabel": "Taal / Language / Limba / Langue"
+  }
+}

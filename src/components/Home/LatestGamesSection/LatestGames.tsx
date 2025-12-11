@@ -1,5 +1,6 @@
 import { GameCard } from "./GameCard.tsx";
 import type { Game } from "../../../types/Game.ts";
+import { useTranslation } from "react-i18next";
 
 const games: Game[] = [
   {
@@ -38,11 +39,13 @@ const games: Game[] = [
 ];
 
 export function LatestGames() {
+  const { t } = useTranslation();
+  
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="flex flex-col w-full lg:w-2/3 mt-4 px-4 sm:px-6 mb-7">
         <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold italic uppercase">
-          ULTIMELE MECIURI
+          {t('games.latestGames')}
         </h2>
         {games.map((game, index) => (
           <GameCard key={index} game={game} />

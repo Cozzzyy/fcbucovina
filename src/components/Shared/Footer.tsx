@@ -1,38 +1,41 @@
 import {Link} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+    const { t } = useTranslation();
+    
     return (
         <footer className="bg-[#018749] text-gray-100 mt-7">
             <div className="flex flex-col justify-center items-center w-full text-center">
                 <div className=" flex flex-col justify-start items-start w-full lg:w-1/2 mt-5">
                     <h2 className="text-4xl lg:text-6xl font-bold text-left px-4 lg:px-0 lg:text-center italic ">
-                        Fotbal Club Bucovina Vzw
+                        {t('footer.clubName')}
                     </h2>
                     <div className={"flex md:flex-row flex-col justify-between px-4 lg:px-0  w-full items-start mt-4"}>
                         <div className="flex md:flex-row flex-col justify-between items-start mt-6 gap-15">
                             <div className="flex flex-col justify-center items-start gap-2">
                                 <h2 className="text-md text-white font-bold italic mb-2">
-                                    LINKS
+                                    {t('footer.links')}
                                 </h2>
                                 <h2 className="text-sm text-white">
-                                    <Link to="/">ACASA</Link>
+                                    <Link to="/">{t('footer.home')}</Link>
                                 </h2>
                                 <h2 className="text-sm text-white">
-                                    <Link to="/stiri">STIRI</Link>
+                                    <Link to="/stiri">{t('footer.news')}</Link>
                                 </h2>
                                 <h2 className="text-sm text-white">
-                                    <Link to="/meciuri">MECIURI</Link>
+                                    <Link to="/meciuri">{t('footer.games')}</Link>
                                 </h2>
                                 <h2 className="text-sm text-white">
-                                    <Link to="/club">CLUB</Link>
+                                    <Link to="/club">{t('footer.club')}</Link>
                                 </h2>
                                 <h2 className="text-sm text-white">
-                                    <Link to="/clasament">CLASAMENT</Link>
+                                    <Link to="/clasament">{t('footer.standings')}</Link>
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-start gap-2">
                                 <h2 className="text-md text-white font-bold italic mb-2">
-                                    CONTACT
+                                    {t('footer.contact')}
                                 </h2>
                                 <h2 className="text-sm text-white uppercase">
                                     bucovinafc@gmail.com
@@ -48,7 +51,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 mb-4 font-light">
-                    <p>&copy; 2025 Cosmin Nechita. All rights reserved.</p>
+                    <p>{t('footer.copyright')}</p>
                 </div>
 
             </div>

@@ -1,25 +1,27 @@
 import {useState} from "react";
 import type {Team} from "../../types/Team.ts";
 import standingsData from "../../../data/standings.json";
+import { useTranslation } from "react-i18next";
 
 export function StandingsTable() {
     const [selectedCompetition, setSelectedCompetition] = useState("1");
+    const { t } = useTranslation();
 
     const standings: Team[] = standingsData.standingsVoetbalVlaanderen4P
 
     return (
         <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
-            <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">CLASAMENT</h2>
-            <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">2025-2026</h2>
+            <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
+            <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">{t('standings.season')}</h2>
 
             <form className="max-w-xs mb-8">
-                <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-500">Alege competiția</label>
+                <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-500">{t('standings.selectCompetition')}</label>
                 <select
                     id="countries"
                     value={selectedCompetition}
                     onChange={(e) => setSelectedCompetition(e.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mb-8">
-                    <option value="0">Voetbal Vlaanderen 4P</option>
+                    <option value="0">{t('standings.competition')}</option>
                 </select>
             </form>
 
@@ -27,13 +29,13 @@ export function StandingsTable() {
                 <table className="min-w-full bg-white rounded-xl shadow-md">
                     <thead className="bg-gray-100 text-gray-700 text-xs sm:text-sm uppercase">
                     <tr>
-                        <th className="px-4 py-3 text-center">Loc</th>
-                        <th className="px-4 py-3 text-left">Echipă</th>
-                        <th className="px-2 py-3 text-center">Puncte</th>
-                        <th className="px-4 py-3 text-center">Meciuri</th>
-                        <th className="px-4 py-3 text-center">Victorii</th>
-                        <th className="px-4 py-3 text-center">Egaluri</th>
-                        <th className="px-4 py-3 text-center">Înfrângeri</th>
+                        <th className="px-4 py-3 text-center">{t('standings.position')}</th>
+                        <th className="px-4 py-3 text-left">{t('standings.team')}</th>
+                        <th className="px-2 py-3 text-center">{t('standings.points')}</th>
+                        <th className="px-4 py-3 text-center">{t('standings.games')}</th>
+                        <th className="px-4 py-3 text-center">{t('standings.wins')}</th>
+                        <th className="px-4 py-3 text-center">{t('standings.draws')}</th>
+                        <th className="px-4 py-3 text-center">{t('standings.losses')}</th>
                     </tr>
                     </thead>
                     <tbody className="text-gray-800">

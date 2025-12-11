@@ -1,10 +1,11 @@
 
 import { Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function NameSection() {
     const navigate = useNavigate();
-    const fullText = `"O ECHIPĂ UNITĂ PRIN ÎNCREDERE, CRESCUTĂ PRIN RESPECT, CONDUSĂ DE DORINȚA DE A ÎNVINGE.”`;
+    const { t } = useTranslation();
 
     const handleCalendarClick = () => {
         navigate("/meciuri");
@@ -25,7 +26,7 @@ export function NameSection() {
                     LOENHOUT
                 </h2>
                 <h2 className="text-[12px] lg:text-md text-center text-[#ffe87c] pt-2 lg:w-1/4 m-0">
-                    {fullText}
+                    "{t('home.teamMotto')}"
                 </h2>
             </header>
             <footer className="mb-auto mt-8">
@@ -35,7 +36,7 @@ export function NameSection() {
                     aria-label="Vezi mai multe despre FC Bucovina"
                 >
                     <Calendar className="w-4 h-4 text-white" />
-                    Calendar
+                    {t('home.calendar')}
                 </button>
             </footer>
         </section>
