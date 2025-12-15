@@ -1,12 +1,14 @@
 import { NewsCard } from "./NewsCard.tsx";
 import type { News } from "../../../types/News.ts";
-import newsData from '../../../../data/data.json';
 import { useTranslation } from "react-i18next";
 
-export function NewsCards() {
+interface NewsCardsProps {
+    news?: News[];
+}
+
+export function NewsCards({ news }: NewsCardsProps) {
     const { t } = useTranslation();
-    const latestNews: News[] = [...newsData]
-        .sort((a: News, b: News): number => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const latestNews: News[] = news ? [...news].sort((a: News, b: News): number => new Date(b.date).getTime() - new Date(a.date).getTime()) : [];
 
     return (
         <>

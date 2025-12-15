@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import players from "../../../../data/players.json";
-import staff from "../../../../data/staff.json";
 import { PlayerCard } from "../../Club/PlayerCard.tsx";
 import { useTranslation } from "react-i18next";
+import type { Player } from "../../../types/Player";
 
-export function ScrollingPlayersRow() {
+interface ScrollingPlayersRowProps {
+    players?: Player[];
+    staff?: Player[];
+}
+
+export function ScrollingPlayersRow({ players = [], staff = [] }: ScrollingPlayersRowProps) {
     const { t } = useTranslation();
     const scrollRef = useRef<HTMLDivElement>(null);
     const firstCardRef = useRef<HTMLDivElement>(null);

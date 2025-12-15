@@ -1,8 +1,12 @@
 import { PlayerCard } from "./PlayerCard.tsx";
-import players from "../../../data/players.json";
-import staff from "../../../data/staff.json";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import type { Player } from "../../types/Player";
+
+interface PlayersListProps {
+    players?: Player[];
+    staff?: Player[];
+}
 
 function capitalizeFirstLetter(text: string): string {
     return text.charAt(0).toUpperCase() + text.slice(1);
@@ -13,7 +17,7 @@ const cardVariants = {
     visible: { opacity: 1, y: 0 },
 };
 
-export function PlayersList() {
+export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
     const { t } = useTranslation();
     
     return (

@@ -6,6 +6,8 @@ import { LatestGames } from "../components/Home/LatestGamesSection/LatestGames.t
 import { Sponsors } from "../components/Shared/Sponsors.tsx";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { useNews } from "../components/News/api/hooks/useNews";
+import { useClub } from "../components/Club/api/hooks/useClub";
 
 export function HomePage() {
     const newsSeparatorRef = useRef<HTMLDivElement>(null);
@@ -13,6 +15,9 @@ export function HomePage() {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
     };
+
+    const { data: news } = useNews();
+    const { data: clubData } = useClub();
 
     return (
         <>
@@ -27,7 +32,7 @@ export function HomePage() {
                 transition={{ duration: 0.8 }}
                 variants={sectionVariants}
             >
-                <NewsCards />
+                <NewsCards news={news} />
             </motion.div>
 
             <motion.div
@@ -47,7 +52,7 @@ export function HomePage() {
                 transition={{ duration: 0.8 }}
                 variants={sectionVariants}
             >
-                <ScrollingPlayersRow />
+                <ScrollingPlayersRow players={clubData?.players} staff={clubData?.staff} />
             </motion.div>
 
             <motion.div

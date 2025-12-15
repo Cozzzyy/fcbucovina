@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
+import { useQueryClient } from '@tanstack/react-query';
+import { fetchClubMatches } from '../Games/api/endpoint/endpoint';
+import { fetchSeriesRankings } from '../Standings/api/endpoint/endpoint';
+import { fetchNews } from '../News/api/endpoint/endpoint';
+import { fetchClubData } from '../Club/api/endpoint/endpoint';
 
 const navLinks = [
     { nameKey: "nav.home", path: "/" },
@@ -23,6 +28,7 @@ export function NavigationBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [langMenuOpen, setLangMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
+    const queryClient = useQueryClient();
 
     const changeLanguage = (langCode: string) => {
         i18n.changeLanguage(langCode);
@@ -30,6 +36,39 @@ export function NavigationBar() {
     };
 
     const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
+    const handleHover = (route: string) => {
+        switch (route) {
+            case '/meciuri':
+                queryClient.prefetchQuery({
+                    queryKey: ['games'],
+                    queryFn: fetchClubMatches,
+                    staleTime: 5 * 60 * 1000,
+                });
+                break;
+            case '/clasament':
+                queryClient.prefetchQuery({
+                    queryKey: ['standings'],
+                    queryFn: fetchSeriesRankings,
+                    staleTime: 5 * 60 * 1000,
+                });
+                break;
+            case '/stiri':
+                queryClient.prefetchQuery({
+                    queryKey: ['news'],
+                    queryFn: fetchNews,
+                    staleTime: 10 * 60 * 1000,
+                });
+                break;
+            case '/club':
+                queryClient.prefetchQuery({
+                    queryKey: ['club'],
+                    queryFn: fetchClubData,
+                    staleTime: 30 * 60 * 1000,
+                });
+                break;
+        }
+    };
 
     return (
         <nav className="bg-[#018749] fixed top-0 w-full z-50 drop-shadow-black">
@@ -71,6 +110,7 @@ export function NavigationBar() {
                             <Link
                                 key={item.nameKey}
                                 to={item.path}
+                                onMouseEnter={() => handleHover(item.path)}
                                 className="rounded-md px-3 py-2 text-lg font-bold text-white hover:text-green-300 hover:scale-105 transition-transform"
                             >
                                 {t(item.nameKey)}
@@ -139,6 +179,7 @@ export function NavigationBar() {
                                     <Link
                                         to={item.path}
                                         onClick={() => setMenuOpen(false)}
+                                        onMouseEnter={() => handleHover(item.path)}
                                         className="block rounded-md px-3 py-2 text-base font-bold text-white hover:bg-green-800"
                                     >
                                         {t(item.nameKey)}
