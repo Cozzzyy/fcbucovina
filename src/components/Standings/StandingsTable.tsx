@@ -22,12 +22,22 @@ export function StandingsTable() {
             </div>
         );
     }
-
-    if (error || !standings) {
+    
+    if (error) {
         return (
             <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
                 <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
-                <p className="text-red-600">{t('common.error')}: {error?.message || t('common.noData')}</p>
+                <p className="text-red-600">{t('common.error')}: {error.message}</p>
+            </div>
+        );
+    }
+
+    // Show error if standings is not a valid array with data
+    if (!standings || !Array.isArray(standings) || standings.length === 0) {
+        return (
+            <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+                <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
+                <p className="text-red-600">{t('common.error')}: No standings data available</p>
             </div>
         );
     }

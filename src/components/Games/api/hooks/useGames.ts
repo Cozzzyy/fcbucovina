@@ -1,7 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import type { Game } from "../../../../types/Game";
 import { fetchClubMatches, transformToGameFormat } from "../endpoint/endpoint";
-import gamesData from "../../../../../data/games.json";
 
 export const useGames = () => {
   return useQuery({
@@ -12,7 +10,6 @@ export const useGames = () => {
         return transformToGameFormat(data.clubMatchesAssignations);
       } catch (error) {
         console.warn("Failed to fetch games from API, falling back to cached JSON:", error);
-        return gamesData as Game[];
       }
     },
     staleTime: 60 * 60 * 1000, // 1 hour

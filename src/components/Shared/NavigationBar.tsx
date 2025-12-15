@@ -4,10 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 import { useQueryClient } from '@tanstack/react-query';
-import { fetchClubMatches } from '../Games/api/endpoint/endpoint';
+import { fetchClubMatches, transformToGameFormat } from '../Games/api/endpoint/endpoint';
 import { fetchSeriesRankings } from '../Standings/api/endpoint/endpoint';
 import { fetchNews } from '../News/api/endpoint/endpoint';
 import { fetchClubData } from '../Club/api/endpoint/endpoint';
+import transformToTeamFormat from '../Standings/utils/utils';
 
 const navLinks = [
     { nameKey: "nav.home", path: "/" },
@@ -42,21 +43,30 @@ export function NavigationBar() {
             case '/meciuri':
                 queryClient.prefetchQuery({
                     queryKey: ['games'],
-                    queryFn: fetchClubMatches,
+                    queryFn: async () => {
+                        const data = await fetchClubMatches();
+                        return transformToGameFormat(data.clubMatchesAssignations);
+                    },
                     staleTime: 5 * 60 * 1000,
                 });
                 break;
             case '/clasament':
                 queryClient.prefetchQuery({
                     queryKey: ['standings'],
-                    queryFn: fetchSeriesRankings,
+                    queryFn: async () => {
+                        const apiData = await fetchSeriesRankings();
+                        return transformToTeamFormat(apiData);
+                    },
                     staleTime: 5 * 60 * 1000,
                 });
                 break;
             case '/stiri':
                 queryClient.prefetchQuery({
                     queryKey: ['news'],
-                    queryFn: fetchNews,
+                    queryFn: async () => {
+                        const data = await fetchNews();
+                        return data.news;
+                    },
                     staleTime: 10 * 60 * 1000,
                 });
                 break;
