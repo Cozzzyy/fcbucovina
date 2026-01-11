@@ -9,8 +9,9 @@ const getDateRange = () => {
   const today = new Date();
   const currentYear = today.getFullYear();
   
-  const startDate = new Date(currentYear, 6, 7); // July 7
-  const endDate = new Date(currentYear + 1, 6, 7); // July 7 next year
+  // Fetch from July 7 last year to July 7 this year
+  const startDate = new Date(currentYear - 1, 6, 7); // July 7 of last year
+  const endDate = new Date(currentYear, 6, 7); // July 7 of this year
   
   const formatDate = (date: Date) => {
     const year = date.getFullYear();
@@ -40,7 +41,7 @@ export async function fetchClubMatches(): Promise<ClubMatchesData> {
         language: "nl",
         startDate,
         endDate,
-        hasLocation: false,
+        hasLocation: true,
       },
       extensions: {
         persistedQuery: {
