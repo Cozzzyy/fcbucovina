@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { TitleSection } from "../components/Games/TitleSection.tsx";
 import { MonthFilter } from "../components/Games/MonthFilter.tsx";
 import { MonthTitle } from "../components/Games/GamesSection/MonthTitle.tsx";
@@ -9,7 +9,7 @@ import { useGames } from "../components/Games/api/hooks/useGames.ts";
 export function GamesPage() {
     const { data: games = [] } = useGames();
 
-    const groupGamesByMonth = (games: Game[]) => {
+    const groupedGames = useMemo(() => {
         const grouped: { [key: string]: Game[] } = {};
 
         games.forEach((game) => {
@@ -21,9 +21,7 @@ export function GamesPage() {
         });
 
         return Object.entries(grouped).sort();
-    };
-
-    const groupedGames = groupGamesByMonth(games);
+    }, [games]);
 
     useEffect(() => {
         // Scroll to the top of the page when the component is mounted

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -36,7 +36,11 @@ export function NavigationBar() {
         setLangMenuOpen(false);
     };
 
-    const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+    // Memoize language lookup to avoid recalculation on each render
+    const currentLanguage = useMemo(
+        () => languages.find(lang => lang.code === i18n.language) || languages[0],
+        [i18n.language]
+    );
 
     const handleHover = (route: string) => {
         switch (route) {
@@ -94,9 +98,9 @@ export function NavigationBar() {
                             aria-expanded={menuOpen}
                             aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
                         >
-              <span className="sr-only">
-                {menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
-              </span>
+                            <span className="sr-only">
+                                {menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+                            </span>
                             {menuOpen ? (
                                 <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -126,7 +130,7 @@ export function NavigationBar() {
                                 {t(item.nameKey)}
                             </Link>
                         ))}
-                        
+
                         {/* Language selector */}
                         <div className="relative ml-4">
                             <button
@@ -137,7 +141,7 @@ export function NavigationBar() {
                                 <Globe className="w-5 h-5" />
                                 {currentLanguage.name}
                             </button>
-                            
+
                             <AnimatePresence>
                                 {langMenuOpen && (
                                     <motion.div
@@ -151,9 +155,8 @@ export function NavigationBar() {
                                             <button
                                                 key={lang.code}
                                                 onClick={() => changeLanguage(lang.code)}
-                                                className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                                                    i18n.language === lang.code ? 'bg-green-50 text-green-700 font-bold' : 'text-gray-700'
-                                                }`}
+                                                className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${i18n.language === lang.code ? 'bg-green-50 text-green-700 font-bold' : 'text-gray-700'
+                                                    }`}
                                             >
                                                 {t(`languages.${lang.code === 'ro' ? 'romanian' : lang.code === 'en' ? 'english' : lang.code === 'nl' ? 'dutch' : 'french'}`)}
                                             </button>
@@ -196,7 +199,7 @@ export function NavigationBar() {
                                     </Link>
                                 </motion.div>
                             ))}
-                            
+
                             {/* Mobile language selector */}
                             <div className="pt-2 border-t border-green-600 mt-2">
                                 <p className="px-3 py-2 text-sm text-green-200 font-semibold">{t('languages.languageLabel')}</p>
@@ -204,11 +207,10 @@ export function NavigationBar() {
                                     <button
                                         key={lang.code}
                                         onClick={() => changeLanguage(lang.code)}
-                                        className={`block w-full text-left rounded-md px-3 py-2 ${
-                                            i18n.language === lang.code 
-                                                ? 'text-white font-bold text-base' 
+                                        className={`block w-full text-left rounded-md px-3 py-2 ${i18n.language === lang.code
+                                                ? 'text-white font-bold text-base'
                                                 : 'text-white hover:bg-green-800 text-sm font-light'
-                                        }`}
+                                            }`}
                                     >
                                         {t(`languages.${lang.code === 'ro' ? 'romanian' : lang.code === 'en' ? 'english' : lang.code === 'nl' ? 'dutch' : 'french'}`)}
                                     </button>

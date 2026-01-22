@@ -6,32 +6,34 @@ interface GameCardProps {
     game: Game;
 }
 
+// Hoisted outside component - pure function with no component dependencies
+function parseScore(scoreString: string): { homeScore: string; awayScore: string } {
+    if (!scoreString || scoreString.trim() === '') {
+        return { homeScore: ' ', awayScore: ' ' };
+    }
+    const scores = scoreString.split('-');
+    return {
+        homeScore: scores[0] || ' ',
+        awayScore: scores[1] || ' '
+    };
+}
+
 export function GameCard({ game }: GameCardProps) {
     const { t } = useTranslation();
 
     const { homeScore, awayScore } = parseScore(game.score);
 
+    // formatDate uses t() from useTranslation, so it must remain in component scope
     function formatDate(dateString: string): string {
         const date = new Date(dateString);
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const dayIndex = date.getDay();
-        
+
         const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
         const dayName = t(`days.${dayNames[dayIndex]}`);
 
         return `${dayName}, ${day}/${month}`;
-    }
-
-    function parseScore(scoreString: string): { homeScore: string; awayScore: string } {
-        if (!scoreString || scoreString.trim() === '') {
-            return { homeScore: ' ', awayScore: ' ' };
-        }
-        const scores = scoreString.split('-');
-        return {
-            homeScore: scores[0] || ' ',
-            awayScore: scores[1] || ' '
-        };
     }
 
     return (

@@ -1,6 +1,7 @@
 import { NewsCard } from "./NewsCard.tsx";
 import type { News } from "../../../types/News.ts";
 import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 
 interface NewsCardsProps {
     news?: News[];
@@ -8,7 +9,12 @@ interface NewsCardsProps {
 
 export function NewsCards({ news }: NewsCardsProps) {
     const { t } = useTranslation();
-    const latestNews: News[] = news ? [...news].sort((a: News, b: News): number => new Date(b.date).getTime() - new Date(a.date).getTime()) : [];
+    const latestNews = useMemo(() => {
+        if (!news) return [];
+        return [...news].sort((a: News, b: News): number =>
+            new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+    }, [news]);
 
     return (
         <>
@@ -22,9 +28,8 @@ export function NewsCards({ news }: NewsCardsProps) {
                     {latestNews.map((newsItem: News, index: number) => (
                         <div
                             key={newsItem.id}
-                            className={`flex-shrink-0 snap-center w-full sm:w-[90%] md:w-[45%] lg:w-[22%] ${
-                                index === 0 ? "lg:w-[44%]" : ""
-                            }`}
+                            className={`flex-shrink-0 snap-center w-full sm:w-[90%] md:w-[45%] lg:w-[22%] ${index === 0 ? "lg:w-[44%]" : ""
+                                }`}
                         >
                             <NewsCard
                                 title={newsItem.title}

@@ -9,12 +9,14 @@ import { motion } from "framer-motion";
 import { useNews } from "../components/News/api/hooks/useNews";
 import { useClub } from "../components/Club/api/hooks/useClub";
 
+// Hoisted outside component to avoid recreation on each render
+const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+};
+
 export function HomePage() {
     const newsSeparatorRef = useRef<HTMLDivElement>(null);
-    const sectionVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
-    };
 
     const { data: news } = useNews();
     const { data: clubData } = useClub();
@@ -22,7 +24,7 @@ export function HomePage() {
     return (
         <>
             {/* Removed animation for LCP optimization */}
-            <NameSection/>
+            <NameSection />
 
             <motion.div
                 ref={newsSeparatorRef}

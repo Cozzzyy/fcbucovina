@@ -1,14 +1,19 @@
 import { GameCard } from "./GameCard.tsx";
 import { useGames } from "../../Games/api/hooks/useGames.ts";
 import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 
 export function LatestGames() {
   const { t } = useTranslation();
   const { data: games } = useGames();
 
-  const filteredGames = games?.filter(g => g.score && g.score !== 'vs' && !g.score.includes('?'))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
+  const filteredGames = useMemo(() => {
+    if (!games) return [];
+    return games
+      .filter(g => g.score && g.score !== 'vs' && !g.score.includes('?'))
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3);
+  }, [games]);
 
   if (!filteredGames || filteredGames.length === 0) {
     return (

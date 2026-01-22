@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, useCallback } from "react";
 import { PlayerCard } from "../../Club/PlayerCard.tsx";
 import { useTranslation } from "react-i18next";
 import type { Player } from "../../../types/Player";
@@ -8,28 +8,32 @@ interface ScrollingPlayersRowProps {
     staff?: Player[];
 }
 
+// Custom hook for media query - subscribes to derived boolean state instead of continuous width
+// Per rerender-derived-state rule: reduces re-renders from continuous values to boolean transitions
+function useMediaQuery(query: string): boolean {
+    const subscribe = useCallback((callback: () => void) => {
+        const mediaQuery = window.matchMedia(query);
+        mediaQuery.addEventListener('change', callback);
+        return () => mediaQuery.removeEventListener('change', callback);
+    }, [query]);
+
+    const getSnapshot = () => window.matchMedia(query).matches;
+    const getServerSnapshot = () => false;
+
+    return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+}
+
 export function ScrollingPlayersRow({ players = [], staff = [] }: ScrollingPlayersRowProps) {
     const { t } = useTranslation();
     const scrollRef = useRef<HTMLDivElement>(null);
     const firstCardRef = useRef<HTMLDivElement>(null);
-    const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
+    const isDesktop = useMediaQuery('(min-width: 768px)');
     const [sidePadding, setSidePadding] = useState<number>(0);
 
     const members = [
         ...staff.map((s) => ({ ...s, type: "staff" })),
         ...players.map((p) => ({ ...p, type: "player" })),
     ];
-
-    useEffect(() => {
-        const handleResize = () => {
-            const isMobile = window.innerWidth < 768;
-            setIsDesktop(!isMobile);
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
 
     // Calculate padding dynamically to center first card on mobile
     useEffect(() => {
@@ -51,28 +55,25 @@ export function ScrollingPlayersRow({ players = [], staff = [] }: ScrollingPlaye
 
             <div
                 ref={scrollRef}
-                className={`relative w-full overflow-x-scroll px-4 scrollbar-hide ${
-                    isDesktop ? "" : "snap-x snap-mandatory"
-                }`}
+                className={`relative w-full overflow-x-scroll px-4 scrollbar-hide ${isDesktop ? "" : "snap-x snap-mandatory"
+                    }`}
                 style={{
                     paddingLeft: !isDesktop ? sidePadding : undefined,
                     paddingRight: !isDesktop ? sidePadding : undefined,
                 }}
             >
                 <div
-                    className={`flex ${
-                        isDesktop ? "animate-scroll whitespace-nowrap items-center" : "justify-start"
-                    }`}
+                    className={`flex ${isDesktop ? "animate-scroll whitespace-nowrap items-center" : "justify-start"
+                        }`}
                 >
                     {(isDesktop ? [...members, ...members] : members).map((member, index) => (
                         <div
                             key={index}
                             ref={index === 0 ? firstCardRef : null}
-                            className={`${
-                                isDesktop
+                            className={`${isDesktop
                                     ? "min-w-[450px] flex-shrink-0"
                                     : "snap-center min-w-[100%] max-w-[95%] mx-auto"
-                            }`}
+                                }`}
                         >
                             <PlayerCard player={member} hideDetails scrolling={true} />
                         </div>
