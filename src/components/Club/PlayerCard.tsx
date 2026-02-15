@@ -40,7 +40,12 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
                         loading="lazy"
                         onError={(e) => {
                             try {
-                                (e.target as HTMLImageElement).src = '/jucatori/placeholder.webp';
+                                const img = e.target as HTMLImageElement;
+                                if (img.src.endsWith('.webp')) {
+                                    img.src = `/jucatori/${player.name.replace(/\s+/g, "-")}.png`;
+                                } else {
+                                    img.src = '/jucatori/placeholder.webp';
+                                }
                             } catch (error) {
                                 console.warn("Failed to load player image or fallback image:", error);
                             }
