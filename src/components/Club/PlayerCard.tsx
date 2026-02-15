@@ -79,7 +79,7 @@ export function PlayerCard({ player, hideDetails, scrolling }: PlayerCardProps) 
                     <section className="flex flex-col justify-center items-center">
                         <p className="text-xs sm:text-sm text-gray-500 mb-2">{player.dateOfBirth}</p>
                         <p className={'text-sm italic font-bold mb-1'}>{t('club.experience')}</p>
-                        <p className="text-xs sm:text-sm text-gray-900 text-center mb-2 w-full h-[80px] sm:h-[100px] overflow-hidden">
+                        <p className="text-xs sm:text-sm text-gray-900 text-center mb-2 w-full">
                             {player.description}
                         </p>
                     </section>
