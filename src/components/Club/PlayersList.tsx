@@ -57,7 +57,7 @@ export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
             </div>
 
             {/* Players Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-28">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-12 md:gap-20 lg:gap-28">
                 {players.map((player, index) => (
                     <motion.div
                         key={player.number}
