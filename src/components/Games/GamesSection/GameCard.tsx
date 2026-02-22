@@ -38,6 +38,7 @@ export function GameCard({ game }: GameCardProps) {
 
     return (
         <motion.section
+            id={`game-${game.date}`}
             className="flex flex-row w-11/12 md:w-2/3"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
