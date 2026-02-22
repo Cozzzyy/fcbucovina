@@ -34,8 +34,8 @@ export function LatestGames() {
         <h2 className="text-4xl sm:text-6xl text-center text-green-700 font-bold italic uppercase">
           {t('games.latestGames')}
         </h2>
-        {filteredGames.map((game, index) => (
-          <GameCard key={index} game={game} />
+        {filteredGames.map((game) => (
+          <GameCard key={game.date} game={game} />
         ))}
       </div>
     </div>

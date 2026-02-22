@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useSyncExternalStore, useCallback } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, useCallback, useMemo } from "react";
 import { PlayerCard } from "../../Club/PlayerCard.tsx";
 import { useTranslation } from "react-i18next";
 import type { Player } from "../../../types/Player";
@@ -30,10 +30,10 @@ export function ScrollingPlayersRow({ players = [], staff = [] }: ScrollingPlaye
     const isDesktop = useMediaQuery('(min-width: 768px)');
     const [sidePadding, setSidePadding] = useState<number>(0);
 
-    const members = [
+    const members = useMemo(() => [
         ...staff.map((s) => ({ ...s, type: "staff" })),
         ...players.map((p) => ({ ...p, type: "player" })),
-    ];
+    ], [staff, players]);
 
     // Calculate padding dynamically to center first card on mobile
     useEffect(() => {
@@ -71,8 +71,8 @@ export function ScrollingPlayersRow({ players = [], staff = [] }: ScrollingPlaye
                             key={index}
                             ref={index === 0 ? firstCardRef : null}
                             className={`${isDesktop
-                                    ? "min-w-[450px] flex-shrink-0"
-                                    : "snap-center min-w-[100%] max-w-[95%] mx-auto"
+                                ? "min-w-[450px] flex-shrink-0"
+                                : "snap-center min-w-[100%] max-w-[95%] mx-auto"
                                 }`}
                         >
                             <PlayerCard player={member} hideDetails scrolling={true} />
@@ -81,22 +81,6 @@ export function ScrollingPlayersRow({ players = [], staff = [] }: ScrollingPlaye
                 </div>
             </div>
 
-            <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-          animation: scroll 20s linear infinite;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
         </div>
     );
 }

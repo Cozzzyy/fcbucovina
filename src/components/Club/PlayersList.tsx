@@ -2,6 +2,7 @@ import { PlayerCard } from "./PlayerCard.tsx";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import type { Player } from "../../types/Player";
+import { useMemo } from "react";
 
 interface PlayersListProps {
     players?: Player[];
@@ -19,9 +20,23 @@ const cardVariants = {
 
 export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
     const { t } = useTranslation();
-    
+
+    const capitalizedStaff = useMemo(() =>
+        staff.map(member => ({
+            ...member,
+            description: capitalizeFirstLetter(member.description),
+        })),
+        [staff]);
+
+    const capitalizedPlayers = useMemo(() =>
+        players.map(player => ({
+            ...player,
+            description: capitalizeFirstLetter(player.description),
+        })),
+        [players]);
+
     return (
-        <div className="w-full p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+        <div className="w-full p-4 max-w-6xl mx-auto mt-6 lg:mt-10">
             {/* Staff Header */}
             <div className="mb-13">
                 <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('club.staffAndPlayers')}</h2>
@@ -30,7 +45,7 @@ export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
 
             {/* Staff Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {staff.map((member, index) => (
+                {capitalizedStaff.map((member, index) => (
                     <motion.div
                         key={member.name}
                         variants={cardVariants}
@@ -39,12 +54,7 @@ export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                        <PlayerCard
-                            player={{
-                                ...member,
-                                description: capitalizeFirstLetter(member.description),
-                            }}
-                        />
+                        <PlayerCard player={member} />
                     </motion.div>
                 ))}
             </div>
@@ -58,7 +68,7 @@ export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
 
             {/* Players Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-12 md:gap-20 lg:gap-28">
-                {players.map((player, index) => (
+                {capitalizedPlayers.map((player, index) => (
                     <motion.div
                         key={player.number}
                         variants={cardVariants}
@@ -68,10 +78,7 @@ export function PlayersList({ players = [], staff = [] }: PlayersListProps) {
                         transition={{ duration: 0.2, delay: index * 0.05 }} // Faster animation
                     >
                         <PlayerCard
-                            player={{
-                                ...player,
-                                description: capitalizeFirstLetter(player.description),
-                            }}
+                            player={player}
                             hideDetails={false}
                         />
                     </motion.div>

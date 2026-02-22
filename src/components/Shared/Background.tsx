@@ -1,12 +1,13 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
+const EXCLUDED_PATHS = ["/club", "/clasament", "/meciuri", "/stiri"];
+
 export function Background() {
     const location = useLocation();
     const [loaded, setLoaded] = useState(false);
 
-    const excludedPaths = ["/club", "/clasament", "/meciuri","/stiri"];
-    if (excludedPaths.includes(location.pathname)) return null;
+    if (EXCLUDED_PATHS.includes(location.pathname)) return null;
 
     return (
         <div className="absolute inset-0 -z-10 h-screen bg-green-600">
@@ -15,7 +16,7 @@ export function Background() {
                 src="/team-photo.avif"
                 alt=""
                 aria-hidden="true"
-                loading="lazy"
+                loading="eager"
                 onLoad={() => setLoaded(true)}
             />
             <div className="absolute top-0 w-full h-1/2 bg-gradient-to-b from-black/90 to-transparent pointer-events-none" />

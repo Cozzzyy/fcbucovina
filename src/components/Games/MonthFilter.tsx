@@ -1,24 +1,27 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export function MonthFilter() {
-  const { t } = useTranslation();
-  const [selectedMonth, setSelectedMonth] = useState<string>("aug");
+const MONTHS = [
+  "aug",
+  "sep",
+  "oct",
+  "nov",
+  "dec",
+  "jan",
+  "feb",
+  "mar",
+  "apr",
+];
 
-  const months = [
-    "aug",
-    "sep",
-    "oct",
-    "nov",
-    "dec",
-    "jan",
-    "feb",
-    "mar",
-    "apr",
-  ];
+interface MonthFilterProps {
+  selectedMonth: string;
+  onMonthChange: (month: string) => void;
+}
+
+export function MonthFilter({ selectedMonth, onMonthChange }: MonthFilterProps) {
+  const { t } = useTranslation();
 
   const handleMonthClick = (month: string) => {
-    setSelectedMonth(month);
+    onMonthChange(month);
     const element = document.getElementById(month);
     const filter = document.getElementById("month-filter");
 
@@ -50,16 +53,15 @@ export function MonthFilter() {
           "scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
         }
       >
-        {months.map((month) => (
+        {MONTHS.map((month) => (
           <p
             key={month}
             onClick={() => handleMonthClick(month)}
             className={`text-sm md:text-md cursor-pointer font-bold transition-all duration-200
-                            ${
-                              selectedMonth === month
-                                ? "text-green-700 scale-110"
-                                : "opacity-50 hover:text-green-700 hover:scale-105"
-                            } px-2`}
+                            ${selectedMonth === month
+                ? "text-green-700 scale-110"
+                : "opacity-50 hover:text-green-700 hover:scale-105"
+              } px-2`}
           >
             {t(`months.${month}`)}
           </p>

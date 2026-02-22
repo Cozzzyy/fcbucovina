@@ -1,9 +1,9 @@
-import NewsHeader from "./NewsHeader.tsx";
-import {NewsContent} from "./NewsContent.tsx";
+import { NewsHeader } from "./NewsHeader.tsx";
+import { NewsContent } from "./NewsContent.tsx";
 import type { News } from "../../types/News.ts";
 
 interface NewsArticleProps {
-    news : News;
+    news: News;
 }
 
 export function NewsArticle({ news }: NewsArticleProps) {
@@ -14,7 +14,7 @@ export function NewsArticle({ news }: NewsArticleProps) {
                 id={`news-${news.id}`}
                 className="p-4"
             >
-                <NewsHeader news={news}/>
+                <NewsHeader news={news} />
                 <NewsContent news={news} />
             </div>
         </>

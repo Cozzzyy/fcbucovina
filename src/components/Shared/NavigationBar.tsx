@@ -138,7 +138,7 @@ export function NavigationBar() {
                                 className="flex items-center gap-2 rounded-md px-3 py-2 text-lg font-bold text-white hover:bg-green-800 transition-colors"
                                 aria-label={t('languages.selectLanguage')}
                             >
-                                <Globe className="w-5 h-5" />
+                                <Globe size={20} className="w-5 h-5 flex-shrink-0" />
                                 {currentLanguage.name}
                             </button>
 
@@ -208,8 +208,8 @@ export function NavigationBar() {
                                         key={lang.code}
                                         onClick={() => changeLanguage(lang.code)}
                                         className={`block w-full text-left rounded-md px-3 py-2 ${i18n.language === lang.code
-                                                ? 'text-white font-bold text-base'
-                                                : 'text-white hover:bg-green-800 text-sm font-light'
+                                            ? 'text-white font-bold text-base'
+                                            : 'text-white hover:bg-green-800 text-sm font-light'
                                             }`}
                                     >
                                         {t(`languages.${lang.code === 'ro' ? 'romanian' : lang.code === 'en' ? 'english' : lang.code === 'nl' ? 'dutch' : 'french'}`)}

@@ -1,11 +1,11 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export function Footer() {
     const { t } = useTranslation();
-    
+
     return (
-        <footer className="bg-[#018749] text-gray-100 mt-7">
+        <footer className="bg-[#018749] text-gray-100 mt-auto">
             <div className="flex flex-col justify-center items-center w-full text-center">
                 <div className=" flex flex-col justify-start items-start w-full lg:w-1/2 mt-5">
                     <h2 className="text-4xl lg:text-6xl font-bold text-left px-4 lg:px-0 lg:text-center italic ">
@@ -14,40 +14,40 @@ export function Footer() {
                     <div className={"flex md:flex-row flex-col justify-between px-4 lg:px-0  w-full items-start mt-4"}>
                         <div className="flex md:flex-row flex-col justify-between items-start mt-6 gap-15">
                             <div className="flex flex-col justify-center items-start gap-2">
-                                <h2 className="text-md text-white font-bold italic mb-2">
+                                <h3 className="text-md text-white font-bold italic mb-2">
                                     {t('footer.links')}
-                                </h2>
-                                <h2 className="text-sm text-white">
+                                </h3>
+                                <p className="text-sm text-white">
                                     <Link to="/">{t('footer.home')}</Link>
-                                </h2>
-                                <h2 className="text-sm text-white">
+                                </p>
+                                <p className="text-sm text-white">
                                     <Link to="/stiri">{t('footer.news')}</Link>
-                                </h2>
-                                <h2 className="text-sm text-white">
+                                </p>
+                                <p className="text-sm text-white">
                                     <Link to="/meciuri">{t('footer.games')}</Link>
-                                </h2>
-                                <h2 className="text-sm text-white">
+                                </p>
+                                <p className="text-sm text-white">
                                     <Link to="/club">{t('footer.club')}</Link>
-                                </h2>
-                                <h2 className="text-sm text-white">
+                                </p>
+                                <p className="text-sm text-white">
                                     <Link to="/clasament">{t('footer.standings')}</Link>
-                                </h2>
+                                </p>
                             </div>
                             <div className="flex flex-col justify-center items-start gap-2">
-                                <h2 className="text-md text-white font-bold italic mb-2">
+                                <h3 className="text-md text-white font-bold italic mb-2">
                                     {t('footer.contact')}
-                                </h2>
-                                <h2 className="text-sm text-white uppercase">
+                                </h3>
+                                <p className="text-sm text-white uppercase">
                                     bucovinafc@gmail.com
-                                </h2>
-                                <h2 className="text-sm text-white mb-1 mr-2">BE79 7340 6867 8433</h2>
+                                </p>
+                                <p className="text-sm text-white mb-1 mr-2">BE79 7340 6867 8433</p>
                                 <a href="https://www.facebook.com/profile.php?id=100057387851433" target="_blank" rel="noopener noreferrer">
                                     <img className={"w-8 h-auto"} src="/icons8-facebook-50.png" alt={"Facebook"} />
                                 </a>
                             </div>
                         </div>
                         <img className={"w-30 lg:w-45 lg:mt-0 mt-8 h-auto mr-10"} src="/teams/FC%20Bucovina%20Loenhout.png"
-                             alt="FC Bucovina Logo"/>
+                            alt="FC Bucovina Logo" />
                     </div>
                 </div>
                 <div className="mt-8 mb-4 font-light">

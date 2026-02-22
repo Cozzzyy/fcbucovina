@@ -10,6 +10,19 @@ body {
     background-attachment: fixed; /* Keeps the image fixed during scrolling */
 }
 
+/* Infinite horizontal scroll animation for carousels */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
 /* For Webkit browsers (Chrome, Safari) */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -24,5 +37,3 @@ body {
 .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
 }
-
-

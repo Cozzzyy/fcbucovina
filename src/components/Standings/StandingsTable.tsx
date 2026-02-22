@@ -3,29 +3,29 @@ import { useStandings } from "./api/hooks/useStandings";
 import { useTranslation } from "react-i18next";
 import type { Team } from "../../types/Team";
 
+const CLUB_NAME = "FC BUCOVINA LOENHOUT";
+
 export function StandingsTable() {
-    const [selectedCompetition, setSelectedCompetition] = useState("1");
+    const [selectedCompetition, setSelectedCompetition] = useState("0");
     const { t } = useTranslation();
     const { data: standings, isPending: loading, error } = useStandings();
 
-    const getTeamImage = (team : Team) => {
-        return selectedCompetition === "0"
-            ? `/teams/${team.team}.png`
-            : team.image || `/teams/${team.team}.png`;
+    const getTeamImage = (team: Team) => {
+        return team.image || `/teams/${team.team}.png`;
     };
 
     if (loading) {
         return (
-            <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+            <div className="p-4 max-w-6xl mx-auto mt-6 lg:mt-10">
                 <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
                 <p className="text-gray-600 animate-pulse">{t('common.loading')}</p>
             </div>
         );
     }
-    
+
     if (error) {
         return (
-            <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+            <div className="p-4 max-w-6xl mx-auto mt-6 lg:mt-10">
                 <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
                 <p className="text-red-600">{t('common.error')}: {error.message}</p>
             </div>
@@ -35,7 +35,7 @@ export function StandingsTable() {
     // Show error if standings is not a valid array with data
     if (!standings || !Array.isArray(standings) || standings.length === 0) {
         return (
-            <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+            <div className="p-4 max-w-6xl mx-auto mt-6 lg:mt-10">
                 <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
                 <p className="text-red-600">{t('common.error')}: No standings data available</p>
             </div>
@@ -43,7 +43,7 @@ export function StandingsTable() {
     }
 
     return (
-        <div className="p-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+        <div className="p-4 max-w-6xl mx-auto mt-6 lg:mt-10">
             <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-4">{t('standings.title')}</h2>
             <h2 className="text-3xl lg:text-5xl text-green-700 mb-8 lg:mb-12">{t('standings.season')}</h2>
 
@@ -61,14 +61,13 @@ export function StandingsTable() {
             {/* --- COMPACT MOBILE CARD VIEW (< 768px) --- */}
             <div className="block md:hidden space-y-3">
                 {standings.map((team, index) => {
-                    const isBucovina = team.team.toUpperCase() === "FC BUCOVINA LOENHOUT";
-                    
+                    const isBucovina = team.team.toUpperCase() === CLUB_NAME;
+
                     return (
                         <div
                             key={`${selectedCompetition}-${team.pos}-${index}`}
-                            className={`relative bg-white shadow-sm border border-gray-100 p-3 flex flex-col gap-3 overflow-hidden ${
-                                isBucovina ? "border-l-4 border-l-green-600 bg-green-50/20" : "border-l-4 border-l-transparent"
-                            }`}
+                            className={`relative bg-white shadow-sm border border-gray-100 p-3 flex flex-col gap-3 overflow-hidden ${isBucovina ? "border-l-4 border-l-green-600 bg-green-50/20" : "border-l-4 border-l-transparent"
+                                }`}
                         >
                             {/* Top Row: Rank, Logo, Name */}
                             <div className="flex items-center gap-3">
@@ -122,51 +121,50 @@ export function StandingsTable() {
             <div className="hidden md:block">
                 <table className="min-w-full bg-white rounded-xl shadow-md overflow-hidden">
                     <thead className="bg-gray-100 text-gray-700 text-xs sm:text-sm uppercase">
-                    <tr>
-                        <th className="px-2 sm:px-4 py-3 text-center w-16">{t('standings.position')}</th>
-                        <th className="px-2 sm:px-4 py-3 text-left">{t('standings.team')}</th>
-                        <th className="px-2 sm:px-4 py-3 text-center">{t('standings.points')}</th>
-                        <th className="px-2 sm:px-4 py-3 text-center hidden sm:table-cell">{t('standings.games')}</th>
-                        <th className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{t('standings.wins')}</th>
-                        <th className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{t('standings.draws')}</th>
-                        <th className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{t('standings.losses')}</th>
-                    </tr>
+                        <tr>
+                            <th className="px-2 sm:px-4 py-3 text-center w-16">{t('standings.position')}</th>
+                            <th className="px-2 sm:px-4 py-3 text-left">{t('standings.team')}</th>
+                            <th className="px-2 sm:px-4 py-3 text-center">{t('standings.points')}</th>
+                            <th className="px-2 sm:px-4 py-3 text-center hidden sm:table-cell">{t('standings.games')}</th>
+                            <th className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{t('standings.wins')}</th>
+                            <th className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{t('standings.draws')}</th>
+                            <th className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{t('standings.losses')}</th>
+                        </tr>
                     </thead>
                     <tbody className="text-gray-800">
-                    {standings.map((team, index) => {
-                        const isBucovina = team.team.toUpperCase() === "FC BUCOVINA LOENHOUT";
-                        return (
-                            <tr
-                                key={`${selectedCompetition}-${team.pos}-${index}`}
-                                className={`${
-                                    isBucovina
+                        {standings.map((team, index) => {
+                            const isBucovina = team.team.toUpperCase() === CLUB_NAME;
+                            return (
+                                <tr
+                                    key={`${selectedCompetition}-${team.pos}-${index}`}
+                                    className={`${isBucovina
                                         ? "bg-green-50 font-bold"
                                         : index % 2 === 0
                                             ? "bg-white"
                                             : "bg-gray-50"
-                                } hover:bg-green-50 transition duration-150 border-b border-gray-100 last:border-b-0`}
-                            >
-                                <td className="px-2 sm:px-4 py-3 text-center">{team.pos}</td>
-                                <td className="px-2 sm:px-4 py-3 text-left">
-                                    <div className="flex items-center gap-3 select-none pointer-events-none">
-                                        <img
-                                            src={getTeamImage(team)}
-                                            alt={team.team}
-                                            className="w-8 h-8 object-contain"
-                                        />
-                                        <span className="select-none pointer-events-none text-wrap sm:text-nowrap truncate font-medium">
-                                            {team.team.toUpperCase()}
-                                        </span>
-                                    </div>
-                                </td>
-                                <td className="px-2 sm:px-4 py-3 text-center font-bold text-green-700">{team.pts}</td>
-                                <td className="px-2 sm:px-4 py-3 text-center hidden sm:table-cell">{team.matches}</td>
-                                <td className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{team.wins}</td>
-                                <td className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{team.draws}</td>
-                                <td className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{team.losses}</td>
-                            </tr>
-                        );
-                    })}
+                                        } hover:bg-green-50 transition duration-150 border-b border-gray-100 last:border-b-0`}
+                                >
+                                    <td className="px-2 sm:px-4 py-3 text-center">{team.pos}</td>
+                                    <td className="px-2 sm:px-4 py-3 text-left">
+                                        <div className="flex items-center gap-3 select-none pointer-events-none">
+                                            <img
+                                                src={getTeamImage(team)}
+                                                alt={team.team}
+                                                className="w-8 h-8 object-contain"
+                                            />
+                                            <span className="select-none pointer-events-none text-wrap sm:text-nowrap truncate font-medium">
+                                                {team.team.toUpperCase()}
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td className="px-2 sm:px-4 py-3 text-center font-bold text-green-700">{team.pts}</td>
+                                    <td className="px-2 sm:px-4 py-3 text-center hidden sm:table-cell">{team.matches}</td>
+                                    <td className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{team.wins}</td>
+                                    <td className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{team.draws}</td>
+                                    <td className="px-2 sm:px-4 py-3 text-center hidden md:table-cell">{team.losses}</td>
+                                </tr>
+                            );
+                        })}
                     </tbody>
                 </table>
             </div>

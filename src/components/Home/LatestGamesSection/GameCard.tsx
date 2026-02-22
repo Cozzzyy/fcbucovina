@@ -12,8 +12,6 @@ export function GameCard({ game }: { game: Game }) {
                 <div className="flex flex-row justify-end items-center gap-2 flex-1 min-w-0">
                     <h3
                         className="text-[10px] lg:text-lg  ml-2 text-right font-light select-none pointer-events-none"
-                        contentEditable={false}
-                        suppressContentEditableWarning={true}
                     >
                         {game.homeTeam}
                     </h3>

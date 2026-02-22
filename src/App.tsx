@@ -1,4 +1,3 @@
-import './App.css';
 import { Background } from "./components/Shared/Background.tsx";
 import { NavigationBar } from "./components/Shared/NavigationBar.tsx";
 import { Footer } from "./components/Shared/Footer.tsx";
@@ -22,53 +21,56 @@ const pageTransition = {
 function App() {
     return (
         <Router>
-            <ScrollToTop />
-            <NavigationBar />
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <motion.div {...pageTransition}>
-                            <HomePage />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/stiri"
-                    element={
-                        <motion.div {...pageTransition}>
-                            <NewsPage />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/club"
-                    element={
-                        <motion.div {...pageTransition}>
-                            <ClubPage />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/clasament"
-                    element={
-                        <motion.div {...pageTransition}>
-                            <StandingsPage />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/meciuri"
-                    element={
-                        <motion.div {...pageTransition}>
-                            <GamesPage />
-                        </motion.div>
-                    }
-                />
-
-            </Routes>
-            <Footer />
-            <Background />
+            <div className="flex flex-col min-h-screen">
+                <ScrollToTop />
+                <NavigationBar />
+                <main className="flex-1 flex flex-col pt-16 mt-7 lg:mt-0">
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <motion.div {...pageTransition}>
+                                    <HomePage />
+                                </motion.div>
+                            }
+                        />
+                        <Route
+                            path="/stiri"
+                            element={
+                                <motion.div {...pageTransition}>
+                                    <NewsPage />
+                                </motion.div>
+                            }
+                        />
+                        <Route
+                            path="/club"
+                            element={
+                                <motion.div {...pageTransition}>
+                                    <ClubPage />
+                                </motion.div>
+                            }
+                        />
+                        <Route
+                            path="/clasament"
+                            element={
+                                <motion.div {...pageTransition}>
+                                    <StandingsPage />
+                                </motion.div>
+                            }
+                        />
+                        <Route
+                            path="/meciuri"
+                            element={
+                                <motion.div {...pageTransition}>
+                                    <GamesPage />
+                                </motion.div>
+                            }
+                        />
+                    </Routes>
+                </main>
+                <Footer />
+                <Background />
+            </div>
         </Router>
     );
 }

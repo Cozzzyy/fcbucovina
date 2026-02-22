@@ -1,28 +1,29 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const SLIDESHOW_IMAGES = [
+    "/games-images/game2/1.jpg",
+    "/games-images/game2/2.jpg",
+    "/games-images/game2/3.jpg",
+    "/games-images/game2/4.jpg"
+];
+
 export function ImageSlideshow() {
-    const images = [
-        "/games-images/game2/1.jpg",
-        "/games-images/game2/2.jpg",
-        "/games-images/game2/3.jpg",
-        "/games-images/game2/4.jpg"
-    ];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % images.length);
+            setCurrentIndex((prev) => (prev + 1) % SLIDESHOW_IMAGES.length);
         }, 4000);
         return () => clearInterval(interval);
-    }, [images.length]);
+    }, [SLIDESHOW_IMAGES.length]);
 
 
     return (
         <div className="flex flex-col items-center justify-center w-full">
             <div className="relative w-full h-[550px] lg:h-[750px] overflow-hidden shadow-xl">
                 <AnimatePresence mode="wait">
-                    {images.map((image, index) =>
+                    {SLIDESHOW_IMAGES.map((image, index) =>
                         index === currentIndex ? (
                             <motion.div
                                 key={index}
@@ -55,14 +56,13 @@ export function ImageSlideshow() {
 
                 {/* Dot navigation */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-                    {images.map((_, i) => (
+                    {SLIDESHOW_IMAGES.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => setCurrentIndex(i)}
                             aria-label={`Du-te la ${i + 1}`}
-                            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                                i === currentIndex ? "bg-white" : "bg-gray-400"
-                            }`}
+                            className={`w-3 h-3 rounded-full transition-colors duration-300 ${i === currentIndex ? "bg-white" : "bg-gray-400"
+                                }`}
                         />
                     ))}
                 </div>

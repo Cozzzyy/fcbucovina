@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 
 export function TitleSection() {
     const { t } = useTranslation();
-    
+
     return (
-        <div className="w-full text-left px-4 max-w-6xl mx-auto mt-20 lg:mt-32">
+        <div className="w-full text-left px-4 max-w-6xl mx-auto mt-6 lg:mt-10">
             <h2 className="text-5xl lg:text-7xl text-green-700 font-bold italic mb-1">
                 {t('games.gamesTitle')}
             </h2>

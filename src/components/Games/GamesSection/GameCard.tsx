@@ -6,6 +6,8 @@ interface GameCardProps {
     game: Game;
 }
 
+const DAY_NAMES = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+
 // Hoisted outside component - pure function with no component dependencies
 function parseScore(scoreString: string): { homeScore: string; awayScore: string } {
     if (!scoreString || scoreString.trim() === '') {
@@ -30,8 +32,7 @@ export function GameCard({ game }: GameCardProps) {
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const dayIndex = date.getDay();
 
-        const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-        const dayName = t(`days.${dayNames[dayIndex]}`);
+        const dayName = t(`days.${DAY_NAMES[dayIndex]}`);
 
         return `${dayName}, ${day}/${month}`;
     }
