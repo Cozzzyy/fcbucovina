@@ -16,7 +16,7 @@ export function Background() {
                 src="/team-photo.avif"
                 alt=""
                 aria-hidden="true"
-                loading="eager"
+                loading="lazy"
                 onLoad={() => setLoaded(true)}
             />
             <div className="absolute top-0 w-full h-1/2 bg-gradient-to-b from-black/90 to-transparent pointer-events-none" />
