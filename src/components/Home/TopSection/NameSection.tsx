@@ -13,10 +13,10 @@ export function NameSection() {
 
     return (
         <section
-            className="flex flex-col h-screen lg:h-screen md:h-auto sm:h-auto justify-start items-center px-4 text-center overflow-hidden pb-20 lg:pb-40"
+            className="flex flex-col h-screen lg:h-screen md:h-auto sm:h-auto justify-start items-center px-4 text-center overflow-hidden pb-30 lg:pb-50"
             style={{ boxSizing: "border-box" }}
         >
-            <header className="pt-12 flex flex-col justify-center items-center w-full mt-auto">
+            <header className="flex flex-col justify-center items-center w-full mt-12 lg:mt-26 mb-8">
                 <h1
                     className="text-[55px] md:text-6xl lg:text-8xl text-nowrap font-bold text-[#00853E]"
                 >
